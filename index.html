@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Full Funnel Performance Dashboard</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: #f1f5f9; color: #0f172a; display: flex; min-height: 100vh;
+  }
+  /* ---------- Sidebar ---------- */
+  .sidebar {
+    width: 240px; background: #0f172a; color: #cbd5e1; flex-shrink: 0;
+    display: flex; flex-direction: column; padding: 20px 12px; position: sticky; top: 0; height: 100vh;
+  }
+  .sidebar .logo {
+    font-size: 15px; font-weight: 700; color: #fff; padding: 0 12px 20px;
+    letter-spacing: .3px; display: flex; align-items: center; gap: 8px;
+  }
+  .logo-dot { width: 10px; height: 10px; border-radius: 3px; background: #3b82f6; display: inline-block; }
+  .nav-item {
+    display: flex; align-items: center; gap: 10px; padding: 11px 12px; border-radius: 8px;
+    cursor: pointer; font-size: 14px; font-weight: 500; margin-bottom: 4px; transition: background .15s, color .15s;
+    border: none; background: none; color: #cbd5e1; text-align: left; width: 100%; font-family: inherit;
+  }
+  .nav-item:hover { background: #1e293b; color: #fff; }
+  .nav-item.active { background: #2563eb; color: #fff; }
+  .nav-item .icon { width: 18px; text-align: center; opacity: .9; }
+  .sidebar .footer { margin-top: auto; font-size: 11px; color: #64748b; padding: 0 12px; }
+  /* ---------- Main ---------- */
+  .main { flex: 1; padding: 28px 32px; max-width: 1400px; }
+  .page-title { font-size: 22px; font-weight: 700; margin-bottom: 4px; }
+  .page-sub { font-size: 13px; color: #64748b; margin-bottom: 24px; }
+  .hidden { display: none; }
+  /* ---------- Summary boxes ---------- */
+  .summary-row { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; margin-bottom: 20px; }
+  .summary-box {
+    background: #fff; border-radius: 12px; padding: 16px 18px;
+    box-shadow: 0 1px 3px rgba(15,23,42,.08), 0 1px 2px rgba(15,23,42,.04);
+    border: 1px solid #e2e8f0;
+  }
+  .summary-box .label { font-size: 12px; font-weight: 600; color: #64748b; text-transform: uppercase; letter-spacing: .5px; }
+  .summary-box .value { font-size: 28px; font-weight: 700; color: #0f172a; margin-top: 6px; }
+  .summary-box .value.blue { color: #2563eb; }
+  .summary-box .sub { font-size: 11px; color: #94a3b8; margin-top: 4px; }
+  /* ---------- Toolbar / date picker ---------- */
+  .toolbar { display: flex; align-items: center; gap: 14px; margin-bottom: 18px; flex-wrap: wrap; }
+  .toolbar label { font-size: 13px; font-weight: 600; color: #334155; }
+  .toolbar input[type="date"] {
+    padding: 9px 12px; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 14px;
+    font-family: inherit; background: #fff; color: #0f172a; cursor: pointer;
+  }
+  .toolbar input[type="date"]:focus { outline: 2px solid #2563eb; outline-offset: 1px; border-color: #2563eb; }
+  .week-label { font-size: 13px; color: #64748b; }
+  .week-label b { color: #0f172a; }
+  .btn-reset {
+    margin-left: auto; font-size: 12px; padding: 7px 12px; border-radius: 8px; border: 1px solid #cbd5e1;
+    background: #fff; color: #475569; cursor: pointer; font-family: inherit;
+  }
+  .btn-reset:hover { background: #f8fafc; }
+  /* ---------- Table ---------- */
+  .table-card {
+    background: #fff; border-radius: 12px; box-shadow: 0 1px 3px rgba(15,23,42,.08);
+    border: 1px solid #e2e8f0; overflow-x: auto;
+  }
+  .table-card h2 { font-size: 16px; font-weight: 700; padding: 16px 20px 4px; }
+  .table-card .table-sub { font-size: 12px; color: #94a3b8; padding: 0 20px 12px; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; min-width: 860px; }
+  th, td { padding: 10px 12px; text-align: center; border-bottom: 1px solid #e2e8f0; white-space: nowrap; }
+  thead th {
+    background: #f8fafc; font-size: 12px; font-weight: 700; color: #334155;
+    text-transform: uppercase; letter-spacing: .4px; position: sticky; top: 0;
+  }
+  thead th.kpi-col, tbody td.kpi-col {
+    text-align: left; font-weight: 600; color: #0f172a; background: #f8fafc; min-width: 150px;
+    position: sticky; left: 0; z-index: 1;
+  }
+  thead th.kpi-col { z-index: 2; }
+  thead th.total-col, tbody td.total-col { background: #eff6ff; font-weight: 700; }
+  thead th.total-col { z-index: 2; color: #1d4ed8; }
+  tbody td.total-col { color: #1d4ed8; border-left: 2px solid #bfdbfe; }
+  tbody tr:last-child td { border-bottom: none; }
+  tbody tr:hover td { background: #f0f7ff; }
+  tbody tr:hover td.kpi-col { background: #e8f1fe; }
+  tbody tr:hover td.total-col { background: #dbeafe; }
+  td.rate-cell { font-weight: 600; color: #2563eb; }
+  td.count-cell input {
+    width: 70px; padding: 5px 6px; text-align: center; border: 1px solid transparent; border-radius: 6px;
+    font-size: 13px; font-family: inherit; background: transparent; color: #0f172a;
+  }
+  td.count-cell input:hover { border-color: #cbd5e1; background: #fff; }
+  td.count-cell input:focus { outline: none; border-color: #2563eb; background: #fff; }
+  /* ---------- Placeholder pages ---------- */
+  .placeholder {
+    background: #fff; border: 1px dashed #cbd5e1; border-radius: 12px; padding: 60px 40px;
+    text-align: center; color: #94a3b8;
+  }
+  .placeholder h3 { color: #475569; font-size: 18px; margin-bottom: 8px; }
+  @media (max-width: 1000px) { .summary-row { grid-template-columns: repeat(2, 1fr); } .sidebar { width: 200px; } }
+  @media (max-width: 640px) { .summary-row { grid-template-columns: 1fr; } .main { padding: 20px; } }
+</style>
+</head>
+<body>
+
+<nav class="sidebar">
+  <div class="logo"><span class="logo-dot"></span>Funnel Dashboard</div>
+  <button class="nav-item active" data-page="full-funnel"><span class="icon">📊</span>Full Funnel Performance</button>
+  <button class="nav-item" data-page="campaign"><span class="icon">🎯</span>Campaign Performance</button>
+  <button class="nav-item" data-page="lead-quality"><span class="icon">⭐</span>Lead Quality</button>
+  <div class="footer">v1.1 &middot; week = Sun&ndash;Sat</div>
+</nav>
+
+<main class="main">
+
+  <!-- TAB 1: Full Funnel Performance -->
+  <section id="page-full-funnel">
+    <h1 class="page-title">Full Funnel Performance</h1>
+    <p class="page-sub">Daily funnel KPIs with a weekly Total column.</p>
+
+    <div class="summary-row" id="summaryRow"></div>
+
+    <div class="toolbar">
+      <label for="datePicker">Select a day</label>
+      <input type="date" id="datePicker">
+      <span class="week-label" id="weekLabel"></span>
+      <button class="btn-reset" id="resetWeek" title="Set all counts for this week to 0">Reset week</button>
+    </div>
+
+    <div class="table-card">
+      <h2>Full Funnel Performance</h2>
+      <p class="table-sub">Columns 2&ndash;6 = Mon&ndash;Fri of the selected week. Column 7 = Total. Counts are editable and save automatically.</p>
+      <table id="funnelTable">
+        <thead id="tableHead"></thead>
+        <tbody id="tableBody"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- TAB 2: Campaign Performance -->
+  <section id="page-campaign" class="hidden">
+    <h1 class="page-title">Campaign Performance</h1>
+    <p class="page-sub">Coming next.</p>
+    <div class="placeholder"><h3>Campaign Performance</h3><p>This tab will be built next.</p></div>
+  </section>
+
+  <!-- TAB 3: Lead Quality -->
+  <section id="page-lead-quality" class="hidden">
+    <h1 class="page-title">Lead Quality</h1>
+    <p class="page-sub">Coming next.</p>
+    <div class="placeholder"><h3>Lead Quality</h3><p>This tab will be built next.</p></div>
+  </section>
+
+</main>
+
+<script>
+/* ================= Definitions ================= */
+const COUNT_ROWS = [
+  { key: "leadsContacted", label: "Leads Contacted" },
+  { key: "replyReceived",  label: "Reply Recieved" },
+  { key: "positive",       label: "Positive" },
+  { key: "demosBooked",    label: "Demos Booked" },
+  { key: "demosHeld",      label: "Demos Held" },
+  { key: "wonDeals",       label: "Won Deals" },
+];
+/* Rates: numerator / denominator, computed per column (same-column ratio).
+   Total column applies the same formula to the column totals. */
+const RATE_ROWS = [
+  { label: "Reply Rate",    num: "replyReceived", den: "leadsContacted" },
+  { label: "Positive Rate", num: "positive",      den: "replyReceived"  },
+  { label: "Book Rate",     num: "demosBooked",   den: "positive"       },
+  { label: "Held Rate",     num: "demosHeld",     den: "demosBooked"    },
+  { label: "Won Rate",      num: "wonDeals",      den: "demosHeld"      },
+];
+const SUMMARY_BOXES = [
+  { label: "Reply Rate",    num: "replyReceived", den: "leadsContacted" },
+  { label: "Positive Rate", num: "positive",      den: "replyReceived"  },
+  { label: "Book Rate",     num: "demosBooked",   den: "positive"       },
+  { label: "Held Rate",     num: "demosHeld",     den: "demosBooked"    },
+  { label: "Won Rate",      num: "wonDeals",      den: "demosHeld"      },
+];
+const STORAGE_KEY = "funnelDashboard.counts.v1";
+let counts = {};          // { "YYYY-MM-DD": { leadsContacted: n, ... } }
+let selectedDate = null;  // Date object
+
+try { counts = JSON.parse(localStorage.getItem(STORAGE_KEY)) || {}; } catch (e) { counts = {}; }
+
+function saveCounts() { localStorage.setItem(STORAGE_KEY, JSON.stringify(counts)); }
+
+/* ================= Week logic ================= */
+// Week runs Sunday (start) to Saturday (end). Date columns 2-6 show MONDAY..FRIDAY
+// of the selected date's week; column 7 is the Total column.
+function weekSunday(d) {
+  const s = new Date(d); s.setDate(s.getDate() - s.getDay()); s.setHours(0,0,0,0); return s;
+}
+function mondaysOfSelectedWeek(d) {
+  const sun = weekSunday(d);
+  const mon = new Date(sun); mon.setDate(mon.getDate() + 1);
+  return Array.from({length: 5}, (_, i) => { const x = new Date(mon); x.setDate(x.getDate() + i); return x; });
+}
+const MONTHS = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+function fmt(d) { return `${MONTHS[d.getMonth()]} ${d.getDate()}`; }
+function iso(d) {
+  const p = n => String(n).padStart(2, "0");
+  return `${d.getFullYear()}-${p(d.getMonth()+1)}-${p(d.getDate())}`;
+}
+function getCount(isoDate, key) {
+  const rec = counts[isoDate] || {};
+  const n = Number(rec[key]);
+  return Number.isFinite(n) ? n : 0;
+}
+function getTotal(days, key) {
+  return days.reduce((s, d) => s + getCount(iso(d), key), 0);
+}
+function pct(num, den) {
+  if (!den) return "—";
+  return (100 * num / den).toFixed(1).replace(/\.0$/, "") + "%";
+}
+
+/* ================= Render ================= */
+function render() {
+  const days = mondaysOfSelectedWeek(selectedDate);
+  const sun = weekSunday(selectedDate);
+  const sat = new Date(sun); sat.setDate(sat.getDate() + 6);
+
+  document.getElementById("weekLabel").innerHTML =
+    `Week: <b>${fmt(sun)} – ${fmt(sat)}, ${sat.getFullYear()}</b> &nbsp;(Sun–Sat)`;
+
+  /* Header row: KPIs | Mon..Fri | Total */
+  const head = document.getElementById("tableHead");
+  head.innerHTML = "<tr>" +
+    `<th class="kpi-col">KPIs</th>` +
+    days.map(d => `<th>${fmt(d)}</th>`).join("") +
+    `<th class="total-col">Total</th>` +
+    "</tr>";
+
+  /* Count rows (editable per day; Total = sum of columns 2-6) */
+  const body = document.getElementById("tableBody");
+  let html = "";
+  for (const row of COUNT_ROWS) {
+    html += `<tr><td class="kpi-col">${row.label}</td>`;
+    for (const d of days) {
+      const k = iso(d);
+      html += `<td class="count-cell"><input type="number" min="0" step="1" value="${getCount(k, row.key)}"
+        data-date="${k}" data-key="${row.key}"></td>`;
+    }
+    html += `<td class="total-col">${getTotal(days, row.key)}</td></tr>`;
+  }
+  /* Rate rows (same-column ratio; Total column = ratio of totals) */
+  for (const row of RATE_ROWS) {
+    html += `<tr><td class="kpi-col">${row.label}</td>`;
+    for (const d of days) {
+      const k = iso(d);
+      html += `<td class="rate-cell">${pct(getCount(k, row.num), getCount(k, row.den))}</td>`;
+    }
+    html += `<td class="total-col rate-cell">${pct(getTotal(days, row.num), getTotal(days, row.den))}</td></tr>`;
+  }
+  body.innerHTML = html;
+
+  body.querySelectorAll("input").forEach(inp => {
+    inp.addEventListener("input", e => {
+      const { date, key } = e.target.dataset;
+      const v = Math.max(0, Math.floor(Number(e.target.value) || 0));
+      counts[date] = counts[date] || {};
+      counts[date][key] = v;
+      saveCounts();
+      renderTotals();                // refresh Total column + boxes without rebuilding inputs
+    });
+  });
+
+  renderSummary();
+}
+
+/* Recompute the daily rate cells, Total column + summary boxes after an edit (keeps input focus) */
+function renderTotals() {
+  const days = mondaysOfSelectedWeek(selectedDate);
+  const body = document.getElementById("tableBody");
+  const rows = body.querySelectorAll("tr");
+  let r = 0;
+  for (const row of COUNT_ROWS) {
+    const totalCell = rows[r].querySelector("td.total-col");
+    totalCell.textContent = getTotal(days, row.key);
+    r++;
+  }
+  for (const row of RATE_ROWS) {
+    const tds = rows[r].querySelectorAll("td");
+    for (let i = 0; i < days.length; i++) {
+      const k = iso(days[i]);
+      tds[i].textContent = pct(getCount(k, row.num), getCount(k, row.den));
+    }
+    tds[tds.length - 1].textContent = pct(getTotal(days, row.num), getTotal(days, row.den));
+    r++;
+  }
+  renderSummary();
+}
+
+/* Summary boxes: values from the Total column (Row 4/6/8/10/12, Column 7) */
+function renderSummary() {
+  const days = mondaysOfSelectedWeek(selectedDate);
+  document.getElementById("summaryRow").innerHTML = SUMMARY_BOXES.map(b => {
+    const n = getTotal(days, b.num), d = getTotal(days, b.den);
+    return `<div class="summary-box">
+      <div class="label">${b.label}</div>
+      <div class="value blue">${pct(n, d)}</div>
+      <div class="sub">Week total &middot; ${n} / ${d}</div>
+    </div>`;
+  }).join("");
+}
+
+/* ================= Wiring ================= */
+document.querySelectorAll(".nav-item").forEach(btn => {
+  btn.addEventListener("click", () => {
+    document.querySelectorAll(".nav-item").forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+    ["full-funnel", "campaign", "lead-quality"].forEach(id =>
+      document.getElementById("page-" + id).classList.toggle("hidden", id !== btn.dataset.page));
+  });
+});
+
+const picker = document.getElementById("datePicker");
+function initPicker() {
+  const today = new Date();
+  const p = n => String(n).padStart(2, "0");
+  picker.value = `${today.getFullYear()}-${p(today.getMonth()+1)}-${p(today.getDate())}`;
+  selectedDate = today;
+}
+picker.addEventListener("change", () => {
+  const [y, m, d] = picker.value.split("-").map(Number);
+  selectedDate = new Date(y, m - 1, d);
+  render();
+});
+
+document.getElementById("resetWeek").addEventListener("click", () => {
+  if (!confirm("Set all counts for this week to 0?")) return;
+  const sun = weekSunday(selectedDate);
+  for (let i = 0; i < 7; i++) { const d = new Date(sun); d.setDate(d.getDate() + i); delete counts[iso(d)]; }
+  saveCounts();
+  render();
+});
+
+initPicker();
+render();
+</script>
+</body>
+</html>
