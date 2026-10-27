@@ -60,10 +60,10 @@
     background: #fff; color: #475569; cursor: pointer; font-family: inherit;
   }
   .btn-reset:hover { background: #f8fafc; }
-  /* ---------- Table ---------- */
+  /* ---------- Tables ---------- */
   .table-card {
     background: #fff; border-radius: 12px; box-shadow: 0 1px 3px rgba(15,23,42,.08);
-    border: 1px solid #e2e8f0; overflow-x: auto;
+    border: 1px solid #e2e8f0; overflow-x: auto; margin-bottom: 28px;
   }
   .table-card h2 { font-size: 16px; font-weight: 700; padding: 16px 20px 4px; }
   .table-card .table-sub { font-size: 12px; color: #94a3b8; padding: 0 20px 12px; }
@@ -110,7 +110,7 @@
   <button class="nav-item active" data-page="full-funnel"><span class="icon">📊</span>Full Funnel Performance</button>
   <button class="nav-item" data-page="campaign"><span class="icon">🎯</span>Campaign Performance</button>
   <button class="nav-item" data-page="lead-quality"><span class="icon">⭐</span>Lead Quality</button>
-  <div class="footer">v1.2 &middot; week = Sun&ndash;Sat &middot; sheet-linked</div>
+  <div class="footer">v1.3 &middot; week = Sun&ndash;Sat &middot; sheet-linked</div>
 </nav>
 
 <main class="main">
@@ -118,7 +118,7 @@
   <!-- TAB 1: Full Funnel Performance -->
   <section id="page-full-funnel">
     <h1 class="page-title">Full Funnel Performance</h1>
-    <p class="page-sub">Daily funnel KPIs with a weekly Total column. Auto-filled from the Google Sheet.</p>
+    <p class="page-sub">Daily funnel KPIs per source, with weekly Total columns. Auto-filled from the Google Sheet.</p>
 
     <div class="summary-row" id="summaryRow"></div>
 
@@ -127,17 +127,10 @@
       <input type="date" id="datePicker">
       <span class="week-label" id="weekLabel"></span>
       <span class="week-label" id="sheetStatus">Linking to Google Sheet…</span>
-      <button class="btn-reset" id="resetWeek" title="Clear your manual overrides for this week">Reset week</button>
+      <button class="btn-reset" id="resetWeek" title="Clear your manual overrides for this week (all tables)">Reset week</button>
     </div>
 
-    <div class="table-card">
-      <h2>Full Funnel Performance</h2>
-      <p class="table-sub">Columns 2&ndash;6 = Mon&ndash;Fri of the selected week. Column 7 = Total. Grey values come from the Google Sheet; type in a cell to override (clear a cell to fall back to the sheet).</p>
-      <table id="funnelTable">
-        <thead id="tableHead"></thead>
-        <tbody id="tableBody"></tbody>
-      </table>
-    </div>
+    <div id="tablesContainer"></div>
   </section>
 
   <!-- TAB 2: Campaign Performance -->
@@ -180,11 +173,21 @@ const SUMMARY_BOXES = [
   { label: "Held Rate",     num: "demosHeld",     den: "demosBooked"    },
   { label: "Won Rate",      num: "wonDeals",      den: "demosHeld"      },
 ];
-const STORAGE_KEY = "funnelDashboard.counts.v1";
-const SHEET_KEY = "funnelDashboard.sheet.v1";
+
+/* Sheet sections: csvRow = 1-based CSV row of the section's "KPI"/date header row.
+   Within each block: Contacted=+1, Email Sent=+2, Replies=+3, Reply Rate=+4,
+   Positive=+5, Positive Rate=+6, Booked=+7, Held=+8, Book Rate=+9. */
+const SECTIONS = [
+  { id: "wishpond",  title: "Full Funnel Performance - Wishpond",  csvRow: 3,  sheetLabel: "OVERALL OUTBOUND" },
+  { id: "persistiq", title: "Full Funnel Performance - PersistIQ", csvRow: 14, sheetLabel: "PERSISTIQ" },
+  { id: "invigo",    title: "Full Funnel Performance - Invigo",    csvRow: 26, sheetLabel: "INVIGO" },
+];
+
+const STORAGE_KEY = "funnelDashboard.counts.v2";   // overrides: { sectionId: { date: { key: n } } }
+const SHEET_KEY = "funnelDashboard.sheet.v2";      // sheet data: { sectionId: { date: { key: n } } }
 const SHEET_URL = "https://docs.google.com/spreadsheets/d/1AZTzFmfPvMCCae0c6w0OL8XJ8PvfzmpAH2m4P3e-4_A/gviz/tq?tqx=out:csv&gid=0";
-let counts = {};          // manual overrides: { "YYYY-MM-DD": { key: n } }
-let sheetData = {};       // sheet values:    { "YYYY-MM-DD": { key: n } }
+let counts = {};
+let sheetData = {};
 let selectedDate = null;
 
 try { counts = JSON.parse(localStorage.getItem(STORAGE_KEY)) || {}; } catch (e) { counts = {}; }
@@ -208,20 +211,19 @@ function iso(d) {
   const p = n => String(n).padStart(2, "0");
   return `${d.getFullYear()}-${p(d.getMonth()+1)}-${p(d.getDate())}`;
 }
-/* Effective value: manual override wins, else sheet value, else 0 */
-function getCount(isoDate, key) {
-  const manual = (counts[isoDate] || {})[key];
+function getCount(sectionId, isoDate, key) {
+  const manual = ((counts[sectionId] || {})[isoDate] || {})[key];
   if (manual !== undefined && manual !== null && manual !== "") return Number(manual);
-  const fromSheet = (sheetData[isoDate] || {})[key];
+  const fromSheet = ((sheetData[sectionId] || {})[isoDate] || {})[key];
   if (fromSheet !== undefined && fromSheet !== null && Number.isFinite(Number(fromSheet))) return Number(fromSheet);
   return 0;
 }
-function getManual(isoDate, key) {
-  const n = Number((counts[isoDate] || {})[key]);
+function getManual(sectionId, isoDate, key) {
+  const n = Number(((counts[sectionId] || {})[isoDate] || {})[key]);
   return Number.isFinite(n) ? n : 0;
 }
-function getTotal(days, key) {
-  return days.reduce((s, d) => s + getCount(iso(d), key), 0);
+function getTotal(sectionId, days, key) {
+  return days.reduce((s, d) => s + getCount(sectionId, iso(d), key), 0);
 }
 function pct(num, den) {
   if (!den) return "—";
@@ -229,9 +231,6 @@ function pct(num, den) {
 }
 
 /* ================= Google Sheet import ================= */
-/* Sheet layout (1-based CSV rows): row 3 = dates ("Jun 15"), row 4 = Contacted,
-   row 6 = Replies, row 8 = Positive, row 10 = Booked, row 11 = Held.
-   Rates are recomputed locally; Won Deals is not in the sheet. */
 function parseCSV(text) {
   const rows = []; let row = [], field = "", inQ = false;
   for (let i = 0; i < text.length; i++) {
@@ -254,30 +253,37 @@ async function importSheet() {
     if (!res.ok) throw new Error("HTTP " + res.status);
     const text = await res.text();
     const rows = parseCSV(text);
-    if (rows.length < 11) throw new Error("unexpected sheet shape");
+    if (rows.length < 35) throw new Error("unexpected sheet shape");
     const M = { Jan:1,Feb:2,Mar:3,Apr:4,May:5,Jun:6,Jul:7,Aug:8,Sep:9,Oct:10,Nov:11,Dec:12 };
     const year = new Date().getFullYear();
     const data = {};
-    rows[2].forEach((cell, i) => {
-      const parts = String(cell || "").trim().split(/\s+/);
-      if (parts.length !== 2 || !(parts[0] in M) || !/^\d+$/.test(parts[1])) return;
-      const d = new Date(year, M[parts[0]] - 1, parseInt(parts[1], 10));
-      const k = iso(d);
-      const num = r => { const v = String((r && r[i]) || "").replace(/,/g, "").trim(); return v === "" ? null : Number(v); };
-      const rec = {
-        leadsContacted: num(rows[3]),
-        replyReceived:  num(rows[5]),
-        positive:       num(rows[7]),
-        demosBooked:    num(rows[9]),
-        demosHeld:      num(rows[10]),
+    for (const sec of SECTIONS) {
+      data[sec.id] = {};
+      const dateRow = rows[sec.csvRow - 1];
+      const valRows = {
+        leadsContacted: rows[sec.csvRow],        // Contacted
+        replyReceived:  rows[sec.csvRow + 2],    // Replies
+        positive:       rows[sec.csvRow + 4],    // Positive
+        demosBooked:    rows[sec.csvRow + 6],    // Booked
+        demosHeld:      rows[sec.csvRow + 7],    // Held
       };
-      if (Object.values(rec).some(v => v !== null)) data[k] = rec;
-    });
-    if (!Object.keys(data).length) throw new Error("no dated columns found");
+      dateRow.forEach((cell, i) => {
+        const parts = String(cell || "").trim().split(/\s+/);
+        if (parts.length !== 2 || !(parts[0] in M) || !/^\d+$/.test(parts[1])) return;
+        const d = new Date(year, M[parts[0]] - 1, parseInt(parts[1], 10));
+        const k = iso(d);
+        const num = r => { const v = String((r && r[i]) || "").replace(/,/g, "").trim(); return v === "" ? null : Number(v); };
+        const rec = {};
+        for (const key of Object.keys(valRows)) rec[key] = num(valRows[key]);
+        if (Object.values(rec).some(v => v !== null)) data[sec.id][k] = rec;
+      });
+    }
+    const total = Object.values(data).reduce((s, o) => s + Object.keys(o).length, 0);
+    if (!total) throw new Error("no dated columns found");
     sheetData = data;
     saveSheet();
     document.getElementById("sheetStatus").textContent =
-      `Sheet linked ✓ — ${Object.keys(data).length} days (auto-loaded)`;
+      `Sheet linked ✓ — ${SECTIONS.length} tables, ${total} day-rows (auto-loaded)`;
     render();
   } catch (err) {
     document.getElementById("sheetStatus").textContent =
@@ -286,6 +292,50 @@ async function importSheet() {
 }
 
 /* ================= Render ================= */
+function buildContainers() {
+  document.getElementById("tablesContainer").innerHTML = SECTIONS.map(sec => `
+    <div class="table-card">
+      <h2>${sec.title}</h2>
+      <p class="table-sub">Columns 2&ndash;6 = Mon&ndash;Fri of the selected week. Column 7 = Total. Grey values come from the Google Sheet; type in a cell to override (clear a cell to fall back to the sheet).</p>
+      <table id="table-${sec.id}"><thead id="head-${sec.id}"></thead><tbody id="body-${sec.id}"></tbody></table>
+    </div>`).join("");
+}
+
+function renderSection(sec, days) {
+  const head = document.getElementById("head-" + sec.id);
+  head.innerHTML = "<tr>" +
+    `<th class="kpi-col">KPIs</th>` +
+    days.map(d => `<th>${fmt(d)}</th>`).join("") +
+    `<th class="total-col">Total</th>` +
+    "</tr>";
+
+  const body = document.getElementById("body-" + sec.id);
+  let html = "";
+  for (const row of COUNT_ROWS) {
+    html += `<tr><td class="kpi-col">${row.label}</td>`;
+    for (const d of days) {
+      const k = iso(d);
+      const fromSheet = ((sheetData[sec.id] || {})[k] || {})[row.key];
+      const hasSheet = fromSheet !== undefined && fromSheet !== null;
+      const manual = getManual(sec.id, k, row.key);
+      const v = hasSheet && manual === 0 ? fromSheet : manual;
+      html += `<td class="count-cell"><input type="number" min="0" step="1" value="${v}"
+        class="${hasSheet && manual === 0 ? "sheet-filled" : ""}"
+        data-section="${sec.id}" data-date="${k}" data-key="${row.key}"></td>`;
+    }
+    html += `<td class="total-col">${getTotal(sec.id, days, row.key)}</td></tr>`;
+  }
+  for (const row of RATE_ROWS) {
+    html += `<tr><td class="kpi-col">${row.label}</td>`;
+    for (const d of days) {
+      const k = iso(d);
+      html += `<td class="rate-cell">${pct(getCount(sec.id, k, row.num), getCount(sec.id, k, row.den))}</td>`;
+    }
+    html += `<td class="total-col rate-cell">${pct(getTotal(sec.id, days, row.num), getTotal(sec.id, days, row.den))}</td></tr>`;
+  }
+  body.innerHTML = html;
+}
+
 function render() {
   const days = mondaysOfSelectedWeek(selectedDate);
   const sun = weekSunday(selectedDate);
@@ -294,80 +344,58 @@ function render() {
   document.getElementById("weekLabel").innerHTML =
     `Week: <b>${fmt(sun)} – ${fmt(sat)}, ${sat.getFullYear()}</b> &nbsp;(Sun–Sat)`;
 
-  const head = document.getElementById("tableHead");
-  head.innerHTML = "<tr>" +
-    `<th class="kpi-col">KPIs</th>` +
-    days.map(d => `<th>${fmt(d)}</th>`).join("") +
-    `<th class="total-col">Total</th>` +
-    "</tr>";
-
-  const body = document.getElementById("tableBody");
-  let html = "";
-  for (const row of COUNT_ROWS) {
-    html += `<tr><td class="kpi-col">${row.label}</td>`;
-    for (const d of days) {
-      const k = iso(d);
-      const fromSheet = (sheetData[k] || {})[row.key];
-      const hasSheet = fromSheet !== undefined && fromSheet !== null;
-      const v = hasSheet && getManual(k, row.key) === 0 ? fromSheet : getManual(k, row.key);
-      html += `<td class="count-cell"><input type="number" min="0" step="1" value="${v}"
-        class="${hasSheet && getManual(k, row.key) === 0 ? "sheet-filled" : ""}"
-        data-date="${k}" data-key="${row.key}"></td>`;
-    }
-    html += `<td class="total-col">${getTotal(days, row.key)}</td></tr>`;
-  }
-  for (const row of RATE_ROWS) {
-    html += `<tr><td class="kpi-col">${row.label}</td>`;
-    for (const d of days) {
-      const k = iso(d);
-      html += `<td class="rate-cell">${pct(getCount(k, row.num), getCount(k, row.den))}</td>`;
-    }
-    html += `<td class="total-col rate-cell">${pct(getTotal(days, row.num), getTotal(days, row.den))}</td></tr>`;
-  }
-  body.innerHTML = html;
-
-  body.querySelectorAll("input").forEach(inp => {
-    inp.addEventListener("input", e => {
-      const { date, key } = e.target.dataset;
-      if (e.target.value === "") {
-        if (counts[date]) { delete counts[date][key]; if (!Object.keys(counts[date]).length) delete counts[date]; saveCounts(); }
-      } else {
-        const v = Math.max(0, Math.floor(Number(e.target.value) || 0));
-        counts[date] = counts[date] || {};
-        counts[date][key] = v;
-        saveCounts();
-      }
-      renderTotals();
-      refreshInputs();
-    });
-  });
-
+  for (const sec of SECTIONS) renderSection(sec, days);
   renderSummary();
+  wireInputs();
 }
 
-function renderTotals() {
+function wireInputs() {
+  document.querySelectorAll("td.count-cell input").forEach(inp => {
+    inp.addEventListener("input", e => {
+      const { section, date, key } = e.target.dataset;
+      if (e.target.value === "") {
+        if (counts[section] && counts[section][date]) {
+          delete counts[section][date][key];
+          if (!Object.keys(counts[section][date]).length) delete counts[section][date];
+          if (!Object.keys(counts[section]).length) delete counts[section];
+          saveCounts();
+        }
+      } else {
+        const v = Math.max(0, Math.floor(Number(e.target.value) || 0));
+        counts[section] = counts[section] || {};
+        counts[section][date] = counts[section][date] || {};
+        counts[section][date][key] = v;
+        saveCounts();
+      }
+      renderTotals(section);
+      refreshInputs(section);
+    });
+  });
+}
+
+function renderTotals(sectionId) {
   const days = mondaysOfSelectedWeek(selectedDate);
-  const rows = document.getElementById("tableBody").querySelectorAll("tr");
+  const rows = document.getElementById("body-" + sectionId).querySelectorAll("tr");
   let r = 0;
   for (const row of COUNT_ROWS) {
-    rows[r].querySelector("td.total-col").textContent = getTotal(days, row.key);
+    rows[r].querySelector("td.total-col").textContent = getTotal(sectionId, days, row.key);
     r++;
   }
   for (const row of RATE_ROWS) {
     const tds = rows[r].querySelectorAll("td");
     for (let i = 0; i < days.length; i++) {
       const k = iso(days[i]);
-      tds[i].textContent = pct(getCount(k, row.num), getCount(k, row.den));
+      tds[i].textContent = pct(getCount(sectionId, k, row.num), getCount(sectionId, k, row.den));
     }
-    tds[tds.length - 1].textContent = pct(getTotal(days, row.num), getTotal(days, row.den));
+    tds[tds.length - 1].textContent = pct(getTotal(sectionId, days, row.num), getTotal(sectionId, days, row.den));
     r++;
   }
-  renderSummary();
+  if (sectionId === "wishpond") renderSummary();
 }
 
-function refreshInputs() {
+function refreshInputs(sectionId) {
   const days = mondaysOfSelectedWeek(selectedDate);
-  const rows = document.getElementById("tableBody").querySelectorAll("tr");
+  const rows = document.getElementById("body-" + sectionId).querySelectorAll("tr");
   let r = 0;
   for (const row of COUNT_ROWS) {
     const tds = rows[r].querySelectorAll("td.count-cell input");
@@ -375,9 +403,9 @@ function refreshInputs() {
       const k = iso(days[i]);
       const inp = tds[i];
       if (document.activeElement === inp) continue;
-      const fromSheet = (sheetData[k] || {})[row.key];
+      const fromSheet = ((sheetData[sectionId] || {})[k] || {})[row.key];
       const hasSheet = fromSheet !== undefined && fromSheet !== null;
-      const manual = getManual(k, row.key);
+      const manual = getManual(sectionId, k, row.key);
       inp.value = hasSheet && manual === 0 ? fromSheet : manual;
       inp.classList.toggle("sheet-filled", hasSheet && manual === 0);
     }
@@ -385,14 +413,15 @@ function refreshInputs() {
   }
 }
 
+/* Summary boxes reflect the Wishpond table's Total column */
 function renderSummary() {
   const days = mondaysOfSelectedWeek(selectedDate);
   document.getElementById("summaryRow").innerHTML = SUMMARY_BOXES.map(b => {
-    const n = getTotal(days, b.num), d = getTotal(days, b.den);
+    const n = getTotal("wishpond", days, b.num), d = getTotal("wishpond", days, b.den);
     return `<div class="summary-box">
       <div class="label">${b.label}</div>
       <div class="value blue">${pct(n, d)}</div>
-      <div class="sub">Week total &middot; ${n} / ${d}</div>
+      <div class="sub">Wishpond week total &middot; ${n} / ${d}</div>
     </div>`;
   }).join("");
 }
@@ -421,14 +450,20 @@ picker.addEventListener("change", () => {
 });
 
 document.getElementById("resetWeek").addEventListener("click", () => {
-  if (!confirm("Clear your manual overrides for this week? (Sheet values will show again.)")) return;
+  if (!confirm("Clear your manual overrides for this week (all tables)? Sheet values will show again.")) return;
   const sun = weekSunday(selectedDate);
-  for (let i = 0; i < 7; i++) { const d = new Date(sun); d.setDate(d.getDate() + i); delete counts[iso(d)]; }
+  for (const sec of SECTIONS) {
+    for (let i = 0; i < 7; i++) {
+      const d = new Date(sun); d.setDate(d.getDate() + i);
+      if (counts[sec.id]) delete counts[sec.id][iso(d)];
+    }
+  }
   saveCounts();
   render();
 });
 
 initPicker();
+buildContainers();
 render();
 importSheet();
 </script>
