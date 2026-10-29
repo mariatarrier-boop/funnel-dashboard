@@ -1,67 +1,614 @@
 {
- "generated": "2026-10-29 19:43 UTC",
- "rule": "Booked = entered Qualified; Held = entered Demo Held or later (by stage-change date)",
+ "generated": "2026-10-29 20:20 UTC",
+ "rule": "Booked = deal not in Unqualified/Positive Contact Made (current stage); Held = also not in Qualified. Bucketed by deal created date; week groups: Sun+Mon, Tue, Wed, Thu, Fri+Sat.",
  "weekly": [
   {
+   "week_start": "2026-05-31",
+   "groups": [
+    "Sun+Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri+Sat"
+   ],
+   "booked": [
+    12,
+    16,
+    18,
+    21,
+    22
+   ],
+   "held": [
+    4,
+    10,
+    12,
+    15,
+    10
+   ],
+   "booked_total": 89,
+   "held_total": 51
+  },
+  {
+   "week_start": "2026-06-07",
+   "groups": [
+    "Sun+Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri+Sat"
+   ],
+   "booked": [
+    26,
+    13,
+    6,
+    7,
+    19
+   ],
+   "held": [
+    13,
+    6,
+    4,
+    5,
+    12
+   ],
+   "booked_total": 71,
+   "held_total": 40
+  },
+  {
+   "week_start": "2026-06-14",
+   "groups": [
+    "Sun+Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri+Sat"
+   ],
+   "booked": [
+    22,
+    12,
+    8,
+    15,
+    29
+   ],
+   "held": [
+    12,
+    8,
+    4,
+    6,
+    17
+   ],
+   "booked_total": 86,
+   "held_total": 47
+  },
+  {
+   "week_start": "2026-06-21",
+   "groups": [
+    "Sun+Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri+Sat"
+   ],
+   "booked": [
+    15,
+    15,
+    20,
+    19,
+    9
+   ],
+   "held": [
+    10,
+    11,
+    13,
+    7,
+    1
+   ],
+   "booked_total": 78,
+   "held_total": 42
+  },
+  {
+   "week_start": "2026-06-28",
+   "groups": [
+    "Sun+Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri+Sat"
+   ],
+   "booked": [
+    29,
+    11,
+    6,
+    12,
+    27
+   ],
+   "held": [
+    12,
+    6,
+    3,
+    8,
+    14
+   ],
+   "booked_total": 85,
+   "held_total": 43
+  },
+  {
+   "week_start": "2026-07-05",
+   "groups": [
+    "Sun+Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri+Sat"
+   ],
+   "booked": [
+    17,
+    23,
+    11,
+    8,
+    29
+   ],
+   "held": [
+    9,
+    12,
+    8,
+    5,
+    15
+   ],
+   "booked_total": 88,
+   "held_total": 49
+  },
+  {
+   "week_start": "2026-07-12",
+   "groups": [
+    "Sun+Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri+Sat"
+   ],
+   "booked": [
+    17,
+    13,
+    10,
+    6,
+    14
+   ],
+   "held": [
+    10,
+    7,
+    6,
+    3,
+    10
+   ],
+   "booked_total": 60,
+   "held_total": 36
+  },
+  {
+   "week_start": "2026-07-19",
+   "groups": [
+    "Sun+Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri+Sat"
+   ],
+   "booked": [
+    20,
+    14,
+    12,
+    11,
+    18
+   ],
+   "held": [
+    12,
+    7,
+    8,
+    6,
+    8
+   ],
+   "booked_total": 75,
+   "held_total": 41
+  },
+  {
+   "week_start": "2026-07-26",
+   "groups": [
+    "Sun+Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri+Sat"
+   ],
+   "booked": [
+    33,
+    31,
+    24,
+    31,
+    44
+   ],
+   "held": [
+    18,
+    18,
+    13,
+    12,
+    16
+   ],
+   "booked_total": 163,
+   "held_total": 77
+  },
+  {
+   "week_start": "2026-08-02",
+   "groups": [
+    "Sun+Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri+Sat"
+   ],
+   "booked": [
+    33,
+    26,
+    27,
+    42,
+    47
+   ],
+   "held": [
+    16,
+    13,
+    14,
+    18,
+    14
+   ],
+   "booked_total": 175,
+   "held_total": 75
+  },
+  {
+   "week_start": "2026-08-09",
+   "groups": [
+    "Sun+Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri+Sat"
+   ],
+   "booked": [
+    20,
+    28,
+    22,
+    38,
+    63
+   ],
+   "held": [
+    12,
+    15,
+    7,
+    20,
+    21
+   ],
+   "booked_total": 171,
+   "held_total": 75
+  },
+  {
+   "week_start": "2026-08-16",
+   "groups": [
+    "Sun+Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri+Sat"
+   ],
+   "booked": [
+    40,
+    33,
+    44,
+    35,
+    59
+   ],
+   "held": [
+    14,
+    16,
+    18,
+    13,
+    20
+   ],
+   "booked_total": 211,
+   "held_total": 81
+  },
+  {
+   "week_start": "2026-08-23",
+   "groups": [
+    "Sun+Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri+Sat"
+   ],
+   "booked": [
+    31,
+    33,
+    25,
+    40,
+    68
+   ],
+   "held": [
+    12,
+    15,
+    10,
+    14,
+    16
+   ],
+   "booked_total": 197,
+   "held_total": 67
+  },
+  {
    "week_start": "2026-08-30",
-   "booked": 120,
-   "held": 2
+   "groups": [
+    "Sun+Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri+Sat"
+   ],
+   "booked": [
+    29,
+    51,
+    65,
+    39,
+    35
+   ],
+   "held": [
+    5,
+    8,
+    7,
+    10,
+    11
+   ],
+   "booked_total": 219,
+   "held_total": 41
   },
   {
    "week_start": "2026-09-06",
-   "booked": 109,
-   "held": 13
+   "groups": [
+    "Sun+Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri+Sat"
+   ],
+   "booked": [
+    13,
+    19,
+    38,
+    32,
+    47
+   ],
+   "held": [
+    5,
+    8,
+    19,
+    13,
+    16
+   ],
+   "booked_total": 149,
+   "held_total": 61
   },
   {
    "week_start": "2026-09-13",
-   "booked": 137,
-   "held": 57
+   "groups": [
+    "Sun+Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri+Sat"
+   ],
+   "booked": [
+    23,
+    24,
+    16,
+    16,
+    23
+   ],
+   "held": [
+    13,
+    9,
+    7,
+    4,
+    8
+   ],
+   "booked_total": 102,
+   "held_total": 41
   },
   {
    "week_start": "2026-09-20",
-   "booked": 131,
-   "held": 58
+   "groups": [
+    "Sun+Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri+Sat"
+   ],
+   "booked": [
+    23,
+    16,
+    29,
+    22,
+    38
+   ],
+   "held": [
+    10,
+    5,
+    11,
+    8,
+    12
+   ],
+   "booked_total": 128,
+   "held_total": 46
   },
   {
    "week_start": "2026-09-27",
-   "booked": 85,
-   "held": 57
+   "groups": [
+    "Sun+Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri+Sat"
+   ],
+   "booked": [
+    16,
+    28,
+    16,
+    23,
+    16
+   ],
+   "held": [
+    5,
+    6,
+    7,
+    9,
+    8
+   ],
+   "booked_total": 99,
+   "held_total": 35
   },
   {
    "week_start": "2026-10-04",
-   "booked": 29,
-   "held": 21
+   "groups": [
+    "Sun+Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri+Sat"
+   ],
+   "booked": [
+    16,
+    19,
+    5,
+    18,
+    9
+   ],
+   "held": [
+    8,
+    10,
+    1,
+    6,
+    3
+   ],
+   "booked_total": 67,
+   "held_total": 28
   },
   {
    "week_start": "2026-10-11",
-   "booked": 15,
-   "held": 8
+   "groups": [
+    "Sun+Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri+Sat"
+   ],
+   "booked": [
+    18,
+    16,
+    13,
+    9,
+    12
+   ],
+   "held": [
+    7,
+    4,
+    4,
+    2,
+    5
+   ],
+   "booked_total": 68,
+   "held_total": 22
   },
   {
    "week_start": "2026-10-18",
-   "booked": 0,
-   "held": 2
+   "groups": [
+    "Sun+Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri+Sat"
+   ],
+   "booked": [
+    6,
+    8,
+    12,
+    4,
+    8
+   ],
+   "held": [
+    2,
+    3,
+    6,
+    2,
+    4
+   ],
+   "booked_total": 38,
+   "held_total": 17
   },
   {
    "week_start": "2026-10-25",
-   "booked": 1,
-   "held": 1
+   "groups": [
+    "Sun+Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri+Sat"
+   ],
+   "booked": [
+    10,
+    1,
+    3,
+    0,
+    0
+   ],
+   "held": [
+    2,
+    1,
+    3,
+    0,
+    0
+   ],
+   "booked_total": 14,
+   "held_total": 6
   }
  ],
  "monthly": [
   {
+   "month": "2026-05",
+   "booked": 89,
+   "held": 51
+  },
+  {
+   "month": "2026-06",
+   "booked": 320,
+   "held": 172
+  },
+  {
+   "month": "2026-07",
+   "booked": 386,
+   "held": 203
+  },
+  {
+   "month": "2026-08",
+   "booked": 973,
+   "held": 339
+  },
+  {
    "month": "2026-09",
-   "booked": 566,
-   "held": 173
+   "booked": 478,
+   "held": 183
   },
   {
    "month": "2026-10",
-   "booked": 61,
-   "held": 46
+   "booked": 187,
+   "held": 73
   }
  ],
  "totals": {
-  "booked": 627,
-  "held": 219
+  "booked": 2433,
+  "held": 1021
  }
 }

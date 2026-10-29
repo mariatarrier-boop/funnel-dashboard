@@ -610,14 +610,19 @@ async function renderPipeline() {
 
 function renderPipeWeekly() {
   const rows = pipeData.weekly;
+  const GROUPS = ["Sun+Mon", "Tue", "Wed", "Thu", "Fri+Sat"];
   document.getElementById("pipeWeeklyHead").innerHTML = "<tr>" +
-    `<th class="kpi-col">Week (starts Sunday)</th><th>Booked</th><th>Held</th><th class="total-col">Held Rate</th></tr>`;
+    `<th class="kpi-col">Week (starts Sunday)</th>` +
+    GROUPS.map(g => `<th>${g}<div class="bh-labels"><span>Booked</span><span>Held</span></div></th>`).join("") +
+    `<th class="total-col">Total Booked</th><th class="total-col">Total Held</th><th class="total-col">Held Rate</th></tr>`;
   document.getElementById("pipeWeeklyBody").innerHTML = rows.map(r => {
     const sun = new Date(r.week_start + "T00:00:00");
     const sat = new Date(sun); sat.setDate(sat.getDate() + 6);
     return `<tr><td class="kpi-col">${fmt(sun)} – ${fmt(sat)}</td>` +
-      `<td>${r.booked}</td><td>${r.held}</td>` +
-      `<td class="total-col rate-cell">${pct(r.held, r.booked)}</td></tr>`;
+      r.booked.map((b, i) => `<td><b>${b}</b> <span style="color:#94a3b8">/ ${r.held[i]}</span></td>`).join("") +
+      `<td class="total-col">${r.booked_total}</td>` +
+      `<td class="total-col">${r.held_total}</td>` +
+      `<td class="total-col rate-cell">${pct(r.held_total, r.booked_total)}</td></tr>`;
   }).join("");
 }
 
