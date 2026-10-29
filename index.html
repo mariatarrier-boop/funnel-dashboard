@@ -598,7 +598,7 @@ async function renderPipeline() {
     if (!res.ok) throw new Error("HTTP " + res.status);
     pipeData = await res.json();
     status.innerHTML =
-      `Pipedrive data from <b>${pipeData.generated}</b> — rule: ${pipeData.rule}. ` +
+      `Pipedrive data from <b>${pipeData.generated}</b> — rule: ${pipeData.logic || pipeData.rule}. ` +
       `Totals: ${pipeData.totals.booked} booked, ${pipeData.totals.held} held ` +
       `(${pct(pipeData.totals.held, pipeData.totals.booked)} held rate).`;
     renderPipeWeekly();
