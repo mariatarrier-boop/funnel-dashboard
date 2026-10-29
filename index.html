@@ -587,8 +587,6 @@ render();
 initConvPicker();
 renderConversion();
 importSheet();
-renderPipeline();
-
 /* ================= Pipeline Funnel (Pipedrive snapshot) ================= */
 const PIPE_URL = "pipeline.json";
 let pipeData = null;
@@ -634,6 +632,8 @@ function renderPipeMonthly() {
       `<td class="total-col rate-cell">${pct(r.held, r.booked)}</td></tr>`;
   }).join("");
 }
+
+renderPipeline();
 </script>
 </body>
 </html>
