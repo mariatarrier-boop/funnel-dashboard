@@ -522,6 +522,7 @@ picker.addEventListener("change", () => {
   const [y, m, d] = picker.value.split("-").map(Number);
   selectedDate = new Date(y, m - 1, d);
   render();
+  renderConversion();
 });
 
 document.getElementById("resetWeek").addEventListener("click", () => {
@@ -540,6 +541,7 @@ document.getElementById("resetWeek").addEventListener("click", () => {
 initPicker();
 buildContainers();
 render();
+renderConversion();
 importSheet();
 </script>
 </body>
