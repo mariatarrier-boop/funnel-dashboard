@@ -1,0 +1,2690 @@
+{
+ "generated": "2026-10-29 21:32 UTC",
+ "logic": "booked = day deal entered Qualified; held = day deal entered Demo Held+ (matched to most recent booking)",
+ "weekly": [
+  {
+   "week_start": "2026-05-31",
+   "groups": [
+    "Sun+Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri+Sat"
+   ],
+   "intervals": {
+    "Sun+Mon": {
+     "Same Day": {
+      "booked": 0,
+      "held": 0
+     },
+     "24 Hours": {
+      "booked": 0,
+      "held": 0
+     },
+     "2 to 4 days": {
+      "booked": 0,
+      "held": 0
+     },
+     "1 Week": {
+      "booked": 0,
+      "held": 0
+     },
+     ">1 Week": {
+      "booked": 0,
+      "held": 0
+     }
+    },
+    "Tue": {
+     "Same Day": {
+      "booked": 0,
+      "held": 0
+     },
+     "24 Hours": {
+      "booked": 0,
+      "held": 0
+     },
+     "2 to 4 days": {
+      "booked": 4,
+      "held": 0
+     },
+     "1 Week": {
+      "booked": 1,
+      "held": 0
+     },
+     ">1 Week": {
+      "booked": 1,
+      "held": 0
+     }
+    },
+    "Wed": {
+     "Same Day": {
+      "booked": 5,
+      "held": 5
+     },
+     "24 Hours": {
+      "booked": 1,
+      "held": 0
+     },
+     "2 to 4 days": {
+      "booked": 1,
+      "held": 0
+     },
+     "1 Week": {
+      "booked": 3,
+      "held": 0
+     },
+     ">1 Week": {
+      "booked": 3,
+      "held": 0
+     }
+    },
+    "Thu": {
+     "Same Day": {
+      "booked": 1,
+      "held": 1
+     },
+     "24 Hours": {
+      "booked": 0,
+      "held": 1
+     },
+     "2 to 4 days": {
+      "booked": 4,
+      "held": 5
+     },
+     "1 Week": {
+      "booked": 0,
+      "held": 0
+     },
+     ">1 Week": {
+      "booked": 0,
+      "held": 0
+     }
+    },
+    "Fri+Sat": {
+     "Same Day": {
+      "booked": 0,
+      "held": 0
+     },
+     "24 Hours": {
+      "booked": 0,
+      "held": 0
+     },
+     "2 to 4 days": {
+      "booked": 11,
+      "held": 3
+     },
+     "1 Week": {
+      "booked": 1,
+      "held": 0
+     },
+     ">1 Week": {
+      "booked": 5,
+      "held": 0
+     }
+    }
+   }
+  },
+  {
+   "week_start": "2026-06-07",
+   "groups": [
+    "Sun+Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri+Sat"
+   ],
+   "intervals": {
+    "Sun+Mon": {
+     "Same Day": {
+      "booked": 0,
+      "held": 0
+     },
+     "24 Hours": {
+      "booked": 1,
+      "held": 0
+     },
+     "2 to 4 days": {
+      "booked": 11,
+      "held": 7
+     },
+     "1 Week": {
+      "booked": 2,
+      "held": 3
+     },
+     ">1 Week": {
+      "booked": 5,
+      "held": 0
+     }
+    },
+    "Tue": {
+     "Same Day": {
+      "booked": 0,
+      "held": 0
+     },
+     "24 Hours": {
+      "booked": 0,
+      "held": 1
+     },
+     "2 to 4 days": {
+      "booked": 7,
+      "held": 8
+     },
+     "1 Week": {
+      "booked": 8,
+      "held": 1
+     },
+     ">1 Week": {
+      "booked": 4,
+      "held": 0
+     }
+    },
+    "Wed": {
+     "Same Day": {
+      "booked": 0,
+      "held": 0
+     },
+     "24 Hours": {
+      "booked": 0,
+      "held": 0
+     },
+     "2 to 4 days": {
+      "booked": 4,
+      "held": 6
+     },
+     "1 Week": {
+      "booked": 1,
+      "held": 1
+     },
+     ">1 Week": {
+      "booked": 3,
+      "held": 0
+     }
+    },
+    "Thu": {
+     "Same Day": {
+      "booked": 3,
+      "held": 3
+     },
+     "24 Hours": {
+      "booked": 2,
+      "held": 0
+     },
+     "2 to 4 days": {
+      "booked": 1,
+      "held": 5
+     },
+     "1 Week": {
+      "booked": 1,
+      "held": 0
+     },
+     ">1 Week": {
+      "booked": 1,
+      "held": 0
+     }
+    },
+    "Fri+Sat": {
+     "Same Day": {
+      "booked": 2,
+      "held": 2
+     },
+     "24 Hours": {
+      "booked": 0,
+      "held": 2
+     },
+     "2 to 4 days": {
+      "booked": 1,
+      "held": 9
+     },
+     "1 Week": {
+      "booked": 0,
+      "held": 0
+     },
+     ">1 Week": {
+      "booked": 2,
+      "held": 0
+     }
+    }
+   }
+  },
+  {
+   "week_start": "2026-06-14",
+   "groups": [
+    "Sun+Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri+Sat"
+   ],
+   "intervals": {
+    "Sun+Mon": {
+     "Same Day": {
+      "booked": 3,
+      "held": 3
+     },
+     "24 Hours": {
+      "booked": 0,
+      "held": 0
+     },
+     "2 to 4 days": {
+      "booked": 8,
+      "held": 1
+     },
+     "1 Week": {
+      "booked": 0,
+      "held": 3
+     },
+     ">1 Week": {
+      "booked": 4,
+      "held": 1
+     }
+    },
+    "Tue": {
+     "Same Day": {
+      "booked": 2,
+      "held": 2
+     },
+     "24 Hours": {
+      "booked": 1,
+      "held": 0
+     },
+     "2 to 4 days": {
+      "booked": 1,
+      "held": 5
+     },
+     "1 Week": {
+      "booked": 1,
+      "held": 8
+     },
+     ">1 Week": {
+      "booked": 1,
+      "held": 3
+     }
+    },
+    "Wed": {
+     "Same Day": {
+      "booked": 3,
+      "held": 3
+     },
+     "24 Hours": {
+      "booked": 2,
+      "held": 1
+     },
+     "2 to 4 days": {
+      "booked": 5,
+      "held": 3
+     },
+     "1 Week": {
+      "booked": 2,
+      "held": 1
+     },
+     ">1 Week": {
+      "booked": 3,
+      "held": 3
+     }
+    },
+    "Thu": {
+     "Same Day": {
+      "booked": 2,
+      "held": 2
+     },
+     "24 Hours": {
+      "booked": 3,
+      "held": 2
+     },
+     "2 to 4 days": {
+      "booked": 0,
+      "held": 3
+     },
+     "1 Week": {
+      "booked": 0,
+      "held": 0
+     },
+     ">1 Week": {
+      "booked": 0,
+      "held": 0
+     }
+    },
+    "Fri+Sat": {
+     "Same Day": {
+      "booked": 1,
+      "held": 1
+     },
+     "24 Hours": {
+      "booked": 0,
+      "held": 3
+     },
+     "2 to 4 days": {
+      "booked": 4,
+      "held": 3
+     },
+     "1 Week": {
+      "booked": 0,
+      "held": 0
+     },
+     ">1 Week": {
+      "booked": 2,
+      "held": 2
+     }
+    }
+   }
+  },
+  {
+   "week_start": "2026-06-21",
+   "groups": [
+    "Sun+Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri+Sat"
+   ],
+   "intervals": {
+    "Sun+Mon": {
+     "Same Day": {
+      "booked": 10,
+      "held": 10
+     },
+     "24 Hours": {
+      "booked": 3,
+      "held": 0
+     },
+     "2 to 4 days": {
+      "booked": 8,
+      "held": 3
+     },
+     "1 Week": {
+      "booked": 0,
+      "held": 1
+     },
+     ">1 Week": {
+      "booked": 6,
+      "held": 1
+     }
+    },
+    "Tue": {
+     "Same Day": {
+      "booked": 1,
+      "held": 1
+     },
+     "24 Hours": {
+      "booked": 1,
+      "held": 3
+     },
+     "2 to 4 days": {
+      "booked": 7,
+      "held": 5
+     },
+     "1 Week": {
+      "booked": 0,
+      "held": 1
+     },
+     ">1 Week": {
+      "booked": 2,
+      "held": 0
+     }
+    },
+    "Wed": {
+     "Same Day": {
+      "booked": 1,
+      "held": 1
+     },
+     "24 Hours": {
+      "booked": 4,
+      "held": 1
+     },
+     "2 to 4 days": {
+      "booked": 4,
+      "held": 4
+     },
+     "1 Week": {
+      "booked": 2,
+      "held": 1
+     },
+     ">1 Week": {
+      "booked": 4,
+      "held": 0
+     }
+    },
+    "Thu": {
+     "Same Day": {
+      "booked": 4,
+      "held": 4
+     },
+     "24 Hours": {
+      "booked": 3,
+      "held": 4
+     },
+     "2 to 4 days": {
+      "booked": 4,
+      "held": 7
+     },
+     "1 Week": {
+      "booked": 2,
+      "held": 0
+     },
+     ">1 Week": {
+      "booked": 1,
+      "held": 0
+     }
+    },
+    "Fri+Sat": {
+     "Same Day": {
+      "booked": 0,
+      "held": 0
+     },
+     "24 Hours": {
+      "booked": 0,
+      "held": 3
+     },
+     "2 to 4 days": {
+      "booked": 4,
+      "held": 7
+     },
+     "1 Week": {
+      "booked": 1,
+      "held": 0
+     },
+     ">1 Week": {
+      "booked": 9,
+      "held": 1
+     }
+    }
+   }
+  },
+  {
+   "week_start": "2026-06-28",
+   "groups": [
+    "Sun+Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri+Sat"
+   ],
+   "intervals": {
+    "Sun+Mon": {
+     "Same Day": {
+      "booked": 1,
+      "held": 1
+     },
+     "24 Hours": {
+      "booked": 0,
+      "held": 0
+     },
+     "2 to 4 days": {
+      "booked": 0,
+      "held": 1
+     },
+     "1 Week": {
+      "booked": 0,
+      "held": 2
+     },
+     ">1 Week": {
+      "booked": 2,
+      "held": 1
+     }
+    },
+    "Tue": {
+     "Same Day": {
+      "booked": 0,
+      "held": 0
+     },
+     "24 Hours": {
+      "booked": 0,
+      "held": 0
+     },
+     "2 to 4 days": {
+      "booked": 5,
+      "held": 4
+     },
+     "1 Week": {
+      "booked": 3,
+      "held": 2
+     },
+     ">1 Week": {
+      "booked": 7,
+      "held": 1
+     }
+    },
+    "Wed": {
+     "Same Day": {
+      "booked": 0,
+      "held": 0
+     },
+     "24 Hours": {
+      "booked": 0,
+      "held": 0
+     },
+     "2 to 4 days": {
+      "booked": 1,
+      "held": 0
+     },
+     "1 Week": {
+      "booked": 0,
+      "held": 0
+     },
+     ">1 Week": {
+      "booked": 5,
+      "held": 0
+     }
+    },
+    "Thu": {
+     "Same Day": {
+      "booked": 0,
+      "held": 0
+     },
+     "24 Hours": {
+      "booked": 0,
+      "held": 0
+     },
+     "2 to 4 days": {
+      "booked": 5,
+      "held": 2
+     },
+     "1 Week": {
+      "booked": 3,
+      "held": 1
+     },
+     ">1 Week": {
+      "booked": 2,
+      "held": 1
+     }
+    },
+    "Fri+Sat": {
+     "Same Day": {
+      "booked": 0,
+      "held": 0
+     },
+     "24 Hours": {
+      "booked": 0,
+      "held": 0
+     },
+     "2 to 4 days": {
+      "booked": 3,
+      "held": 4
+     },
+     "1 Week": {
+      "booked": 3,
+      "held": 0
+     },
+     ">1 Week": {
+      "booked": 1,
+      "held": 0
+     }
+    }
+   }
+  },
+  {
+   "week_start": "2026-07-05",
+   "groups": [
+    "Sun+Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri+Sat"
+   ],
+   "intervals": {
+    "Sun+Mon": {
+     "Same Day": {
+      "booked": 0,
+      "held": 0
+     },
+     "24 Hours": {
+      "booked": 3,
+      "held": 0
+     },
+     "2 to 4 days": {
+      "booked": 5,
+      "held": 7
+     },
+     "1 Week": {
+      "booked": 0,
+      "held": 2
+     },
+     ">1 Week": {
+      "booked": 1,
+      "held": 1
+     }
+    },
+    "Tue": {
+     "Same Day": {
+      "booked": 1,
+      "held": 1
+     },
+     "24 Hours": {
+      "booked": 1,
+      "held": 3
+     },
+     "2 to 4 days": {
+      "booked": 3,
+      "held": 3
+     },
+     "1 Week": {
+      "booked": 0,
+      "held": 2
+     },
+     ">1 Week": {
+      "booked": 1,
+      "held": 2
+     }
+    },
+    "Wed": {
+     "Same Day": {
+      "booked": 1,
+      "held": 1
+     },
+     "24 Hours": {
+      "booked": 2,
+      "held": 1
+     },
+     "2 to 4 days": {
+      "booked": 4,
+      "held": 3
+     },
+     "1 Week": {
+      "booked": 4,
+      "held": 2
+     },
+     ">1 Week": {
+      "booked": 0,
+      "held": 2
+     }
+    },
+    "Thu": {
+     "Same Day": {
+      "booked": 0,
+      "held": 0
+     },
+     "24 Hours": {
+      "booked": 5,
+      "held": 2
+     },
+     "2 to 4 days": {
+      "booked": 6,
+      "held": 2
+     },
+     "1 Week": {
+      "booked": 3,
+      "held": 2
+     },
+     ">1 Week": {
+      "booked": 5,
+      "held": 4
+     }
+    },
+    "Fri+Sat": {
+     "Same Day": {
+      "booked": 1,
+      "held": 1
+     },
+     "24 Hours": {
+      "booked": 0,
+      "held": 5
+     },
+     "2 to 4 days": {
+      "booked": 8,
+      "held": 8
+     },
+     "1 Week": {
+      "booked": 10,
+      "held": 1
+     },
+     ">1 Week": {
+      "booked": 4,
+      "held": 2
+     }
+    }
+   }
+  },
+  {
+   "week_start": "2026-07-12",
+   "groups": [
+    "Sun+Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri+Sat"
+   ],
+   "intervals": {
+    "Sun+Mon": {
+     "Same Day": {
+      "booked": 1,
+      "held": 1
+     },
+     "24 Hours": {
+      "booked": 0,
+      "held": 0
+     },
+     "2 to 4 days": {
+      "booked": 8,
+      "held": 8
+     },
+     "1 Week": {
+      "booked": 0,
+      "held": 2
+     },
+     ">1 Week": {
+      "booked": 4,
+      "held": 1
+     }
+    },
+    "Tue": {
+     "Same Day": {
+      "booked": 4,
+      "held": 4
+     },
+     "24 Hours": {
+      "booked": 3,
+      "held": 0
+     },
+     "2 to 4 days": {
+      "booked": 3,
+      "held": 4
+     },
+     "1 Week": {
+      "booked": 2,
+      "held": 4
+     },
+     ">1 Week": {
+      "booked": 2,
+      "held": 0
+     }
+    },
+    "Wed": {
+     "Same Day": {
+      "booked": 2,
+      "held": 2
+     },
+     "24 Hours": {
+      "booked": 0,
+      "held": 3
+     },
+     "2 to 4 days": {
+      "booked": 2,
+      "held": 4
+     },
+     "1 Week": {
+      "booked": 3,
+      "held": 11
+     },
+     ">1 Week": {
+      "booked": 0,
+      "held": 1
+     }
+    },
+    "Thu": {
+     "Same Day": {
+      "booked": 3,
+      "held": 3
+     },
+     "24 Hours": {
+      "booked": 1,
+      "held": 0
+     },
+     "2 to 4 days": {
+      "booked": 1,
+      "held": 2
+     },
+     "1 Week": {
+      "booked": 2,
+      "held": 0
+     },
+     ">1 Week": {
+      "booked": 2,
+      "held": 0
+     }
+    },
+    "Fri+Sat": {
+     "Same Day": {
+      "booked": 0,
+      "held": 0
+     },
+     "24 Hours": {
+      "booked": 0,
+      "held": 1
+     },
+     "2 to 4 days": {
+      "booked": 1,
+      "held": 7
+     },
+     "1 Week": {
+      "booked": 1,
+      "held": 0
+     },
+     ">1 Week": {
+      "booked": 0,
+      "held": 10
+     }
+    }
+   }
+  },
+  {
+   "week_start": "2026-07-19",
+   "groups": [
+    "Sun+Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri+Sat"
+   ],
+   "intervals": {
+    "Sun+Mon": {
+     "Same Day": {
+      "booked": 12,
+      "held": 12
+     },
+     "24 Hours": {
+      "booked": 1,
+      "held": 0
+     },
+     "2 to 4 days": {
+      "booked": 9,
+      "held": 3
+     },
+     "1 Week": {
+      "booked": 1,
+      "held": 3
+     },
+     ">1 Week": {
+      "booked": 11,
+      "held": 1
+     }
+    },
+    "Tue": {
+     "Same Day": {
+      "booked": 4,
+      "held": 4
+     },
+     "24 Hours": {
+      "booked": 0,
+      "held": 1
+     },
+     "2 to 4 days": {
+      "booked": 5,
+      "held": 3
+     },
+     "1 Week": {
+      "booked": 3,
+      "held": 0
+     },
+     ">1 Week": {
+      "booked": 7,
+      "held": 4
+     }
+    },
+    "Wed": {
+     "Same Day": {
+      "booked": 3,
+      "held": 3
+     },
+     "24 Hours": {
+      "booked": 1,
+      "held": 0
+     },
+     "2 to 4 days": {
+      "booked": 3,
+      "held": 3
+     },
+     "1 Week": {
+      "booked": 3,
+      "held": 5
+     },
+     ">1 Week": {
+      "booked": 4,
+      "held": 1
+     }
+    },
+    "Thu": {
+     "Same Day": {
+      "booked": 1,
+      "held": 1
+     },
+     "24 Hours": {
+      "booked": 1,
+      "held": 1
+     },
+     "2 to 4 days": {
+      "booked": 0,
+      "held": 4
+     },
+     "1 Week": {
+      "booked": 1,
+      "held": 0
+     },
+     ">1 Week": {
+      "booked": 0,
+      "held": 3
+     }
+    },
+    "Fri+Sat": {
+     "Same Day": {
+      "booked": 1,
+      "held": 1
+     },
+     "24 Hours": {
+      "booked": 0,
+      "held": 1
+     },
+     "2 to 4 days": {
+      "booked": 1,
+      "held": 5
+     },
+     "1 Week": {
+      "booked": 1,
+      "held": 0
+     },
+     ">1 Week": {
+      "booked": 1,
+      "held": 2
+     }
+    }
+   }
+  },
+  {
+   "week_start": "2026-07-26",
+   "groups": [
+    "Sun+Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri+Sat"
+   ],
+   "intervals": {
+    "Sun+Mon": {
+     "Same Day": {
+      "booked": 4,
+      "held": 4
+     },
+     "24 Hours": {
+      "booked": 4,
+      "held": 0
+     },
+     "2 to 4 days": {
+      "booked": 8,
+      "held": 0
+     },
+     "1 Week": {
+      "booked": 0,
+      "held": 4
+     },
+     ">1 Week": {
+      "booked": 4,
+      "held": 4
+     }
+    },
+    "Tue": {
+     "Same Day": {
+      "booked": 5,
+      "held": 5
+     },
+     "24 Hours": {
+      "booked": 4,
+      "held": 4
+     },
+     "2 to 4 days": {
+      "booked": 4,
+      "held": 5
+     },
+     "1 Week": {
+      "booked": 3,
+      "held": 4
+     },
+     ">1 Week": {
+      "booked": 8,
+      "held": 4
+     }
+    },
+    "Wed": {
+     "Same Day": {
+      "booked": 5,
+      "held": 5
+     },
+     "24 Hours": {
+      "booked": 1,
+      "held": 4
+     },
+     "2 to 4 days": {
+      "booked": 7,
+      "held": 2
+     },
+     "1 Week": {
+      "booked": 2,
+      "held": 1
+     },
+     ">1 Week": {
+      "booked": 9,
+      "held": 2
+     }
+    },
+    "Thu": {
+     "Same Day": {
+      "booked": 2,
+      "held": 2
+     },
+     "24 Hours": {
+      "booked": 0,
+      "held": 1
+     },
+     "2 to 4 days": {
+      "booked": 1,
+      "held": 6
+     },
+     "1 Week": {
+      "booked": 5,
+      "held": 0
+     },
+     ">1 Week": {
+      "booked": 3,
+      "held": 3
+     }
+    },
+    "Fri+Sat": {
+     "Same Day": {
+      "booked": 0,
+      "held": 0
+     },
+     "24 Hours": {
+      "booked": 0,
+      "held": 0
+     },
+     "2 to 4 days": {
+      "booked": 1,
+      "held": 8
+     },
+     "1 Week": {
+      "booked": 7,
+      "held": 0
+     },
+     ">1 Week": {
+      "booked": 7,
+      "held": 2
+     }
+    }
+   }
+  },
+  {
+   "week_start": "2026-08-02",
+   "groups": [
+    "Sun+Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri+Sat"
+   ],
+   "intervals": {
+    "Sun+Mon": {
+     "Same Day": {
+      "booked": 0,
+      "held": 0
+     },
+     "24 Hours": {
+      "booked": 0,
+      "held": 0
+     },
+     "2 to 4 days": {
+      "booked": 7,
+      "held": 0
+     },
+     "1 Week": {
+      "booked": 0,
+      "held": 3
+     },
+     ">1 Week": {
+      "booked": 12,
+      "held": 1
+     }
+    },
+    "Tue": {
+     "Same Day": {
+      "booked": 1,
+      "held": 1
+     },
+     "24 Hours": {
+      "booked": 0,
+      "held": 0
+     },
+     "2 to 4 days": {
+      "booked": 0,
+      "held": 1
+     },
+     "1 Week": {
+      "booked": 8,
+      "held": 5
+     },
+     ">1 Week": {
+      "booked": 10,
+      "held": 0
+     }
+    },
+    "Wed": {
+     "Same Day": {
+      "booked": 1,
+      "held": 1
+     },
+     "24 Hours": {
+      "booked": 3,
+      "held": 0
+     },
+     "2 to 4 days": {
+      "booked": 1,
+      "held": 4
+     },
+     "1 Week": {
+      "booked": 2,
+      "held": 5
+     },
+     ">1 Week": {
+      "booked": 3,
+      "held": 0
+     }
+    },
+    "Thu": {
+     "Same Day": {
+      "booked": 2,
+      "held": 2
+     },
+     "24 Hours": {
+      "booked": 1,
+      "held": 3
+     },
+     "2 to 4 days": {
+      "booked": 3,
+      "held": 1
+     },
+     "1 Week": {
+      "booked": 1,
+      "held": 1
+     },
+     ">1 Week": {
+      "booked": 0,
+      "held": 0
+     }
+    },
+    "Fri+Sat": {
+     "Same Day": {
+      "booked": 0,
+      "held": 0
+     },
+     "24 Hours": {
+      "booked": 0,
+      "held": 1
+     },
+     "2 to 4 days": {
+      "booked": 3,
+      "held": 4
+     },
+     "1 Week": {
+      "booked": 1,
+      "held": 3
+     },
+     ">1 Week": {
+      "booked": 0,
+      "held": 14
+     }
+    }
+   }
+  },
+  {
+   "week_start": "2026-08-09",
+   "groups": [
+    "Sun+Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri+Sat"
+   ],
+   "intervals": {
+    "Sun+Mon": {
+     "Same Day": {
+      "booked": 4,
+      "held": 4
+     },
+     "24 Hours": {
+      "booked": 0,
+      "held": 0
+     },
+     "2 to 4 days": {
+      "booked": 14,
+      "held": 5
+     },
+     "1 Week": {
+      "booked": 1,
+      "held": 4
+     },
+     ">1 Week": {
+      "booked": 4,
+      "held": 6
+     }
+    },
+    "Tue": {
+     "Same Day": {
+      "booked": 0,
+      "held": 0
+     },
+     "24 Hours": {
+      "booked": 1,
+      "held": 0
+     },
+     "2 to 4 days": {
+      "booked": 5,
+      "held": 2
+     },
+     "1 Week": {
+      "booked": 4,
+      "held": 7
+     },
+     ">1 Week": {
+      "booked": 9,
+      "held": 4
+     }
+    },
+    "Wed": {
+     "Same Day": {
+      "booked": 1,
+      "held": 1
+     },
+     "24 Hours": {
+      "booked": 0,
+      "held": 1
+     },
+     "2 to 4 days": {
+      "booked": 0,
+      "held": 6
+     },
+     "1 Week": {
+      "booked": 5,
+      "held": 0
+     },
+     ">1 Week": {
+      "booked": 6,
+      "held": 2
+     }
+    },
+    "Thu": {
+     "Same Day": {
+      "booked": 2,
+      "held": 2
+     },
+     "24 Hours": {
+      "booked": 0,
+      "held": 0
+     },
+     "2 to 4 days": {
+      "booked": 2,
+      "held": 4
+     },
+     "1 Week": {
+      "booked": 6,
+      "held": 0
+     },
+     ">1 Week": {
+      "booked": 3,
+      "held": 8
+     }
+    },
+    "Fri+Sat": {
+     "Same Day": {
+      "booked": 0,
+      "held": 0
+     },
+     "24 Hours": {
+      "booked": 0,
+      "held": 0
+     },
+     "2 to 4 days": {
+      "booked": 2,
+      "held": 8
+     },
+     "1 Week": {
+      "booked": 7,
+      "held": 1
+     },
+     ">1 Week": {
+      "booked": 4,
+      "held": 6
+     }
+    }
+   }
+  },
+  {
+   "week_start": "2026-08-16",
+   "groups": [
+    "Sun+Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri+Sat"
+   ],
+   "intervals": {
+    "Sun+Mon": {
+     "Same Day": {
+      "booked": 0,
+      "held": 0
+     },
+     "24 Hours": {
+      "booked": 0,
+      "held": 0
+     },
+     "2 to 4 days": {
+      "booked": 16,
+      "held": 2
+     },
+     "1 Week": {
+      "booked": 4,
+      "held": 6
+     },
+     ">1 Week": {
+      "booked": 11,
+      "held": 2
+     }
+    },
+    "Tue": {
+     "Same Day": {
+      "booked": 0,
+      "held": 0
+     },
+     "24 Hours": {
+      "booked": 2,
+      "held": 0
+     },
+     "2 to 4 days": {
+      "booked": 7,
+      "held": 1
+     },
+     "1 Week": {
+      "booked": 6,
+      "held": 7
+     },
+     ">1 Week": {
+      "booked": 6,
+      "held": 4
+     }
+    },
+    "Wed": {
+     "Same Day": {
+      "booked": 0,
+      "held": 0
+     },
+     "24 Hours": {
+      "booked": 0,
+      "held": 2
+     },
+     "2 to 4 days": {
+      "booked": 3,
+      "held": 3
+     },
+     "1 Week": {
+      "booked": 8,
+      "held": 6
+     },
+     ">1 Week": {
+      "booked": 16,
+      "held": 11
+     }
+    },
+    "Thu": {
+     "Same Day": {
+      "booked": 1,
+      "held": 1
+     },
+     "24 Hours": {
+      "booked": 1,
+      "held": 0
+     },
+     "2 to 4 days": {
+      "booked": 2,
+      "held": 6
+     },
+     "1 Week": {
+      "booked": 8,
+      "held": 1
+     },
+     ">1 Week": {
+      "booked": 5,
+      "held": 6
+     }
+    },
+    "Fri+Sat": {
+     "Same Day": {
+      "booked": 3,
+      "held": 3
+     },
+     "24 Hours": {
+      "booked": 0,
+      "held": 1
+     },
+     "2 to 4 days": {
+      "booked": 6,
+      "held": 17
+     },
+     "1 Week": {
+      "booked": 7,
+      "held": 4
+     },
+     ">1 Week": {
+      "booked": 6,
+      "held": 4
+     }
+    }
+   }
+  },
+  {
+   "week_start": "2026-08-23",
+   "groups": [
+    "Sun+Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri+Sat"
+   ],
+   "intervals": {
+    "Sun+Mon": {
+     "Same Day": {
+      "booked": 2,
+      "held": 2
+     },
+     "24 Hours": {
+      "booked": 3,
+      "held": 1
+     },
+     "2 to 4 days": {
+      "booked": 8,
+      "held": 3
+     },
+     "1 Week": {
+      "booked": 2,
+      "held": 11
+     },
+     ">1 Week": {
+      "booked": 16,
+      "held": 9
+     }
+    },
+    "Tue": {
+     "Same Day": {
+      "booked": 4,
+      "held": 4
+     },
+     "24 Hours": {
+      "booked": 0,
+      "held": 2
+     },
+     "2 to 4 days": {
+      "booked": 0,
+      "held": 4
+     },
+     "1 Week": {
+      "booked": 6,
+      "held": 8
+     },
+     ">1 Week": {
+      "booked": 6,
+      "held": 2
+     }
+    },
+    "Wed": {
+     "Same Day": {
+      "booked": 1,
+      "held": 1
+     },
+     "24 Hours": {
+      "booked": 0,
+      "held": 0
+     },
+     "2 to 4 days": {
+      "booked": 2,
+      "held": 3
+     },
+     "1 Week": {
+      "booked": 1,
+      "held": 8
+     },
+     ">1 Week": {
+      "booked": 2,
+      "held": 1
+     }
+    },
+    "Thu": {
+     "Same Day": {
+      "booked": 1,
+      "held": 1
+     },
+     "24 Hours": {
+      "booked": 0,
+      "held": 0
+     },
+     "2 to 4 days": {
+      "booked": 3,
+      "held": 5
+     },
+     "1 Week": {
+      "booked": 10,
+      "held": 3
+     },
+     ">1 Week": {
+      "booked": 13,
+      "held": 0
+     }
+    },
+    "Fri+Sat": {
+     "Same Day": {
+      "booked": 2,
+      "held": 2
+     },
+     "24 Hours": {
+      "booked": 0,
+      "held": 0
+     },
+     "2 to 4 days": {
+      "booked": 1,
+      "held": 5
+     },
+     "1 Week": {
+      "booked": 13,
+      "held": 2
+     },
+     ">1 Week": {
+      "booked": 4,
+      "held": 19
+     }
+    }
+   }
+  },
+  {
+   "week_start": "2026-08-30",
+   "groups": [
+    "Sun+Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri+Sat"
+   ],
+   "intervals": {
+    "Sun+Mon": {
+     "Same Day": {
+      "booked": 0,
+      "held": 0
+     },
+     "24 Hours": {
+      "booked": 1,
+      "held": 0
+     },
+     "2 to 4 days": {
+      "booked": 8,
+      "held": 1
+     },
+     "1 Week": {
+      "booked": 2,
+      "held": 3
+     },
+     ">1 Week": {
+      "booked": 10,
+      "held": 12
+     }
+    },
+    "Tue": {
+     "Same Day": {
+      "booked": 0,
+      "held": 0
+     },
+     "24 Hours": {
+      "booked": 0,
+      "held": 1
+     },
+     "2 to 4 days": {
+      "booked": 4,
+      "held": 1
+     },
+     "1 Week": {
+      "booked": 1,
+      "held": 10
+     },
+     ">1 Week": {
+      "booked": 3,
+      "held": 10
+     }
+    },
+    "Wed": {
+     "Same Day": {
+      "booked": 2,
+      "held": 2
+     },
+     "24 Hours": {
+      "booked": 0,
+      "held": 0
+     },
+     "2 to 4 days": {
+      "booked": 2,
+      "held": 1
+     },
+     "1 Week": {
+      "booked": 3,
+      "held": 9
+     },
+     ">1 Week": {
+      "booked": 5,
+      "held": 8
+     }
+    },
+    "Thu": {
+     "Same Day": {
+      "booked": 0,
+      "held": 0
+     },
+     "24 Hours": {
+      "booked": 0,
+      "held": 0
+     },
+     "2 to 4 days": {
+      "booked": 0,
+      "held": 10
+     },
+     "1 Week": {
+      "booked": 5,
+      "held": 7
+     },
+     ">1 Week": {
+      "booked": 6,
+      "held": 2
+     }
+    },
+    "Fri+Sat": {
+     "Same Day": {
+      "booked": 0,
+      "held": 0
+     },
+     "24 Hours": {
+      "booked": 0,
+      "held": 0
+     },
+     "2 to 4 days": {
+      "booked": 0,
+      "held": 3
+     },
+     "1 Week": {
+      "booked": 5,
+      "held": 4
+     },
+     ">1 Week": {
+      "booked": 4,
+      "held": 6
+     }
+    }
+   }
+  },
+  {
+   "week_start": "2026-09-06",
+   "groups": [
+    "Sun+Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri+Sat"
+   ],
+   "intervals": {
+    "Sun+Mon": {
+     "Same Day": {
+      "booked": 0,
+      "held": 0
+     },
+     "24 Hours": {
+      "booked": 0,
+      "held": 0
+     },
+     "2 to 4 days": {
+      "booked": 5,
+      "held": 0
+     },
+     "1 Week": {
+      "booked": 2,
+      "held": 2
+     },
+     ">1 Week": {
+      "booked": 1,
+      "held": 6
+     }
+    },
+    "Tue": {
+     "Same Day": {
+      "booked": 0,
+      "held": 0
+     },
+     "24 Hours": {
+      "booked": 0,
+      "held": 0
+     },
+     "2 to 4 days": {
+      "booked": 3,
+      "held": 0
+     },
+     "1 Week": {
+      "booked": 4,
+      "held": 6
+     },
+     ">1 Week": {
+      "booked": 7,
+      "held": 4
+     }
+    },
+    "Wed": {
+     "Same Day": {
+      "booked": 2,
+      "held": 2
+     },
+     "24 Hours": {
+      "booked": 0,
+      "held": 0
+     },
+     "2 to 4 days": {
+      "booked": 1,
+      "held": 1
+     },
+     "1 Week": {
+      "booked": 7,
+      "held": 3
+     },
+     ">1 Week": {
+      "booked": 6,
+      "held": 7
+     }
+    },
+    "Thu": {
+     "Same Day": {
+      "booked": 0,
+      "held": 0
+     },
+     "24 Hours": {
+      "booked": 1,
+      "held": 0
+     },
+     "2 to 4 days": {
+      "booked": 2,
+      "held": 8
+     },
+     "1 Week": {
+      "booked": 3,
+      "held": 2
+     },
+     ">1 Week": {
+      "booked": 0,
+      "held": 6
+     }
+    },
+    "Fri+Sat": {
+     "Same Day": {
+      "booked": 2,
+      "held": 2
+     },
+     "24 Hours": {
+      "booked": 0,
+      "held": 1
+     },
+     "2 to 4 days": {
+      "booked": 6,
+      "held": 0
+     },
+     "1 Week": {
+      "booked": 11,
+      "held": 3
+     },
+     ">1 Week": {
+      "booked": 8,
+      "held": 3
+     }
+    }
+   }
+  },
+  {
+   "week_start": "2026-09-13",
+   "groups": [
+    "Sun+Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri+Sat"
+   ],
+   "intervals": {
+    "Sun+Mon": {
+     "Same Day": {
+      "booked": 1,
+      "held": 1
+     },
+     "24 Hours": {
+      "booked": 0,
+      "held": 0
+     },
+     "2 to 4 days": {
+      "booked": 15,
+      "held": 3
+     },
+     "1 Week": {
+      "booked": 6,
+      "held": 1
+     },
+     ">1 Week": {
+      "booked": 11,
+      "held": 9
+     }
+    },
+    "Tue": {
+     "Same Day": {
+      "booked": 0,
+      "held": 0
+     },
+     "24 Hours": {
+      "booked": 0,
+      "held": 0
+     },
+     "2 to 4 days": {
+      "booked": 4,
+      "held": 3
+     },
+     "1 Week": {
+      "booked": 3,
+      "held": 10
+     },
+     ">1 Week": {
+      "booked": 5,
+      "held": 5
+     }
+    },
+    "Wed": {
+     "Same Day": {
+      "booked": 2,
+      "held": 2
+     },
+     "24 Hours": {
+      "booked": 0,
+      "held": 0
+     },
+     "2 to 4 days": {
+      "booked": 1,
+      "held": 10
+     },
+     "1 Week": {
+      "booked": 4,
+      "held": 7
+     },
+     ">1 Week": {
+      "booked": 6,
+      "held": 4
+     }
+    },
+    "Thu": {
+     "Same Day": {
+      "booked": 2,
+      "held": 2
+     },
+     "24 Hours": {
+      "booked": 0,
+      "held": 0
+     },
+     "2 to 4 days": {
+      "booked": 3,
+      "held": 5
+     },
+     "1 Week": {
+      "booked": 4,
+      "held": 7
+     },
+     ">1 Week": {
+      "booked": 4,
+      "held": 8
+     }
+    },
+    "Fri+Sat": {
+     "Same Day": {
+      "booked": 2,
+      "held": 2
+     },
+     "24 Hours": {
+      "booked": 0,
+      "held": 0
+     },
+     "2 to 4 days": {
+      "booked": 2,
+      "held": 8
+     },
+     "1 Week": {
+      "booked": 8,
+      "held": 1
+     },
+     ">1 Week": {
+      "booked": 2,
+      "held": 4
+     }
+    }
+   }
+  },
+  {
+   "week_start": "2026-09-20",
+   "groups": [
+    "Sun+Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri+Sat"
+   ],
+   "intervals": {
+    "Sun+Mon": {
+     "Same Day": {
+      "booked": 3,
+      "held": 3
+     },
+     "24 Hours": {
+      "booked": 1,
+      "held": 0
+     },
+     "2 to 4 days": {
+      "booked": 10,
+      "held": 2
+     },
+     "1 Week": {
+      "booked": 4,
+      "held": 8
+     },
+     ">1 Week": {
+      "booked": 13,
+      "held": 5
+     }
+    },
+    "Tue": {
+     "Same Day": {
+      "booked": 1,
+      "held": 1
+     },
+     "24 Hours": {
+      "booked": 0,
+      "held": 1
+     },
+     "2 to 4 days": {
+      "booked": 8,
+      "held": 1
+     },
+     "1 Week": {
+      "booked": 2,
+      "held": 4
+     },
+     ">1 Week": {
+      "booked": 2,
+      "held": 7
+     }
+    },
+    "Wed": {
+     "Same Day": {
+      "booked": 1,
+      "held": 1
+     },
+     "24 Hours": {
+      "booked": 0,
+      "held": 0
+     },
+     "2 to 4 days": {
+      "booked": 4,
+      "held": 4
+     },
+     "1 Week": {
+      "booked": 0,
+      "held": 8
+     },
+     ">1 Week": {
+      "booked": 0,
+      "held": 6
+     }
+    },
+    "Thu": {
+     "Same Day": {
+      "booked": 0,
+      "held": 0
+     },
+     "24 Hours": {
+      "booked": 1,
+      "held": 0
+     },
+     "2 to 4 days": {
+      "booked": 5,
+      "held": 10
+     },
+     "1 Week": {
+      "booked": 6,
+      "held": 2
+     },
+     ">1 Week": {
+      "booked": 2,
+      "held": 12
+     }
+    },
+    "Fri+Sat": {
+     "Same Day": {
+      "booked": 1,
+      "held": 1
+     },
+     "24 Hours": {
+      "booked": 0,
+      "held": 1
+     },
+     "2 to 4 days": {
+      "booked": 5,
+      "held": 10
+     },
+     "1 Week": {
+      "booked": 3,
+      "held": 3
+     },
+     ">1 Week": {
+      "booked": 6,
+      "held": 3
+     }
+    }
+   }
+  },
+  {
+   "week_start": "2026-09-27",
+   "groups": [
+    "Sun+Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri+Sat"
+   ],
+   "intervals": {
+    "Sun+Mon": {
+     "Same Day": {
+      "booked": 0,
+      "held": 0
+     },
+     "24 Hours": {
+      "booked": 0,
+      "held": 0
+     },
+     "2 to 4 days": {
+      "booked": 4,
+      "held": 5
+     },
+     "1 Week": {
+      "booked": 1,
+      "held": 5
+     },
+     ">1 Week": {
+      "booked": 2,
+      "held": 9
+     }
+    },
+    "Tue": {
+     "Same Day": {
+      "booked": 1,
+      "held": 1
+     },
+     "24 Hours": {
+      "booked": 1,
+      "held": 0
+     },
+     "2 to 4 days": {
+      "booked": 4,
+      "held": 4
+     },
+     "1 Week": {
+      "booked": 0,
+      "held": 5
+     },
+     ">1 Week": {
+      "booked": 4,
+      "held": 14
+     }
+    },
+    "Wed": {
+     "Same Day": {
+      "booked": 2,
+      "held": 2
+     },
+     "24 Hours": {
+      "booked": 1,
+      "held": 1
+     },
+     "2 to 4 days": {
+      "booked": 5,
+      "held": 2
+     },
+     "1 Week": {
+      "booked": 1,
+      "held": 3
+     },
+     ">1 Week": {
+      "booked": 0,
+      "held": 12
+     }
+    },
+    "Thu": {
+     "Same Day": {
+      "booked": 2,
+      "held": 2
+     },
+     "24 Hours": {
+      "booked": 0,
+      "held": 1
+     },
+     "2 to 4 days": {
+      "booked": 3,
+      "held": 6
+     },
+     "1 Week": {
+      "booked": 3,
+      "held": 2
+     },
+     ">1 Week": {
+      "booked": 6,
+      "held": 14
+     }
+    },
+    "Fri+Sat": {
+     "Same Day": {
+      "booked": 1,
+      "held": 1
+     },
+     "24 Hours": {
+      "booked": 0,
+      "held": 0
+     },
+     "2 to 4 days": {
+      "booked": 8,
+      "held": 5
+     },
+     "1 Week": {
+      "booked": 1,
+      "held": 0
+     },
+     ">1 Week": {
+      "booked": 0,
+      "held": 2
+     }
+    }
+   }
+  },
+  {
+   "week_start": "2026-10-04",
+   "groups": [
+    "Sun+Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri+Sat"
+   ],
+   "intervals": {
+    "Sun+Mon": {
+     "Same Day": {
+      "booked": 0,
+      "held": 0
+     },
+     "24 Hours": {
+      "booked": 2,
+      "held": 0
+     },
+     "2 to 4 days": {
+      "booked": 12,
+      "held": 5
+     },
+     "1 Week": {
+      "booked": 10,
+      "held": 2
+     },
+     ">1 Week": {
+      "booked": 4,
+      "held": 4
+     }
+    },
+    "Tue": {
+     "Same Day": {
+      "booked": 4,
+      "held": 4
+     },
+     "24 Hours": {
+      "booked": 0,
+      "held": 2
+     },
+     "2 to 4 days": {
+      "booked": 9,
+      "held": 5
+     },
+     "1 Week": {
+      "booked": 5,
+      "held": 2
+     },
+     ">1 Week": {
+      "booked": 2,
+      "held": 3
+     }
+    },
+    "Wed": {
+     "Same Day": {
+      "booked": 3,
+      "held": 3
+     },
+     "24 Hours": {
+      "booked": 0,
+      "held": 0
+     },
+     "2 to 4 days": {
+      "booked": 0,
+      "held": 12
+     },
+     "1 Week": {
+      "booked": 0,
+      "held": 2
+     },
+     ">1 Week": {
+      "booked": 0,
+      "held": 5
+     }
+    },
+    "Thu": {
+     "Same Day": {
+      "booked": 3,
+      "held": 3
+     },
+     "24 Hours": {
+      "booked": 0,
+      "held": 0
+     },
+     "2 to 4 days": {
+      "booked": 0,
+      "held": 5
+     },
+     "1 Week": {
+      "booked": 3,
+      "held": 0
+     },
+     ">1 Week": {
+      "booked": 1,
+      "held": 3
+     }
+    },
+    "Fri+Sat": {
+     "Same Day": {
+      "booked": 0,
+      "held": 0
+     },
+     "24 Hours": {
+      "booked": 0,
+      "held": 0
+     },
+     "2 to 4 days": {
+      "booked": 2,
+      "held": 5
+     },
+     "1 Week": {
+      "booked": 2,
+      "held": 10
+     },
+     ">1 Week": {
+      "booked": 0,
+      "held": 6
+     }
+    }
+   }
+  },
+  {
+   "week_start": "2026-10-11",
+   "groups": [
+    "Sun+Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri+Sat"
+   ],
+   "intervals": {
+    "Sun+Mon": {
+     "Same Day": {
+      "booked": 0,
+      "held": 0
+     },
+     "24 Hours": {
+      "booked": 0,
+      "held": 0
+     },
+     "2 to 4 days": {
+      "booked": 6,
+      "held": 0
+     },
+     "1 Week": {
+      "booked": 0,
+      "held": 1
+     },
+     ">1 Week": {
+      "booked": 1,
+      "held": 1
+     }
+    },
+    "Tue": {
+     "Same Day": {
+      "booked": 1,
+      "held": 1
+     },
+     "24 Hours": {
+      "booked": 2,
+      "held": 0
+     },
+     "2 to 4 days": {
+      "booked": 5,
+      "held": 3
+     },
+     "1 Week": {
+      "booked": 1,
+      "held": 6
+     },
+     ">1 Week": {
+      "booked": 0,
+      "held": 9
+     }
+    },
+    "Wed": {
+     "Same Day": {
+      "booked": 3,
+      "held": 3
+     },
+     "24 Hours": {
+      "booked": 0,
+      "held": 2
+     },
+     "2 to 4 days": {
+      "booked": 3,
+      "held": 4
+     },
+     "1 Week": {
+      "booked": 0,
+      "held": 3
+     },
+     ">1 Week": {
+      "booked": 1,
+      "held": 2
+     }
+    },
+    "Thu": {
+     "Same Day": {
+      "booked": 0,
+      "held": 0
+     },
+     "24 Hours": {
+      "booked": 0,
+      "held": 0
+     },
+     "2 to 4 days": {
+      "booked": 2,
+      "held": 6
+     },
+     "1 Week": {
+      "booked": 0,
+      "held": 0
+     },
+     ">1 Week": {
+      "booked": 0,
+      "held": 4
+     }
+    },
+    "Fri+Sat": {
+     "Same Day": {
+      "booked": 1,
+      "held": 1
+     },
+     "24 Hours": {
+      "booked": 0,
+      "held": 0
+     },
+     "2 to 4 days": {
+      "booked": 2,
+      "held": 3
+     },
+     "1 Week": {
+      "booked": 1,
+      "held": 0
+     },
+     ">1 Week": {
+      "booked": 0,
+      "held": 5
+     }
+    }
+   }
+  },
+  {
+   "week_start": "2026-10-18",
+   "groups": [
+    "Sun+Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri+Sat"
+   ],
+   "intervals": {
+    "Sun+Mon": {
+     "Same Day": {
+      "booked": 0,
+      "held": 0
+     },
+     "24 Hours": {
+      "booked": 0,
+      "held": 0
+     },
+     "2 to 4 days": {
+      "booked": 0,
+      "held": 3
+     },
+     "1 Week": {
+      "booked": 0,
+      "held": 0
+     },
+     ">1 Week": {
+      "booked": 2,
+      "held": 9
+     }
+    },
+    "Tue": {
+     "Same Day": {
+      "booked": 1,
+      "held": 1
+     },
+     "24 Hours": {
+      "booked": 0,
+      "held": 0
+     },
+     "2 to 4 days": {
+      "booked": 4,
+      "held": 1
+     },
+     "1 Week": {
+      "booked": 0,
+      "held": 1
+     },
+     ">1 Week": {
+      "booked": 0,
+      "held": 2
+     }
+    },
+    "Wed": {
+     "Same Day": {
+      "booked": 0,
+      "held": 0
+     },
+     "24 Hours": {
+      "booked": 0,
+      "held": 0
+     },
+     "2 to 4 days": {
+      "booked": 1,
+      "held": 1
+     },
+     "1 Week": {
+      "booked": 0,
+      "held": 0
+     },
+     ">1 Week": {
+      "booked": 1,
+      "held": 0
+     }
+    },
+    "Thu": {
+     "Same Day": {
+      "booked": 5,
+      "held": 5
+     },
+     "24 Hours": {
+      "booked": 1,
+      "held": 0
+     },
+     "2 to 4 days": {
+      "booked": 0,
+      "held": 1
+     },
+     "1 Week": {
+      "booked": 0,
+      "held": 0
+     },
+     ">1 Week": {
+      "booked": 0,
+      "held": 1
+     }
+    },
+    "Fri+Sat": {
+     "Same Day": {
+      "booked": 2,
+      "held": 2
+     },
+     "24 Hours": {
+      "booked": 0,
+      "held": 1
+     },
+     "2 to 4 days": {
+      "booked": 3,
+      "held": 3
+     },
+     "1 Week": {
+      "booked": 0,
+      "held": 1
+     },
+     ">1 Week": {
+      "booked": 0,
+      "held": 3
+     }
+    }
+   }
+  },
+  {
+   "week_start": "2026-10-25",
+   "groups": [
+    "Sun+Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri+Sat"
+   ],
+   "intervals": {
+    "Sun+Mon": {
+     "Same Day": {
+      "booked": 0,
+      "held": 0
+     },
+     "24 Hours": {
+      "booked": 0,
+      "held": 0
+     },
+     "2 to 4 days": {
+      "booked": 3,
+      "held": 2
+     },
+     "1 Week": {
+      "booked": 0,
+      "held": 0
+     },
+     ">1 Week": {
+      "booked": 0,
+      "held": 3
+     }
+    },
+    "Tue": {
+     "Same Day": {
+      "booked": 0,
+      "held": 0
+     },
+     "24 Hours": {
+      "booked": 0,
+      "held": 0
+     },
+     "2 to 4 days": {
+      "booked": 1,
+      "held": 3
+     },
+     "1 Week": {
+      "booked": 0,
+      "held": 0
+     },
+     ">1 Week": {
+      "booked": 0,
+      "held": 1
+     }
+    },
+    "Wed": {
+     "Same Day": {
+      "booked": 0,
+      "held": 0
+     },
+     "24 Hours": {
+      "booked": 0,
+      "held": 0
+     },
+     "2 to 4 days": {
+      "booked": 0,
+      "held": 2
+     },
+     "1 Week": {
+      "booked": 0,
+      "held": 0
+     },
+     ">1 Week": {
+      "booked": 0,
+      "held": 3
+     }
+    },
+    "Thu": {
+     "Same Day": {
+      "booked": 3,
+      "held": 3
+     },
+     "24 Hours": {
+      "booked": 0,
+      "held": 0
+     },
+     "2 to 4 days": {
+      "booked": 0,
+      "held": 0
+     },
+     "1 Week": {
+      "booked": 0,
+      "held": 0
+     },
+     ">1 Week": {
+      "booked": 0,
+      "held": 3
+     }
+    },
+    "Fri+Sat": {
+     "Same Day": {
+      "booked": 0,
+      "held": 0
+     },
+     "24 Hours": {
+      "booked": 0,
+      "held": 0
+     },
+     "2 to 4 days": {
+      "booked": 0,
+      "held": 0
+     },
+     "1 Week": {
+      "booked": 0,
+      "held": 0
+     },
+     ">1 Week": {
+      "booked": 0,
+      "held": 0
+     }
+    }
+   }
+  }
+ ]
+}

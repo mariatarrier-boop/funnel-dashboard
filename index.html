@@ -140,7 +140,7 @@
   <!-- TAB 2: Conversion Rate -->
   <section id="page-conversion" class="hidden">
     <h1 class="page-title">Conversion Rate</h1>
-    <p class="page-sub">How quickly booked demos get held. Editable entries save automatically.</p>
+    <p class="page-sub" id="convStatus">How quickly booked demos get held. Auto-filled from Pipedrive; type in a cell to override.</p>
     <div class="toolbar">
       <label for="convDatePicker">Select a day</label>
       <input type="date" id="convDatePicker">
@@ -476,7 +476,44 @@ document.querySelectorAll(".nav-item").forEach(btn => {
 const CONV_INTERVALS = ["Same Day", "24 Hours", "2 to 4 days", "1 Week", ">1 Week"];
 const CONV_STORAGE_KEY = "funnelDashboard.conversion.v1";  // { "YYYY-MM-DD": { interval: { booked: n, held: n } } }
 let convData = {};
+const CONV_SNAPSHOT_URL = "conversion-intervals.json";
+let convSnapshot = {};     // { "YYYY-MM-DD": { interval: { booked, held } } }
 try { convData = JSON.parse(localStorage.getItem(CONV_STORAGE_KEY)) || {}; } catch (e) { convData = {}; }
+
+async function loadConvSnapshot() {
+  try {
+    const res = await fetch(CONV_SNAPSHOT_URL, { cache: "no-store" });
+    if (!res.ok) throw new Error("HTTP " + res.status);
+    const snap = await res.json();
+    convSnapshot = {};
+    const GROUPS = ["Sun+Mon","Tue","Wed","Thu","Fri+Sat"];
+    for (const w of snap.weekly) {
+      const ws = new Date(w.week_start + "T00:00:00");
+      const dayIso = off => {
+        const d = new Date(ws); d.setDate(d.getDate() + off);
+        return iso(d);
+      };
+      const groupDays = [[dayIso(0), dayIso(1)], [dayIso(2)], [dayIso(3)], [dayIso(4)], [dayIso(5), dayIso(6)]];
+      for (let gi = 0; gi < GROUPS.length; gi++) {
+        const g = (w.intervals || {})[GROUPS[gi]] || {};
+        for (const dayIsoStr of groupDays[gi]) {
+          convSnapshot[dayIsoStr] = convSnapshot[dayIsoStr] || {};
+          for (const interval of CONV_INTERVALS) {
+            const rec = g[interval] || {};
+            convSnapshot[dayIsoStr][interval] = { booked: Number(rec.booked) || 0, held: Number(rec.held) || 0 };
+          }
+        }
+      }
+    }
+    document.getElementById("convStatus").innerHTML =
+      `Pipedrive data from <b>${snap.generated}</b> — booked = day deal entered Qualified, held = day it entered Demo Held+ ` +
+      `(matched to the most recent booking). Type in a cell to override.`;
+    renderConversion();
+  } catch (err) {
+    document.getElementById("convStatus").textContent =
+      "Failed to load conversion snapshot (" + err.message + ") — manual entries only";
+  }
+}
 function saveConv() { localStorage.setItem(CONV_STORAGE_KEY, JSON.stringify(convData)); }
 let convSelectedDate = null;   // separate date for the Conversion tab
 
@@ -501,9 +538,10 @@ function renderConversion() {
     let totB = 0, totH = 0;
     for (const d of days) {
       const k = iso(d);
-      const rec = (convData[k] || {})[interval] || {};
-      const b = Number.isFinite(Number(rec.booked)) ? Number(rec.booked) : 0;
-      const h = Number.isFinite(Number(rec.held)) ? Number(rec.held) : 0;
+      const snap = (convSnapshot[k] || {})[interval] || {};
+      const over = (convData[k] || {})[interval] || {};
+      const b = Number.isFinite(Number(over.booked)) ? Number(over.booked) : (Number(snap.booked) || 0);
+      const h = Number.isFinite(Number(over.held)) ? Number(over.held) : (Number(snap.held) || 0);
       totB += b; totH += h;
       html += `<td class="count-cell">
         <input type="number" min="0" step="1" value="${b}" data-date="${k}" data-interval="${interval}" data-field="booked" title="Demo Booked">
@@ -533,9 +571,11 @@ function renderConvTotals() {
   CONV_INTERVALS.forEach((interval, r) => {
     let totB = 0, totH = 0;
     for (const d of days) {
-      const rec = (convData[iso(d)] || {})[interval] || {};
-      totB += Number(rec.booked) || 0;
-      totH += Number(rec.held) || 0;
+      const k = iso(d);
+      const snap = (convSnapshot[k] || {})[interval] || {};
+      const over = (convData[k] || {})[interval] || {};
+      totB += Number.isFinite(Number(over.booked)) ? Number(over.booked) : (Number(snap.booked) || 0);
+      totH += Number.isFinite(Number(over.held)) ? Number(over.held) : (Number(snap.held) || 0);
     }
     rows[r].querySelector("td.total-col").textContent = pct(totH, totB);
   });
@@ -586,6 +626,7 @@ buildContainers();
 render();
 initConvPicker();
 renderConversion();
+loadConvSnapshot();
 importSheet();
 /* ================= Pipeline Funnel (Pipedrive snapshot) ================= */
 const PIPE_URL = "pipeline.json";
