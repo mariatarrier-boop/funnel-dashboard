@@ -443,6 +443,9 @@ document.querySelectorAll(".nav-item").forEach(btn => {
     document.querySelectorAll(".nav-item").forEach(b => b.classList.remove("active"));
     btn.classList.add("active");
     ["full-funnel", "conversion", "campaign", "lead-quality"].forEach(id =>
+      document.getElementById("page-" + id).classList.toggle("hidden", id !== btn.dataset.page));
+  });
+});
 
 function renderConversion() {
   const days = mondaysOfSelectedWeek(selectedDate);
@@ -499,9 +502,6 @@ function renderConvTotals() {
     rows[r].querySelector("td.total-col").textContent = pct(totH, totB);
   });
 }
-      document.getElementById("page-" + id).classList.toggle("hidden", id !== btn.dataset.page));
-  });
-});
 
 const picker = document.getElementById("datePicker");
 function initPicker() {
