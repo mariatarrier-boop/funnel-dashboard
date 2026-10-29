@@ -1,0 +1,67 @@
+{
+ "generated": "2026-10-29 19:43 UTC",
+ "rule": "Booked = entered Qualified; Held = entered Demo Held or later (by stage-change date)",
+ "weekly": [
+  {
+   "week_start": "2026-08-30",
+   "booked": 120,
+   "held": 2
+  },
+  {
+   "week_start": "2026-09-06",
+   "booked": 109,
+   "held": 13
+  },
+  {
+   "week_start": "2026-09-13",
+   "booked": 137,
+   "held": 57
+  },
+  {
+   "week_start": "2026-09-20",
+   "booked": 131,
+   "held": 58
+  },
+  {
+   "week_start": "2026-09-27",
+   "booked": 85,
+   "held": 57
+  },
+  {
+   "week_start": "2026-10-04",
+   "booked": 29,
+   "held": 21
+  },
+  {
+   "week_start": "2026-10-11",
+   "booked": 15,
+   "held": 8
+  },
+  {
+   "week_start": "2026-10-18",
+   "booked": 0,
+   "held": 2
+  },
+  {
+   "week_start": "2026-10-25",
+   "booked": 1,
+   "held": 1
+  }
+ ],
+ "monthly": [
+  {
+   "month": "2026-09",
+   "booked": 566,
+   "held": 173
+  },
+  {
+   "month": "2026-10",
+   "booked": 61,
+   "held": 46
+  }
+ ],
+ "totals": {
+  "booked": 627,
+  "held": 219
+ }
+}

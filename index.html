@@ -111,6 +111,7 @@
   <div class="logo"><span class="logo-dot"></span>Funnel Dashboard</div>
   <button class="nav-item active" data-page="full-funnel"><span class="icon">📊</span>Full Funnel Performance</button>
   <button class="nav-item" data-page="conversion"><span class="icon">📈</span>Conversion Rate</button>
+  <button class="nav-item" data-page="pipeline"><span class="icon">🚀</span>Pipeline Funnel</button>
   <button class="nav-item" data-page="campaign"><span class="icon">🎯</span>Campaign Performance</button>
   <button class="nav-item" data-page="lead-quality"><span class="icon">⭐</span>Lead Quality</button>
   <div class="footer">v1.4 &middot; week = Sun&ndash;Sat &middot; sheet-linked</div>
@@ -149,6 +150,22 @@
       <h2>Conversion Rate</h2>
       <p class="table-sub">Conversion Rate = Demo Held &divide; Demo Booked for each interval. Each day column has two rows of cells: <b>Booked</b> (top) and <b>Held</b> (bottom).</p>
       <table id="convTable"><thead id="convHead"></thead><tbody id="convBody"></tbody></table>
+    </div>
+  </section>
+
+  <!-- TAB: Pipeline Funnel (Pipedrive) -->
+  <section id="page-pipeline" class="hidden">
+    <h1 class="page-title">Pipeline Funnel</h1>
+    <p class="page-sub" id="pipeStatus">Loading Pipedrive data…</p>
+    <div class="table-card">
+      <h2>Booked vs Held — Weekly</h2>
+      <p class="table-sub">Week starts Sunday. Booked = deal entered Qualified; Held = entered Demo Held or later. Counts by stage-change date.</p>
+      <table id="pipeWeekly"><thead id="pipeWeeklyHead"></thead><tbody id="pipeWeeklyBody"></tbody></table>
+    </div>
+    <div class="table-card">
+      <h2>Booked vs Held — Monthly</h2>
+      <p class="table-sub">Same rule, grouped by calendar month.</p>
+      <table id="pipeMonthly"><thead id="pipeMonthlyHead"></thead><tbody id="pipeMonthlyBody"></tbody></table>
     </div>
   </section>
 
@@ -450,7 +467,7 @@ document.querySelectorAll(".nav-item").forEach(btn => {
   btn.addEventListener("click", () => {
     document.querySelectorAll(".nav-item").forEach(b => b.classList.remove("active"));
     btn.classList.add("active");
-    ["full-funnel", "conversion", "campaign", "lead-quality"].forEach(id =>
+    ["full-funnel", "conversion", "pipeline", "campaign", "lead-quality"].forEach(id =>
       document.getElementById("page-" + id).classList.toggle("hidden", id !== btn.dataset.page));
   });
 });
@@ -570,6 +587,53 @@ render();
 initConvPicker();
 renderConversion();
 importSheet();
+renderPipeline();
+
+/* ================= Pipeline Funnel (Pipedrive snapshot) ================= */
+const PIPE_URL = "pipeline.json";
+let pipeData = null;
+
+async function renderPipeline() {
+  const status = document.getElementById("pipeStatus");
+  try {
+    const res = await fetch(PIPE_URL, { cache: "no-store" });
+    if (!res.ok) throw new Error("HTTP " + res.status);
+    pipeData = await res.json();
+    status.innerHTML =
+      `Pipedrive data from <b>${pipeData.generated}</b> — rule: ${pipeData.rule}. ` +
+      `Totals: ${pipeData.totals.booked} booked, ${pipeData.totals.held} held ` +
+      `(${pct(pipeData.totals.held, pipeData.totals.booked)} held rate).`;
+    renderPipeWeekly();
+    renderPipeMonthly();
+  } catch (err) {
+    status.textContent = "Failed to load Pipedrive snapshot (" + err.message + ")";
+  }
+}
+
+function renderPipeWeekly() {
+  const rows = pipeData.weekly;
+  document.getElementById("pipeWeeklyHead").innerHTML = "<tr>" +
+    `<th class="kpi-col">Week (starts Sunday)</th><th>Booked</th><th>Held</th><th class="total-col">Held Rate</th></tr>`;
+  document.getElementById("pipeWeeklyBody").innerHTML = rows.map(r => {
+    const sun = new Date(r.week_start + "T00:00:00");
+    const sat = new Date(sun); sat.setDate(sat.getDate() + 6);
+    return `<tr><td class="kpi-col">${fmt(sun)} – ${fmt(sat)}</td>` +
+      `<td>${r.booked}</td><td>${r.held}</td>` +
+      `<td class="total-col rate-cell">${pct(r.held, r.booked)}</td></tr>`;
+  }).join("");
+}
+
+function renderPipeMonthly() {
+  const rows = pipeData.monthly;
+  document.getElementById("pipeMonthlyHead").innerHTML = "<tr>" +
+    `<th class="kpi-col">Month</th><th>Booked</th><th>Held</th><th class="total-col">Held Rate</th></tr>`;
+  document.getElementById("pipeMonthlyBody").innerHTML = rows.map(r => {
+    const [y, m] = r.month.split("-").map(Number);
+    return `<tr><td class="kpi-col">${MONTHS[m-1]} ${y}</td>` +
+      `<td>${r.booked}</td><td>${r.held}</td>` +
+      `<td class="total-col rate-cell">${pct(r.held, r.booked)}</td></tr>`;
+  }).join("");
+}
 </script>
 </body>
 </html>
