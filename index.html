@@ -93,6 +93,8 @@
   td.count-cell input:hover { border-color: #cbd5e1; background: #fff; }
   td.count-cell input:focus { outline: none; border-color: #2563eb; background: #fff; }
   td.count-cell input.sheet-filled { color: #334155; }
+  /* Booked / Held stacked labels under date headers */
+  .bh-labels { display: flex; gap: 34px; justify-content: center; font-size: 10px; font-weight: 600; color: #94a3b8; text-transform: none; letter-spacing: 0; margin-top: 2px; }
   /* ---------- Placeholder pages ---------- */
   .placeholder {
     background: #fff; border: 1px dashed #cbd5e1; border-radius: 12px; padding: 60px 40px;
@@ -138,9 +140,14 @@
   <section id="page-conversion" class="hidden">
     <h1 class="page-title">Conversion Rate</h1>
     <p class="page-sub">How quickly booked demos get held. Editable entries save automatically.</p>
+    <div class="toolbar">
+      <label for="convDatePicker">Select a day</label>
+      <input type="date" id="convDatePicker">
+      <span class="week-label" id="convWeekLabel"></span>
+    </div>
     <div class="table-card">
       <h2>Conversion Rate</h2>
-      <p class="table-sub">Conversion Rate = Demo Held &divide; Demo Booked for each interval.</p>
+      <p class="table-sub">Conversion Rate = Demo Held &divide; Demo Booked for each interval. Each day column has two rows of cells: <b>Booked</b> (top) and <b>Held</b> (bottom).</p>
       <table id="convTable"><thead id="convHead"></thead><tbody id="convBody"></tbody></table>
     </div>
   </section>
@@ -454,13 +461,19 @@ const CONV_STORAGE_KEY = "funnelDashboard.conversion.v1";  // { "YYYY-MM-DD": { 
 let convData = {};
 try { convData = JSON.parse(localStorage.getItem(CONV_STORAGE_KEY)) || {}; } catch (e) { convData = {}; }
 function saveConv() { localStorage.setItem(CONV_STORAGE_KEY, JSON.stringify(convData)); }
+let convSelectedDate = null;   // separate date for the Conversion tab
 
 function renderConversion() {
-  const days = mondaysOfSelectedWeek(selectedDate);
+  const days = mondaysOfSelectedWeek(convSelectedDate);
+  const sun = weekSunday(convSelectedDate);
+  const sat = new Date(sun); sat.setDate(sat.getDate() + 6);
+  document.getElementById("convWeekLabel").innerHTML =
+    `Week: <b>${fmt(sun)} – ${fmt(sat)}, ${sat.getFullYear()}</b> &nbsp;(Sun–Sat)`;
+
   const head = document.getElementById("convHead");
   head.innerHTML = "<tr>" +
     `<th class="kpi-col">Book to Held Interval</th>` +
-    days.map(d => `<th>${fmt(d)}</th>`).join("") +
+    days.map(d => `<th>${fmt(d)}<div class="bh-labels"><span>Booked</span><span>Held</span></div></th>`).join("") +
     `<th class="total-col">Total</th>` +
     "</tr>";
 
@@ -476,8 +489,8 @@ function renderConversion() {
       const h = Number.isFinite(Number(rec.held)) ? Number(rec.held) : 0;
       totB += b; totH += h;
       html += `<td class="count-cell">
-        <input type="number" min="0" step="1" value="${b}" data-date="${k}" data-interval="${interval}" data-field="booked" title="Demo Booked" placeholder="B">
-        <input type="number" min="0" step="1" value="${h}" data-date="${k}" data-interval="${interval}" data-field="held" title="Demo Held" placeholder="H">
+        <input type="number" min="0" step="1" value="${b}" data-date="${k}" data-interval="${interval}" data-field="booked" title="Demo Booked">
+        <input type="number" min="0" step="1" value="${h}" data-date="${k}" data-interval="${interval}" data-field="held" title="Demo Held">
       </td>`;
     }
     html += `<td class="total-col">${pct(totH, totB)}</td></tr>`;
@@ -498,7 +511,7 @@ function renderConversion() {
 }
 
 function renderConvTotals() {
-  const days = mondaysOfSelectedWeek(selectedDate);
+  const days = mondaysOfSelectedWeek(convSelectedDate);
   const rows = document.getElementById("convBody").querySelectorAll("tr");
   CONV_INTERVALS.forEach((interval, r) => {
     let totB = 0, totH = 0;
@@ -522,6 +535,19 @@ picker.addEventListener("change", () => {
   const [y, m, d] = picker.value.split("-").map(Number);
   selectedDate = new Date(y, m - 1, d);
   render();
+});
+
+/* Conversion tab's own date picker */
+const convPicker = document.getElementById("convDatePicker");
+function initConvPicker() {
+  const today = new Date();
+  const p = n => String(n).padStart(2, "0");
+  convPicker.value = `${today.getFullYear()}-${p(today.getMonth()+1)}-${p(today.getDate())}`;
+  convSelectedDate = today;
+}
+convPicker.addEventListener("change", () => {
+  const [y, m, d] = convPicker.value.split("-").map(Number);
+  convSelectedDate = new Date(y, m - 1, d);
   renderConversion();
 });
 
@@ -541,6 +567,7 @@ document.getElementById("resetWeek").addEventListener("click", () => {
 initPicker();
 buildContainers();
 render();
+initConvPicker();
 renderConversion();
 importSheet();
 </script>
