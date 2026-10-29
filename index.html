@@ -448,6 +448,13 @@ document.querySelectorAll(".nav-item").forEach(btn => {
   });
 });
 
+/* Conversion Rate tab */
+const CONV_INTERVALS = ["Same Day", "24 Hours", "2 to 4 days", "1 Week", ">1 Week"];
+const CONV_STORAGE_KEY = "funnelDashboard.conversion.v1";  // { "YYYY-MM-DD": { interval: { booked: n, held: n } } }
+let convData = {};
+try { convData = JSON.parse(localStorage.getItem(CONV_STORAGE_KEY)) || {}; } catch (e) { convData = {}; }
+function saveConv() { localStorage.setItem(CONV_STORAGE_KEY, JSON.stringify(convData)); }
+
 function renderConversion() {
   const days = mondaysOfSelectedWeek(selectedDate);
   const head = document.getElementById("convHead");
