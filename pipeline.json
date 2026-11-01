@@ -523,7 +523,7 @@
    "held_total": 55
   },
   {
-   "week_start": "2026-10-19",
+   "week_start": "2026-10-18",
    "groups": [
     "Sun+Mon",
     "Tue",
@@ -532,25 +532,25 @@
     "Fri+Sat"
    ],
    "booked": [
-    25,
+    16,
+    14,
     10,
     15,
-    11,
-    32
+    35
    ],
    "held": [
-    29,
+    18,
+    11,
     2,
     11,
-    29,
-    22
+    51
    ],
-   "booked_total": 93,
+   "booked_total": 90,
    "held_total": 93,
    "method": "4-filter methodology; groups: Sun+Mon, Tue, Wed, Thu, Fri+Sat"
   },
   {
-   "week_start": "2026-10-26",
+   "week_start": "2026-10-25",
    "groups": [
     "Sun+Mon",
     "Tue",
@@ -559,20 +559,20 @@
     "Fri+Sat"
    ],
    "booked": [
-    18,
+    17,
+    9,
     15,
     16,
-    8,
-    4
+    12
    ],
    "held": [
-    24,
+    7,
+    17,
     25,
     23,
-    8,
-    0
+    8
    ],
-   "booked_total": 61,
+   "booked_total": 69,
    "held_total": 80,
    "method": "4-filter methodology; groups: Sun+Mon, Tue, Wed, Thu, Fri+Sat"
   }
