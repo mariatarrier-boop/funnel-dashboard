@@ -8,7 +8,8 @@
    },
    "wishpond": {
     "booked": 3,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "cyberpond": {
     "booked": 0,
@@ -20,11 +21,13 @@
    },
    "persistiq": {
     "booked": 5,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "invigo": {
     "booked": 1,
-    "held": 0
+    "held": 0,
+    "won": 0
    }
   },
   "2026-10-19": {
@@ -34,7 +37,8 @@
    },
    "wishpond": {
     "booked": 6,
-    "held": 13
+    "held": 13,
+    "won": 3
    },
    "cyberpond": {
     "booked": 0,
@@ -46,11 +50,13 @@
    },
    "persistiq": {
     "booked": 9,
-    "held": 9
+    "held": 9,
+    "won": 2
    },
    "invigo": {
     "booked": 2,
-    "held": 1
+    "held": 1,
+    "won": 0
    }
   },
   "2026-10-20": {
@@ -60,7 +66,8 @@
    },
    "wishpond": {
     "booked": 11,
-    "held": 9
+    "held": 9,
+    "won": 0
    },
    "cyberpond": {
     "booked": 0,
@@ -72,11 +79,13 @@
    },
    "persistiq": {
     "booked": 11,
-    "held": 6
+    "held": 6,
+    "won": 0
    },
    "invigo": {
     "booked": 5,
-    "held": 6
+    "held": 6,
+    "won": 1
    }
   },
   "2026-10-21": {
@@ -86,7 +95,8 @@
    },
    "wishpond": {
     "booked": 7,
-    "held": 6
+    "held": 6,
+    "won": 1
    },
    "cyberpond": {
     "booked": 0,
@@ -98,11 +108,13 @@
    },
    "persistiq": {
     "booked": 12,
-    "held": 9
+    "held": 9,
+    "won": 0
    },
    "invigo": {
     "booked": 3,
-    "held": 2
+    "held": 2,
+    "won": 2
    }
   },
   "2026-10-22": {
@@ -112,7 +124,8 @@
    },
    "wishpond": {
     "booked": 12,
-    "held": 13
+    "held": 13,
+    "won": 0
    },
    "cyberpond": {
     "booked": 0,
@@ -124,11 +137,13 @@
    },
    "persistiq": {
     "booked": 8,
-    "held": 6
+    "held": 6,
+    "won": 0
    },
    "invigo": {
     "booked": 1,
-    "held": 1
+    "held": 1,
+    "won": 0
    }
   },
   "2026-10-23": {
@@ -138,7 +153,8 @@
    },
    "wishpond": {
     "booked": 5,
-    "held": 8
+    "held": 8,
+    "won": 4
    },
    "cyberpond": {
     "booked": 5,
@@ -150,11 +166,13 @@
    },
    "persistiq": {
     "booked": 11,
-    "held": 8
+    "held": 8,
+    "won": 0
    },
    "invigo": {
     "booked": 3,
-    "held": 1
+    "held": 1,
+    "won": 1
    }
   },
   "2026-10-24": {
@@ -164,7 +182,8 @@
    },
    "wishpond": {
     "booked": 5,
-    "held": 2
+    "held": 2,
+    "won": 0
    },
    "cyberpond": {
     "booked": 18,
@@ -176,11 +195,13 @@
    },
    "persistiq": {
     "booked": 2,
-    "held": 2
+    "held": 2,
+    "won": 0
    },
    "invigo": {
     "booked": 1,
-    "held": 0
+    "held": 0,
+    "won": 0
    }
   },
   "2026-10-25": {
@@ -190,7 +211,8 @@
    },
    "wishpond": {
     "booked": 8,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "cyberpond": {
     "booked": 0,
@@ -202,11 +224,13 @@
    },
    "persistiq": {
     "booked": 2,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "invigo": {
     "booked": 0,
-    "held": 0
+    "held": 0,
+    "won": 0
    }
   },
   "2026-10-26": {
@@ -216,7 +240,8 @@
    },
    "wishpond": {
     "booked": 7,
-    "held": 5
+    "held": 5,
+    "won": 1
    },
    "cyberpond": {
     "booked": 2,
@@ -228,11 +253,13 @@
    },
    "persistiq": {
     "booked": 10,
-    "held": 3
+    "held": 3,
+    "won": 0
    },
    "invigo": {
     "booked": 0,
-    "held": 1
+    "held": 1,
+    "won": 0
    }
   },
   "2026-10-27": {
@@ -242,7 +269,8 @@
    },
    "wishpond": {
     "booked": 4,
-    "held": 9
+    "held": 9,
+    "won": 1
    },
    "cyberpond": {
     "booked": 4,
@@ -254,11 +282,13 @@
    },
    "persistiq": {
     "booked": 7,
-    "held": 6
+    "held": 6,
+    "won": 0
    },
    "invigo": {
     "booked": 0,
-    "held": 0
+    "held": 0,
+    "won": 0
    }
   },
   "2026-10-28": {
@@ -268,7 +298,8 @@
    },
    "wishpond": {
     "booked": 2,
-    "held": 6
+    "held": 6,
+    "won": 0
    },
    "cyberpond": {
     "booked": 7,
@@ -280,11 +311,13 @@
    },
    "persistiq": {
     "booked": 7,
-    "held": 10
+    "held": 10,
+    "won": 1
    },
    "invigo": {
     "booked": 0,
-    "held": 0
+    "held": 0,
+    "won": 1
    }
   },
   "2026-10-29": {
@@ -294,7 +327,8 @@
    },
    "wishpond": {
     "booked": 7,
-    "held": 7
+    "held": 7,
+    "won": 6
    },
    "cyberpond": {
     "booked": 6,
@@ -306,11 +340,13 @@
    },
    "persistiq": {
     "booked": 7,
-    "held": 6
+    "held": 6,
+    "won": 0
    },
    "invigo": {
     "booked": 0,
-    "held": 1
+    "held": 1,
+    "won": 0
    }
   },
   "2026-10-30": {
@@ -320,7 +356,8 @@
    },
    "wishpond": {
     "booked": 5,
-    "held": 3
+    "held": 3,
+    "won": 1
    },
    "cyberpond": {
     "booked": 3,
@@ -332,11 +369,13 @@
    },
    "persistiq": {
     "booked": 6,
-    "held": 5
+    "held": 5,
+    "won": 3
    },
    "invigo": {
     "booked": 1,
-    "held": 0
+    "held": 0,
+    "won": 1
    }
   },
   "2026-10-31": {
@@ -346,7 +385,8 @@
    },
    "wishpond": {
     "booked": 4,
-    "held": 0
+    "held": 0,
+    "won": 1
    },
    "cyberpond": {
     "booked": 0,
@@ -358,13 +398,15 @@
    },
    "persistiq": {
     "booked": 3,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "invigo": {
     "booked": 0,
-    "held": 0
+    "held": 0,
+    "won": 0
    }
   }
  },
- "note": "persistiq/invigo booked = per user's filter rules; held not yet defined for these sources"
+ "note": "persistiq/invigo booked = per user's filter rules; held not yet defined for these sources | 2026-10-29 has 1 won deal with NO Internal Company set (flagged per your rule)"
 }
