@@ -264,7 +264,7 @@ function getTotal(sectionId, days, key) {
   /* Pipedrive 4-filter totals for the Wishpond table's Demo Booked / Demo Held rows */
   if (funnelDaily && sectionId === "wishpond" && (key === "demosBooked" || key === "demosHeld")) {
     const fn = key === "demosBooked" ? pipedriveBooked : pipedriveHeld;
-    return days.reduce((s, d) => s + fn(iso(d)), 0);
+    return days.reduce((s, d) => s + pipedriveFolded(fn, d), 0);
   }
   return days.reduce((s, d) => s + getCount(sectionId, iso(d), key), 0);
 }
@@ -353,6 +353,25 @@ function pipedriveBooked(isoDay) {
   const rec = ((funnelDaily || {}).days || {})[isoDay] || {};
   return ["brax","wishpond","cyberpond","cyberpond_ndc"].reduce((s, k) => s + (Number((rec[k] || {}).booked) || 0), 0);
 }
+function weekSundayIso(d) {
+  const s = new Date(d); s.setDate(s.getDate() - s.getDay());
+  const pad = n => String(n).padStart(2, "0");
+  return `${s.getFullYear()}-${pad(s.getMonth()+1)}-${pad(s.getDate())}`;
+}
+function weekSaturdayIso(d) {
+  const s = new Date(d); s.setDate(s.getDate() - s.getDay() + 6);
+  const pad = n => String(n).padStart(2, "0");
+  return `${s.getFullYear()}-${pad(s.getMonth()+1)}-${pad(s.getDate())}`;
+}
+/* Folded per-day value: Sunday+Monday in the Monday column, Friday+Saturday in the Friday column */
+function pipedriveFolded(fn, d) {
+  const k = iso(d);
+  const dow = d.getDay();               // 0=Sun..6=Sat
+  let days = [k];
+  if (dow === 1) days = [weekSundayIso(d), k];       // Monday: include Sunday
+  if (dow === 5) days = [k, weekSaturdayIso(d)];     // Friday: include Saturday
+  return days.reduce((s, x) => s + fn(x), 0);
+}
 function pipedriveHeld(isoDay) {
   const rec = ((funnelDaily || {}).days || {})[isoDay] || {};
   return ["brax","wishpond","cyberpond","cyberpond_ndc"].reduce((s, k) => s + (Number((rec[k] || {}).held) || 0), 0);
@@ -388,11 +407,11 @@ function renderSection(sec, days) {
       let v = hasSheet && manual === 0 ? fromSheet : manual;
       /* Pipedrive 4-filter counts: Brax+Wishpond+CyberPond+NDC all counted as Wishpond */
       if (sec.id === "wishpond" && row.key === "demosBooked" && funnelDaily) {
-        const pd = pipedriveBooked(k);
+        const pd = pipedriveFolded(pipedriveBooked, d);
         if (Number.isFinite(pd) && (manual === 0 || !hasSheet)) v = pd;
       }
       if (sec.id === "wishpond" && row.key === "demosHeld" && funnelDaily) {
-        const pd = pipedriveHeld(k);
+        const pd = pipedriveFolded(pipedriveHeld, d);
         if (Number.isFinite(pd) && (manual === 0 || !hasSheet)) v = pd;
       }
       html += `<td class="count-cell"><input type="number" min="0" step="1" value="${v}"
