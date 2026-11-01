@@ -122,7 +122,7 @@
   <!-- TAB 1: Full Funnel Performance -->
   <section id="page-full-funnel">
     <h1 class="page-title">Full Funnel Performance</h1>
-    <p class="page-sub">Demo Booked and Demo Held per day and per Pipedrive source. Auto-filled from the 4-filter counts.</p>
+    <p class="page-sub">Daily funnel KPIs per source, with weekly Total columns. Auto-filled from the Google Sheet.</p>
 
     <div class="summary-row" id="summaryRow"></div>
 
@@ -213,21 +213,20 @@ const SUMMARY_BOXES = [
 /* Sheet sections: csvRow = 1-based CSV row of the section's "KPI"/date header row.
    Within each block: Contacted=+1, Email Sent=+2, Replies=+3, Reply Rate=+4,
    Positive=+5, Positive Rate=+6, Booked=+7, Held=+8, Book Rate=+9. */
-/* Four Pipedrive sources (matches the user's 4-filter counting method) */
 const SECTIONS = [
-  { id: "brax",          title: "Full Funnel Performance - Brax (pipeline 45)" },
-  { id: "wishpond",      title: "Full Funnel Performance - Wishpond (pipeline 12)" },
-  { id: "cyberpond",     title: "Full Funnel Performance - CyberPond (pipeline 78)" },
-  { id: "cyberpond_ndc", title: "Full Funnel Performance - CyberPond NDC (pipeline 79)" },
+  { id: "wishpond",  title: "Full Funnel Performance - Wishpond",  csvRow: 3,  sheetLabel: "OVERALL OUTBOUND" },
+  { id: "persistiq", title: "Full Funnel Performance - PersistIQ", csvRow: 14, sheetLabel: "PERSISTIQ" },
+  { id: "invigo",    title: "Full Funnel Performance - Invigo",    csvRow: 26, sheetLabel: "INVIGO" },
 ];
 
 const STORAGE_KEY = "funnelDashboard.counts.v2";   // overrides: { sectionId: { date: { key: n } } }
 const SHEET_KEY = "funnelDashboard.sheet.v2";      // sheet data: { sectionId: { date: { key: n } } }
+const SHEET_URL = "https://docs.google.com/spreadsheets/d/1AZTzFmfPvMCCae0c6w0OL8XJ8PvfzmpAH2m4P3e-4_A/gviz/tq?tqx=out:csv&gid=0";
 const FUNNEL_DAILY_URL = "funnel-daily.json";
 let counts = {};
 let sheetData = {};
 let selectedDate = null;
-let funnelDaily = null;
+let funnelDaily = null;   // Pipedrive 4-filter daily counts
 
 try { counts = JSON.parse(localStorage.getItem(STORAGE_KEY)) || {}; } catch (e) { counts = {}; }
 try { sheetData = JSON.parse(localStorage.getItem(SHEET_KEY)) || {}; } catch (e) { sheetData = {}; }
@@ -262,6 +261,11 @@ function getManual(sectionId, isoDate, key) {
   return Number.isFinite(n) ? n : 0;
 }
 function getTotal(sectionId, days, key) {
+  /* Pipedrive 4-filter totals for the Wishpond table's Demo Booked / Demo Held rows */
+  if (funnelDaily && sectionId === "wishpond" && (key === "demosBooked" || key === "demosHeld")) {
+    const fn = key === "demosBooked" ? pipedriveBooked : pipedriveHeld;
+    return days.reduce((s, d) => s + fn(iso(d)), 0);
+  }
   return days.reduce((s, d) => s + getCount(sectionId, iso(d), key), 0);
 }
 function pct(num, den) {
@@ -269,19 +273,89 @@ function pct(num, den) {
   return (100 * num / den).toFixed(1).replace(/\.0$/, "") + "%";
 }
 
-/* ================= Pipedrive daily snapshot ================= */
+/* ================= Google Sheet import ================= */
+function parseCSV(text) {
+  const rows = []; let row = [], field = "", inQ = false;
+  for (let i = 0; i < text.length; i++) {
+    const c = text[i];
+    if (inQ) {
+      if (c === '"') { if (text[i+1] === '"') { field += '"'; i++; } else inQ = false; }
+      else field += c;
+    } else if (c === '"') inQ = true;
+    else if (c === ",") { row.push(field); field = ""; }
+    else if (c === "\n") { row.push(field); rows.push(row); row = []; field = ""; }
+    else if (c !== "\r") field += c;
+  }
+  if (field !== "" || row.length) { row.push(field); rows.push(row); }
+  return rows;
+}
+
 async function importSheet() {
+  try {
+    const res = await fetch(SHEET_URL, { cache: "no-store" });
+    if (!res.ok) throw new Error("HTTP " + res.status);
+    const text = await res.text();
+    const rows = parseCSV(text);
+    if (rows.length < 35) throw new Error("unexpected sheet shape");
+    const M = { Jan:1,Feb:2,Mar:3,Apr:4,May:5,Jun:6,Jul:7,Aug:8,Sep:9,Oct:10,Nov:11,Dec:12 };
+    const year = new Date().getFullYear();
+    const data = {};
+    for (const sec of SECTIONS) {
+      data[sec.id] = {};
+      const dateRow = rows[sec.csvRow - 1];
+      const valRows = {
+        leadsContacted: rows[sec.csvRow],        // Contacted
+        replyReceived:  rows[sec.csvRow + 2],    // Replies
+        positive:       rows[sec.csvRow + 4],    // Positive
+        demosBooked:    rows[sec.csvRow + 6],    // Booked
+        demosHeld:      rows[sec.csvRow + 7],    // Held
+      };
+      dateRow.forEach((cell, i) => {
+        const parts = String(cell || "").trim().split(/\s+/);
+        if (parts.length !== 2 || !(parts[0] in M) || !/^\d+$/.test(parts[1])) return;
+        const d = new Date(year, M[parts[0]] - 1, parseInt(parts[1], 10));
+        const k = iso(d);
+        const num = r => { const v = String((r && r[i]) || "").replace(/,/g, "").trim(); return v === "" ? null : Number(v); };
+        const rec = {};
+        for (const key of Object.keys(valRows)) rec[key] = num(valRows[key]);
+        if (Object.values(rec).some(v => v !== null)) data[sec.id][k] = rec;
+      });
+    }
+    const total = Object.values(data).reduce((s, o) => s + Object.keys(o).length, 0);
+    if (!total) throw new Error("no dated columns found");
+    sheetData = data;
+    saveSheet();
+    document.getElementById("sheetStatus").textContent =
+      `Sheet linked ✓ — ${SECTIONS.length} tables, ${total} day-rows (auto-loaded)`;
+    render();
+  } catch (err) {
+    document.getElementById("sheetStatus").textContent =
+      "Sheet link failed (" + err.message + ") — manual entries only";
+  }
+}
+
+/* ================= Pipedrive 4-filter daily counts ================= */
+/* Demo Booked = sum of Brax + Wishpond + CyberPond + CyberPond NDC per day (all counted as Wishpond) */
+async function loadFunnelDaily() {
   try {
     const res = await fetch(FUNNEL_DAILY_URL, { cache: "no-store" });
     if (!res.ok) throw new Error("HTTP " + res.status);
     funnelDaily = await res.json();
-    document.getElementById("sheetStatus").textContent =
-      `Pipedrive data from ${funnelDaily.generated} — booked/held per source (4-filter methodology)`;
+    const status = document.getElementById("sheetStatus");
+    const existing = status.textContent;
+    status.textContent = (existing ? existing + " · " : "") + "Pipedrive booked/held loaded (" + funnelDaily.generated + ")";
     render();
   } catch (err) {
-    document.getElementById("sheetStatus").textContent =
-      "Failed to load Pipedrive snapshot (" + err.message + ")";
+    console.warn("funnel-daily load failed:", err);
   }
+}
+function pipedriveBooked(isoDay) {
+  const rec = ((funnelDaily || {}).days || {})[isoDay] || {};
+  return ["brax","wishpond","cyberpond","cyberpond_ndc"].reduce((s, k) => s + (Number((rec[k] || {}).booked) || 0), 0);
+}
+function pipedriveHeld(isoDay) {
+  const rec = ((funnelDaily || {}).days || {})[isoDay] || {};
+  return ["brax","wishpond","cyberpond","cyberpond_ndc"].reduce((s, k) => s + (Number((rec[k] || {}).held) || 0), 0);
 }
 
 /* ================= Render ================= */
@@ -289,7 +363,7 @@ function buildContainers() {
   document.getElementById("tablesContainer").innerHTML = SECTIONS.map(sec => `
     <div class="table-card">
       <h2>${sec.title}</h2>
-      <p class="table-sub">Columns 2&ndash;6 = Mon&ndash;Fri of the selected week. Column 7 = Total. Demo Booked / Demo Held per day from Pipedrive (4-filter methodology); type in a cell to override.</p>
+      <p class="table-sub">Columns 2&ndash;6 = Mon&ndash;Fri of the selected week. Column 7 = Total. Grey values come from the Google Sheet; type in a cell to override (clear a cell to fall back to the sheet).</p>
       <table id="table-${sec.id}"><thead id="head-${sec.id}"></thead><tbody id="body-${sec.id}"></tbody></table>
     </div>`).join("");
 }
@@ -303,28 +377,41 @@ function renderSection(sec, days) {
     "</tr>";
 
   const body = document.getElementById("body-" + sec.id);
-  const rows = [
-    { key: "booked", label: "Demo Booked" },
-    { key: "held",   label: "Demo Held" },
-  ];
   let html = "";
-  for (const row of rows) {
+  for (const row of COUNT_ROWS) {
     html += `<tr><td class="kpi-col">${row.label}</td>`;
-    let tot = 0;
     for (const d of days) {
       const k = iso(d);
-      const dayRec = ((funnelDaily || {}).days || {})[k] || {};
-      const snapVal = (dayRec[sec.id] || {})[row.key];
+      const fromSheet = ((sheetData[sec.id] || {})[k] || {})[row.key];
+      const hasSheet = fromSheet !== undefined && fromSheet !== null;
       const manual = getManual(sec.id, k, row.key);
-      const v = (Number.isFinite(Number(manual)) && manual !== 0) ? manual : (Number.isFinite(Number(snapVal)) ? snapVal : 0);
-      tot += v;
+      let v = hasSheet && manual === 0 ? fromSheet : manual;
+      /* Pipedrive 4-filter counts: Brax+Wishpond+CyberPond+NDC all counted as Wishpond */
+      if (sec.id === "wishpond" && row.key === "demosBooked" && funnelDaily) {
+        const pd = pipedriveBooked(k);
+        if (Number.isFinite(pd) && (manual === 0 || !hasSheet)) v = pd;
+      }
+      if (sec.id === "wishpond" && row.key === "demosHeld" && funnelDaily) {
+        const pd = pipedriveHeld(k);
+        if (Number.isFinite(pd) && (manual === 0 || !hasSheet)) v = pd;
+      }
       html += `<td class="count-cell"><input type="number" min="0" step="1" value="${v}"
+        class="${hasSheet && manual === 0 ? "sheet-filled" : ""}"
         data-section="${sec.id}" data-date="${k}" data-key="${row.key}"></td>`;
     }
-    html += `<td class="total-col">${tot}</td></tr>`;
+    html += `<td class="total-col">${getTotal(sec.id, days, row.key)}</td></tr>`;
+  }
+  for (const row of RATE_ROWS) {
+    html += `<tr><td class="kpi-col">${row.label}</td>`;
+    for (const d of days) {
+      const k = iso(d);
+      html += `<td class="rate-cell">${pct(getCount(sec.id, k, row.num), getCount(sec.id, k, row.den))}</td>`;
+    }
+    html += `<td class="total-col rate-cell">${pct(getTotal(sec.id, days, row.num), getTotal(sec.id, days, row.den))}</td></tr>`;
   }
   body.innerHTML = html;
 }
+
 function render() {
   const days = mondaysOfSelectedWeek(selectedDate);
   const sun = weekSunday(selectedDate);
@@ -402,26 +489,17 @@ function refreshInputs(sectionId) {
   }
 }
 
-/* Summary boxes: weekly totals across the four sources */
+/* Summary boxes reflect the Wishpond table's Total column */
 function renderSummary() {
   const days = mondaysOfSelectedWeek(selectedDate);
-  let tb = 0, th = 0;
-  for (const d of days) {
-    const day = ((funnelDaily || {}).days || {})[iso(d)] || {};
-    for (const src of SECTIONS) {
-      tb += Number((day[src.id] || {}).booked) || 0;
-      th += Number((day[src.id] || {}).held) || 0;
-    }
-  }
-  const boxes = [
-    { label: "Demo Booked", value: tb },
-    { label: "Demo Held", value: th },
-    { label: "Held Rate", value: pct(th, tb) },
-  ];
-  document.getElementById("summaryRow").innerHTML = boxes.map(b =>
-    `<div class="summary-box"><div class="label">${b.label}</div>
-     <div class="value blue">${b.value}</div>
-     <div class="sub">All sources &middot; selected week</div></div>`).join("");
+  document.getElementById("summaryRow").innerHTML = SUMMARY_BOXES.map(b => {
+    const n = getTotal("wishpond", days, b.num), d = getTotal("wishpond", days, b.den);
+    return `<div class="summary-box">
+      <div class="label">${b.label}</div>
+      <div class="value blue">${pct(n, d)}</div>
+      <div class="sub">Wishpond week total &middot; ${n} / ${d}</div>
+    </div>`;
+  }).join("");
 }
 
 /* ================= Wiring ================= */
@@ -589,7 +667,8 @@ render();
 initConvPicker();
 renderConversion();
 loadConvSnapshot();
-/* Sheet import disabled — Pipedrive is the source of truth for Demo Booked. */
+importSheet();
+loadFunnelDaily();
 /* ================= Pipeline Funnel (Pipedrive snapshot) ================= */
 const PIPE_URL = "pipeline.json";
 let pipeData = null;
@@ -642,7 +721,6 @@ function renderPipeMonthly() {
 }
 
 renderPipeline();
-importSheet();
 </script>
 </body>
 </html>
