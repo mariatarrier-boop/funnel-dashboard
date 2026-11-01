@@ -523,7 +523,7 @@
    "held_total": 55
   },
   {
-   "week_start": "2026-10-18",
+   "week_start": "2026-10-19",
    "groups": [
     "Sun+Mon",
     "Tue",
@@ -532,25 +532,25 @@
     "Fri+Sat"
    ],
    "booked": [
-    16,
-    14,
+    25,
     10,
     15,
-    35
+    11,
+    32
    ],
    "held": [
-    18,
-    11,
+    29,
     2,
     11,
-    51
+    29,
+    22
    ],
-   "booked_total": 90,
+   "booked_total": 93,
    "held_total": 93,
-   "method": "4-filter methodology: booked = entered Qualified/Demo Scheduled that day (36890 all companies; 38095/38086/301649 Wishpond-Brax-Winback only); held = entered Demo Held or later that day, same company rule"
+   "method": "4-filter methodology; groups: Sun+Mon, Tue, Wed, Thu, Fri+Sat"
   },
   {
-   "week_start": "2026-10-25",
+   "week_start": "2026-10-26",
    "groups": [
     "Sun+Mon",
     "Tue",
@@ -559,22 +559,22 @@
     "Fri+Sat"
    ],
    "booked": [
-    17,
-    9,
+    18,
     15,
     16,
-    12
+    8,
+    4
    ],
    "held": [
-    7,
-    17,
+    24,
     25,
     23,
-    8
+    8,
+    0
    ],
-   "booked_total": 69,
+   "booked_total": 61,
    "held_total": 80,
-   "method": "4-filter methodology: booked = entered Qualified/Demo Scheduled that day (36890 all companies; 38095/38086/301649 Wishpond-Brax-Winback only); held = entered Demo Held or later that day, same company rule"
+   "method": "4-filter methodology; groups: Sun+Mon, Tue, Wed, Thu, Fri+Sat"
   }
  ],
  "monthly": [
