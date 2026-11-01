@@ -332,7 +332,7 @@ function buildContainers() {
   document.getElementById("tablesContainer").innerHTML = SECTIONS.map(sec => `
     <div class="table-card">
       <h2>${sec.title}</h2>
-      <p class="table-sub">Columns 2&ndash;6 = Mon&ndash;Fri of the selected week. Column 7 = Total. Grey values come from the Google Sheet; type in a cell to override (clear a cell to fall back to the sheet).</p>
+      <p class="table-sub">Columns 2&ndash;6 = Mon&ndash;Fri of the selected week. Column 7 = Total. Manual entries only — counts come from Pipedrive (see Pipeline Funnel tab). Type to enter values; they save automatically.</p>
       <table id="table-${sec.id}"><thead id="head-${sec.id}"></thead><tbody id="body-${sec.id}"></tbody></table>
     </div>`).join("");
 }
@@ -627,7 +627,7 @@ render();
 initConvPicker();
 renderConversion();
 loadConvSnapshot();
-importSheet();
+/* Sheet import disabled — Pipedrive is the source of truth for Demo Booked. */
 /* ================= Pipeline Funnel (Pipedrive snapshot) ================= */
 const PIPE_URL = "pipeline.json";
 let pipeData = null;
