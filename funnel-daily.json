@@ -37,7 +37,7 @@
    },
    "wishpond": {
     "booked": 6,
-    "held": 13,
+    "held": 9,
     "won": 3
    },
    "cyberpond": {
@@ -66,7 +66,7 @@
    },
    "wishpond": {
     "booked": 11,
-    "held": 9,
+    "held": 3,
     "won": 0
    },
    "cyberpond": {
@@ -95,7 +95,7 @@
    },
    "wishpond": {
     "booked": 7,
-    "held": 6,
+    "held": 1,
     "won": 1
    },
    "cyberpond": {
@@ -124,7 +124,7 @@
    },
    "wishpond": {
     "booked": 12,
-    "held": 13,
+    "held": 8,
     "won": 0
    },
    "cyberpond": {
@@ -153,7 +153,7 @@
    },
    "wishpond": {
     "booked": 5,
-    "held": 8,
+    "held": 7,
     "won": 4
    },
    "cyberpond": {
@@ -182,7 +182,7 @@
    },
    "wishpond": {
     "booked": 5,
-    "held": 2,
+    "held": 1,
     "won": 0
    },
    "cyberpond": {
@@ -240,7 +240,7 @@
    },
    "wishpond": {
     "booked": 7,
-    "held": 5,
+    "held": 4,
     "won": 1
    },
    "cyberpond": {
@@ -269,7 +269,7 @@
    },
    "wishpond": {
     "booked": 4,
-    "held": 9,
+    "held": 3,
     "won": 1
    },
    "cyberpond": {
@@ -327,7 +327,7 @@
    },
    "wishpond": {
     "booked": 7,
-    "held": 7,
+    "held": 6,
     "won": 6
    },
    "cyberpond": {
@@ -356,7 +356,7 @@
    },
    "wishpond": {
     "booked": 5,
-    "held": 3,
+    "held": 2,
     "won": 1
    },
    "cyberpond": {
