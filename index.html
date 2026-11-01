@@ -263,8 +263,13 @@ function getManual(sectionId, isoDate, key) {
 function getTotal(sectionId, days, key) {
   /* Pipedrive 4-filter totals for the Wishpond table's Demo Booked / Demo Held rows */
   if (funnelDaily && ["wishpond","persistiq","invigo"].includes(sectionId) && key === "demosBooked") {
-    const fn = sectionId === "wishpond" ? pipedriveBooked : (d => pipedriveBookedFor(sectionId, d));
-    return days.reduce((s, d) => s + pipedriveFolded(fn, d), 0);
+    const raw = d => {
+      const rec = ((funnelDaily || {}).days || {})[(typeof d === "string" ? d : iso(d))] || {};
+      return sectionId === "wishpond"
+        ? ["brax","wishpond","cyberpond","cyberpond_ndc"].reduce((s, k) => s + (Number((rec[k] || {}).booked) || 0), 0)
+        : (Number((rec[sectionId] || {}).booked) || 0);
+    };
+    return days.reduce((s, d) => s + pipedriveFolded(raw, d), 0);
   }
   if (funnelDaily && sectionId === "wishpond" && key === "demosHeld") {
     return days.reduce((s, d) => s + pipedriveFolded(pipedriveHeld, d), 0);
