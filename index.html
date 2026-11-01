@@ -262,9 +262,12 @@ function getManual(sectionId, isoDate, key) {
 }
 function getTotal(sectionId, days, key) {
   /* Pipedrive 4-filter totals for the Wishpond table's Demo Booked / Demo Held rows */
-  if (funnelDaily && sectionId === "wishpond" && (key === "demosBooked" || key === "demosHeld")) {
-    const fn = key === "demosBooked" ? pipedriveBooked : pipedriveHeld;
+  if (funnelDaily && ["wishpond","persistiq","invigo"].includes(sectionId) && key === "demosBooked") {
+    const fn = sectionId === "wishpond" ? pipedriveBooked : (d => pipedriveBookedFor(sectionId, d));
     return days.reduce((s, d) => s + pipedriveFolded(fn, d), 0);
+  }
+  if (funnelDaily && sectionId === "wishpond" && key === "demosHeld") {
+    return days.reduce((s, d) => s + pipedriveFolded(pipedriveHeld, d), 0);
   }
   return days.reduce((s, d) => s + getCount(sectionId, iso(d), key), 0);
 }
@@ -350,7 +353,8 @@ async function loadFunnelDaily() {
   }
 }
 function pipedriveBooked(isoDay) {
-  const rec = ((funnelDaily || {}).days || {})[isoDay] || {};
+  const key = typeof isoDay === "string" ? isoDay : iso(isoDay);
+  const rec = ((funnelDaily || {}).days || {})[key] || {};
   return ["brax","wishpond","cyberpond","cyberpond_ndc"].reduce((s, k) => s + (Number((rec[k] || {}).booked) || 0), 0);
 }
 function weekSundayIso(d) {
@@ -372,8 +376,20 @@ function pipedriveFolded(fn, d) {
   if (dow === 5) days = [k, weekSaturdayIso(d)];     // Friday: include Saturday
   return days.reduce((s, x) => s + fn(x), 0);
 }
+function pipedriveBookedFor(srcKey, d) {
+  const k = typeof d === "string" ? d : iso(d);
+  const dow = new Date(k + "T00:00:00").getDay();
+  let days = [k];
+  if (dow === 1) days = [weekSundayIso(new Date(k + "T00:00:00")), k];
+  if (dow === 5) days = [k, weekSaturdayIso(new Date(k + "T00:00:00"))];
+  return days.reduce((s, x) => {
+    const rec = ((funnelDaily || {}).days || {})[x] || {};
+    return s + (Number((rec[srcKey] || {}).booked) || 0);
+  }, 0);
+}
 function pipedriveHeld(isoDay) {
-  const rec = ((funnelDaily || {}).days || {})[isoDay] || {};
+  const key = typeof isoDay === "string" ? isoDay : iso(isoDay);
+  const rec = ((funnelDaily || {}).days || {})[key] || {};
   return ["brax","wishpond","cyberpond","cyberpond_ndc"].reduce((s, k) => s + (Number((rec[k] || {}).held) || 0), 0);
 }
 
@@ -405,12 +421,11 @@ function renderSection(sec, days) {
       const hasSheet = fromSheet !== undefined && fromSheet !== null;
       const manual = getManual(sec.id, k, row.key);
       let v = hasSheet && manual === 0 ? fromSheet : manual;
-      /* Pipedrive 4-filter counts: Brax+Wishpond+CyberPond+NDC all counted as Wishpond */
-      if (sec.id === "wishpond" && row.key === "demosBooked" && funnelDaily) {
-        const pd = pipedriveFolded(pipedriveBooked, d);
+      if (funnelDaily && row.key === "demosBooked" && ["wishpond","persistiq","invigo"].includes(sec.id)) {
+        const pd = sec.id === "wishpond" ? pipedriveBooked(d) : pipedriveBookedFor(sec.id, d);
         if (Number.isFinite(pd) && (manual === 0 || !hasSheet)) v = pd;
       }
-      if (sec.id === "wishpond" && row.key === "demosHeld" && funnelDaily) {
+      if (funnelDaily && row.key === "demosHeld" && sec.id === "wishpond") {
         const pd = pipedriveFolded(pipedriveHeld, d);
         if (Number.isFinite(pd) && (manual === 0 || !hasSheet)) v = pd;
       }

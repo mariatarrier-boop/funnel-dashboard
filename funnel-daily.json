@@ -17,6 +17,14 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "persistiq": {
+    "booked": 5,
+    "held": 0
+   },
+   "invigo": {
+    "booked": 1,
+    "held": 0
    }
   },
   "2026-10-19": {
@@ -34,6 +42,14 @@
    },
    "cyberpond_ndc": {
     "booked": 0,
+    "held": 0
+   },
+   "persistiq": {
+    "booked": 9,
+    "held": 0
+   },
+   "invigo": {
+    "booked": 2,
     "held": 0
    }
   },
@@ -53,6 +69,14 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "persistiq": {
+    "booked": 11,
+    "held": 0
+   },
+   "invigo": {
+    "booked": 5,
+    "held": 0
    }
   },
   "2026-10-21": {
@@ -70,6 +94,14 @@
    },
    "cyberpond_ndc": {
     "booked": 0,
+    "held": 0
+   },
+   "persistiq": {
+    "booked": 12,
+    "held": 0
+   },
+   "invigo": {
+    "booked": 3,
     "held": 0
    }
   },
@@ -89,6 +121,14 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "persistiq": {
+    "booked": 8,
+    "held": 0
+   },
+   "invigo": {
+    "booked": 1,
+    "held": 0
    }
   },
   "2026-10-23": {
@@ -107,6 +147,14 @@
    "cyberpond_ndc": {
     "booked": 1,
     "held": 1
+   },
+   "persistiq": {
+    "booked": 11,
+    "held": 0
+   },
+   "invigo": {
+    "booked": 3,
+    "held": 0
    }
   },
   "2026-10-24": {
@@ -125,6 +173,14 @@
    "cyberpond_ndc": {
     "booked": 1,
     "held": 1
+   },
+   "persistiq": {
+    "booked": 2,
+    "held": 0
+   },
+   "invigo": {
+    "booked": 1,
+    "held": 0
    }
   },
   "2026-10-25": {
@@ -141,6 +197,14 @@
     "held": 0
    },
    "cyberpond_ndc": {
+    "booked": 0,
+    "held": 0
+   },
+   "persistiq": {
+    "booked": 2,
+    "held": 0
+   },
+   "invigo": {
     "booked": 0,
     "held": 0
    }
@@ -161,6 +225,14 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "persistiq": {
+    "booked": 10,
+    "held": 0
+   },
+   "invigo": {
+    "booked": 0,
+    "held": 0
    }
   },
   "2026-10-27": {
@@ -179,6 +251,14 @@
    "cyberpond_ndc": {
     "booked": 1,
     "held": 1
+   },
+   "persistiq": {
+    "booked": 7,
+    "held": 0
+   },
+   "invigo": {
+    "booked": 0,
+    "held": 0
    }
   },
   "2026-10-28": {
@@ -197,6 +277,14 @@
    "cyberpond_ndc": {
     "booked": 6,
     "held": 6
+   },
+   "persistiq": {
+    "booked": 7,
+    "held": 0
+   },
+   "invigo": {
+    "booked": 0,
+    "held": 0
    }
   },
   "2026-10-29": {
@@ -215,6 +303,14 @@
    "cyberpond_ndc": {
     "booked": 2,
     "held": 3
+   },
+   "persistiq": {
+    "booked": 7,
+    "held": 0
+   },
+   "invigo": {
+    "booked": 0,
+    "held": 0
    }
   },
   "2026-10-30": {
@@ -232,6 +328,14 @@
    },
    "cyberpond_ndc": {
     "booked": 0,
+    "held": 0
+   },
+   "persistiq": {
+    "booked": 6,
+    "held": 0
+   },
+   "invigo": {
+    "booked": 1,
     "held": 0
    }
   },
@@ -251,7 +355,16 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "persistiq": {
+    "booked": 3,
+    "held": 0
+   },
+   "invigo": {
+    "booked": 0,
+    "held": 0
    }
   }
- }
+ },
+ "note": "persistiq/invigo booked = per user's filter rules; held not yet defined for these sources"
 }
