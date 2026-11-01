@@ -36,8 +36,8 @@
     "held": 2
    },
    "wishpond": {
-    "booked": 6,
-    "held": 9,
+    "booked": 11,
+    "held": 11,
     "won": 3
    },
    "cyberpond": {
@@ -49,12 +49,12 @@
     "held": 0
    },
    "persistiq": {
-    "booked": 9,
+    "booked": 7,
     "held": 9,
     "won": 2
    },
    "invigo": {
-    "booked": 2,
+    "booked": 1,
     "held": 1,
     "won": 0
    }
@@ -65,66 +65,8 @@
     "held": 3
    },
    "wishpond": {
-    "booked": 11,
-    "held": 3,
-    "won": 0
-   },
-   "cyberpond": {
-    "booked": 0,
-    "held": 0
-   },
-   "cyberpond_ndc": {
-    "booked": 0,
-    "held": 0
-   },
-   "persistiq": {
-    "booked": 11,
+    "booked": 14,
     "held": 6,
-    "won": 0
-   },
-   "invigo": {
-    "booked": 5,
-    "held": 6,
-    "won": 1
-   }
-  },
-  "2026-10-21": {
-   "brax": {
-    "booked": 3,
-    "held": 1
-   },
-   "wishpond": {
-    "booked": 7,
-    "held": 1,
-    "won": 1
-   },
-   "cyberpond": {
-    "booked": 0,
-    "held": 0
-   },
-   "cyberpond_ndc": {
-    "booked": 0,
-    "held": 0
-   },
-   "persistiq": {
-    "booked": 12,
-    "held": 9,
-    "won": 0
-   },
-   "invigo": {
-    "booked": 3,
-    "held": 2,
-    "won": 2
-   }
-  },
-  "2026-10-22": {
-   "brax": {
-    "booked": 3,
-    "held": 1
-   },
-   "wishpond": {
-    "booked": 12,
-    "held": 8,
     "won": 0
    },
    "cyberpond": {
@@ -141,6 +83,64 @@
     "won": 0
    },
    "invigo": {
+    "booked": 6,
+    "held": 6,
+    "won": 1
+   }
+  },
+  "2026-10-21": {
+   "brax": {
+    "booked": 3,
+    "held": 1
+   },
+   "wishpond": {
+    "booked": 9,
+    "held": 2,
+    "won": 1
+   },
+   "cyberpond": {
+    "booked": 0,
+    "held": 0
+   },
+   "cyberpond_ndc": {
+    "booked": 0,
+    "held": 0
+   },
+   "persistiq": {
+    "booked": 11,
+    "held": 9,
+    "won": 0
+   },
+   "invigo": {
+    "booked": 2,
+    "held": 2,
+    "won": 2
+   }
+  },
+  "2026-10-22": {
+   "brax": {
+    "booked": 3,
+    "held": 1
+   },
+   "wishpond": {
+    "booked": 13,
+    "held": 9,
+    "won": 0
+   },
+   "cyberpond": {
+    "booked": 0,
+    "held": 0
+   },
+   "cyberpond_ndc": {
+    "booked": 0,
+    "held": 0
+   },
+   "persistiq": {
+    "booked": 6,
+    "held": 6,
+    "won": 0
+   },
+   "invigo": {
     "booked": 1,
     "held": 1,
     "won": 0
@@ -152,8 +152,8 @@
     "held": 0
    },
    "wishpond": {
-    "booked": 5,
-    "held": 7,
+    "booked": 12,
+    "held": 14,
     "won": 4
    },
    "cyberpond": {
@@ -165,7 +165,7 @@
     "held": 1
    },
    "persistiq": {
-    "booked": 11,
+    "booked": 10,
     "held": 8,
     "won": 0
    },
@@ -181,8 +181,8 @@
     "held": 0
    },
    "wishpond": {
-    "booked": 5,
-    "held": 1,
+    "booked": 19,
+    "held": 21,
     "won": 0
    },
    "cyberpond": {
@@ -240,7 +240,7 @@
    },
    "wishpond": {
     "booked": 7,
-    "held": 4,
+    "held": 5,
     "won": 1
    },
    "cyberpond": {
@@ -252,7 +252,7 @@
     "held": 0
    },
    "persistiq": {
-    "booked": 10,
+    "booked": 8,
     "held": 3,
     "won": 0
    },
@@ -268,8 +268,8 @@
     "held": 1
    },
    "wishpond": {
-    "booked": 4,
-    "held": 3,
+    "booked": 9,
+    "held": 10,
     "won": 1
    },
    "cyberpond": {
@@ -297,8 +297,8 @@
     "held": 0
    },
    "wishpond": {
-    "booked": 2,
-    "held": 6,
+    "booked": 15,
+    "held": 18,
     "won": 0
    },
    "cyberpond": {
@@ -326,8 +326,8 @@
     "held": 1
    },
    "wishpond": {
-    "booked": 7,
-    "held": 6,
+    "booked": 16,
+    "held": 16,
     "won": 6
    },
    "cyberpond": {
@@ -339,7 +339,7 @@
     "held": 2
    },
    "persistiq": {
-    "booked": 7,
+    "booked": 6,
     "held": 6,
     "won": 0
    },
@@ -355,8 +355,8 @@
     "held": 0
    },
    "wishpond": {
-    "booked": 5,
-    "held": 2,
+    "booked": 8,
+    "held": 5,
     "won": 1
    },
    "cyberpond": {
@@ -368,7 +368,7 @@
     "held": 0
    },
    "persistiq": {
-    "booked": 6,
+    "booked": 5,
     "held": 5,
     "won": 3
    },
@@ -397,7 +397,7 @@
     "held": 0
    },
    "persistiq": {
-    "booked": 3,
+    "booked": 1,
     "held": 0,
     "won": 0
    },
