@@ -1,0 +1,257 @@
+{
+ "generated": "2026-11-01 20:26 UTC",
+ "days": {
+  "2026-10-18": {
+   "brax": {
+    "booked": 2,
+    "held": 0
+   },
+   "wishpond": {
+    "booked": 3,
+    "held": 0
+   },
+   "cyberpond": {
+    "booked": 0,
+    "held": 0
+   },
+   "cyberpond_ndc": {
+    "booked": 0,
+    "held": 0
+   }
+  },
+  "2026-10-19": {
+   "brax": {
+    "booked": 5,
+    "held": 2
+   },
+   "wishpond": {
+    "booked": 6,
+    "held": 16
+   },
+   "cyberpond": {
+    "booked": 0,
+    "held": 0
+   },
+   "cyberpond_ndc": {
+    "booked": 0,
+    "held": 0
+   }
+  },
+  "2026-10-20": {
+   "brax": {
+    "booked": 3,
+    "held": 4
+   },
+   "wishpond": {
+    "booked": 11,
+    "held": 7
+   },
+   "cyberpond": {
+    "booked": 0,
+    "held": 0
+   },
+   "cyberpond_ndc": {
+    "booked": 0,
+    "held": 0
+   }
+  },
+  "2026-10-21": {
+   "brax": {
+    "booked": 3,
+    "held": 1
+   },
+   "wishpond": {
+    "booked": 7,
+    "held": 1
+   },
+   "cyberpond": {
+    "booked": 0,
+    "held": 0
+   },
+   "cyberpond_ndc": {
+    "booked": 0,
+    "held": 0
+   }
+  },
+  "2026-10-22": {
+   "brax": {
+    "booked": 3,
+    "held": 1
+   },
+   "wishpond": {
+    "booked": 12,
+    "held": 10
+   },
+   "cyberpond": {
+    "booked": 0,
+    "held": 0
+   },
+   "cyberpond_ndc": {
+    "booked": 0,
+    "held": 0
+   }
+  },
+  "2026-10-23": {
+   "brax": {
+    "booked": 0,
+    "held": 1
+   },
+   "wishpond": {
+    "booked": 5,
+    "held": 12
+   },
+   "cyberpond": {
+    "booked": 5,
+    "held": 15
+   },
+   "cyberpond_ndc": {
+    "booked": 1,
+    "held": 1
+   }
+  },
+  "2026-10-24": {
+   "brax": {
+    "booked": 0,
+    "held": 0
+   },
+   "wishpond": {
+    "booked": 5,
+    "held": 2
+   },
+   "cyberpond": {
+    "booked": 18,
+    "held": 19
+   },
+   "cyberpond_ndc": {
+    "booked": 1,
+    "held": 1
+   }
+  },
+  "2026-10-25": {
+   "brax": {
+    "booked": 0,
+    "held": 0
+   },
+   "wishpond": {
+    "booked": 8,
+    "held": 0
+   },
+   "cyberpond": {
+    "booked": 0,
+    "held": 0
+   },
+   "cyberpond_ndc": {
+    "booked": 0,
+    "held": 0
+   }
+  },
+  "2026-10-26": {
+   "brax": {
+    "booked": 0,
+    "held": 0
+   },
+   "wishpond": {
+    "booked": 7,
+    "held": 6
+   },
+   "cyberpond": {
+    "booked": 2,
+    "held": 1
+   },
+   "cyberpond_ndc": {
+    "booked": 0,
+    "held": 0
+   }
+  },
+  "2026-10-27": {
+   "brax": {
+    "booked": 0,
+    "held": 2
+   },
+   "wishpond": {
+    "booked": 4,
+    "held": 7
+   },
+   "cyberpond": {
+    "booked": 4,
+    "held": 7
+   },
+   "cyberpond_ndc": {
+    "booked": 1,
+    "held": 1
+   }
+  },
+  "2026-10-28": {
+   "brax": {
+    "booked": 0,
+    "held": 0
+   },
+   "wishpond": {
+    "booked": 2,
+    "held": 8
+   },
+   "cyberpond": {
+    "booked": 7,
+    "held": 11
+   },
+   "cyberpond_ndc": {
+    "booked": 6,
+    "held": 6
+   }
+  },
+  "2026-10-29": {
+   "brax": {
+    "booked": 1,
+    "held": 3
+   },
+   "wishpond": {
+    "booked": 7,
+    "held": 8
+   },
+   "cyberpond": {
+    "booked": 6,
+    "held": 9
+   },
+   "cyberpond_ndc": {
+    "booked": 2,
+    "held": 3
+   }
+  },
+  "2026-10-30": {
+   "brax": {
+    "booked": 0,
+    "held": 0
+   },
+   "wishpond": {
+    "booked": 5,
+    "held": 4
+   },
+   "cyberpond": {
+    "booked": 3,
+    "held": 4
+   },
+   "cyberpond_ndc": {
+    "booked": 0,
+    "held": 0
+   }
+  },
+  "2026-10-31": {
+   "brax": {
+    "booked": 0,
+    "held": 0
+   },
+   "wishpond": {
+    "booked": 4,
+    "held": 0
+   },
+   "cyberpond": {
+    "booked": 0,
+    "held": 0
+   },
+   "cyberpond_ndc": {
+    "booked": 0,
+    "held": 0
+   }
+  }
+ }
+}
