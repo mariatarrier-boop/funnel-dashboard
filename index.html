@@ -421,13 +421,15 @@ function renderSection(sec, days) {
       const hasSheet = fromSheet !== undefined && fromSheet !== null;
       const manual = getManual(sec.id, k, row.key);
       let v = hasSheet && manual === 0 ? fromSheet : manual;
-      if (funnelDaily && row.key === "demosBooked" && ["wishpond","persistiq","invigo"].includes(sec.id)) {
-        const pd = sec.id === "wishpond" ? pipedriveBooked(d) : pipedriveBookedFor(sec.id, d);
-        if (Number.isFinite(pd) && (manual === 0 || !hasSheet)) v = pd;
-      }
-      if (funnelDaily && row.key === "demosHeld" && sec.id === "wishpond") {
+      /* Pipedrive wins over the sheet for Demos rows; manual typing still wins over everything */
+      if (manual !== 0) {
+        v = manual;
+      } else if (funnelDaily && row.key === "demosBooked" && ["wishpond","persistiq","invigo"].includes(sec.id)) {
+        const pd = sec.id === "wishpond" ? pipedriveFolded(pipedriveBooked, d) : pipedriveBookedFor(sec.id, d);
+        if (Number.isFinite(pd)) v = pd;
+      } else if (funnelDaily && row.key === "demosHeld" && sec.id === "wishpond") {
         const pd = pipedriveFolded(pipedriveHeld, d);
-        if (Number.isFinite(pd) && (manual === 0 || !hasSheet)) v = pd;
+        if (Number.isFinite(pd)) v = pd;
       }
       html += `<td class="count-cell"><input type="number" min="0" step="1" value="${v}"
         class="${hasSheet && manual === 0 ? "sheet-filled" : ""}"
