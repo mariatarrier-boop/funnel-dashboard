@@ -539,15 +539,15 @@
     35
    ],
    "held": [
-    12,
-    5,
-    1,
-    7,
-    10
+    18,
+    11,
+    2,
+    11,
+    51
    ],
    "booked_total": 90,
-   "held_total": 35,
-   "method": "4-filter count (36890 all + 38095/38086/301649 Wishpond/Brax/Winback only)"
+   "held_total": 93,
+   "method": "4-filter methodology: booked = entered Qualified/Demo Scheduled that day (36890 all companies; 38095/38086/301649 Wishpond-Brax-Winback only); held = entered Demo Held or later that day, same company rule"
   },
   {
    "week_start": "2026-10-25",
@@ -566,15 +566,15 @@
     12
    ],
    "held": [
-    5,
-    4,
-    6,
-    6,
-    0
+    7,
+    17,
+    25,
+    23,
+    8
    ],
    "booked_total": 69,
-   "held_total": 21,
-   "method": "4-filter count (36890 all + 38095/38086/301649 Wishpond/Brax/Winback only)"
+   "held_total": 80,
+   "method": "4-filter methodology: booked = entered Qualified/Demo Scheduled that day (36890 all companies; 38095/38086/301649 Wishpond-Brax-Winback only); held = entered Demo Held or later that day, same company rule"
   }
  ],
  "monthly": [
@@ -608,5 +608,5 @@
   "booked": 2421,
   "held": 1458
  },
- "note": "Weeks starting 2026-10-18 and 2026-10-25 use the 4-filter Demo Booked methodology; other weeks use stage-entry logic from changelogs."
+ "note": "Weeks 2026-10-18 & 2026-10-25 use the 4-filter Pipedrive methodology (booked & held). Other weeks use older stage-entry logic."
 }
