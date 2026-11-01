@@ -271,8 +271,14 @@ function getTotal(sectionId, days, key) {
     };
     return days.reduce((s, d) => s + pipedriveFolded(raw, d), 0);
   }
-  if (funnelDaily && sectionId === "wishpond" && key === "demosHeld") {
-    return days.reduce((s, d) => s + pipedriveFolded(pipedriveHeld, d), 0);
+  if (funnelDaily && ["wishpond","persistiq","invigo"].includes(sectionId) && key === "demosHeld") {
+    const raw = d => {
+      const rec = ((funnelDaily || {}).days || {})[(typeof d === "string" ? d : iso(d))] || {};
+      return sectionId === "wishpond"
+        ? ["brax","wishpond","cyberpond","cyberpond_ndc"].reduce((s, k) => s + (Number((rec[k] || {}).held) || 0), 0)
+        : (Number((rec[sectionId] || {}).held) || 0);
+    };
+    return days.reduce((s, d) => s + pipedriveFolded(raw, d), 0);
   }
   return days.reduce((s, d) => s + getCount(sectionId, iso(d), key), 0);
 }
@@ -392,6 +398,17 @@ function pipedriveBookedFor(srcKey, d) {
     return s + (Number((rec[srcKey] || {}).booked) || 0);
   }, 0);
 }
+function pipedriveHeldFor(srcKey, d) {
+  const k = typeof d === "string" ? d : iso(d);
+  const dow = new Date(k + "T00:00:00").getDay();
+  let days = [k];
+  if (dow === 1) days = [weekSundayIso(new Date(k + "T00:00:00")), k];
+  if (dow === 5) days = [k, weekSaturdayIso(new Date(k + "T00:00:00"))];
+  return days.reduce((s, x) => {
+    const rec = ((funnelDaily || {}).days || {})[x] || {};
+    return s + (Number((rec[srcKey] || {}).held) || 0);
+  }, 0);
+}
 function pipedriveHeld(isoDay) {
   const key = typeof isoDay === "string" ? isoDay : iso(isoDay);
   const rec = ((funnelDaily || {}).days || {})[key] || {};
@@ -432,8 +449,8 @@ function renderSection(sec, days) {
       } else if (funnelDaily && row.key === "demosBooked" && ["wishpond","persistiq","invigo"].includes(sec.id)) {
         const pd = sec.id === "wishpond" ? pipedriveFolded(pipedriveBooked, d) : pipedriveBookedFor(sec.id, d);
         if (Number.isFinite(pd)) v = pd;
-      } else if (funnelDaily && row.key === "demosHeld" && sec.id === "wishpond") {
-        const pd = pipedriveFolded(pipedriveHeld, d);
+      } else if (funnelDaily && row.key === "demosHeld" && ["wishpond","persistiq","invigo"].includes(sec.id)) {
+        const pd = sec.id === "wishpond" ? pipedriveFolded(pipedriveHeld, d) : pipedriveHeldFor(sec.id, d);
         if (Number.isFinite(pd)) v = pd;
       }
       html += `<td class="count-cell"><input type="number" min="0" step="1" value="${v}"
