@@ -532,11 +532,11 @@
     "Fri+Sat"
    ],
    "booked": [
-    8,
-    13,
-    4,
-    11,
-    10
+    16,
+    14,
+    10,
+    15,
+    35
    ],
    "held": [
     12,
@@ -545,8 +545,9 @@
     7,
     10
    ],
-   "booked_total": 46,
-   "held_total": 35
+   "booked_total": 90,
+   "held_total": 35,
+   "method": "4-filter count (36890 all + 38095/38086/301649 Wishpond/Brax/Winback only)"
   },
   {
    "week_start": "2026-10-25",
@@ -558,11 +559,11 @@
     "Fri+Sat"
    ],
    "booked": [
+    17,
+    9,
     15,
-    3,
-    0,
-    4,
-    0
+    16,
+    12
    ],
    "held": [
     5,
@@ -571,8 +572,9 @@
     6,
     0
    ],
-   "booked_total": 22,
-   "held_total": 21
+   "booked_total": 69,
+   "held_total": 21,
+   "method": "4-filter count (36890 all + 38095/38086/301649 Wishpond/Brax/Winback only)"
   }
  ],
  "monthly": [
@@ -605,5 +607,6 @@
  "totals": {
   "booked": 2421,
   "held": 1458
- }
+ },
+ "note": "Weeks starting 2026-10-18 and 2026-10-25 use the 4-filter Demo Booked methodology; other weeks use stage-entry logic from changelogs."
 }
