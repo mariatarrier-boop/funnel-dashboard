@@ -420,6 +420,7 @@ function buildContainers() {
     <div class="table-card">
       <h2>${sec.title}</h2>
       <p class="table-sub">Columns 2&ndash;6 = Mon&ndash;Fri of the selected week. Column 7 = Total. Grey values come from the Google Sheet; type in a cell to override (clear a cell to fall back to the sheet).</p>
+      <div class="summary-row" id="summary-${sec.id}"></div>
       <table id="table-${sec.id}"><thead id="head-${sec.id}"></thead><tbody id="body-${sec.id}"></tbody></table>
     </div>`).join("");
 }
@@ -581,6 +582,18 @@ function renderSummary() {
       <div class="sub">Wishpond week total &middot; ${n} / ${d}</div>
     </div>`;
   }).join("");
+  SECTIONS.forEach(sec => {
+    const el = document.getElementById("summary-" + sec.id);
+    if (!el) return;
+    el.innerHTML = SUMMARY_BOXES.map(b => {
+      const n = getTotal(sec.id, days, b.num), d = getTotal(sec.id, days, b.den);
+      return `<div class="summary-box">
+        <div class="label">${b.label}</div>
+        <div class="value blue">${pct(n, d)}</div>
+        <div class="sub">${sec.title.replace("Full Funnel Performance — ", "").replace("Full Funnel Performance - ", "")} week total &middot; ${n} / ${d}</div>
+      </div>`;
+    }).join("");
+  });
 }
 
 /* ================= Wiring ================= */
