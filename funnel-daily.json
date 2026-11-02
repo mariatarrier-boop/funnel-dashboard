@@ -57,6 +57,23 @@
     "booked": 0,
     "held": 1,
     "won": 0
+   },
+   "sheet": {
+    "overall": {
+     "contacted": 6964,
+     "replies": 443,
+     "positive": 80
+    },
+    "persistiq": {
+     "contacted": 27710,
+     "replies": 707,
+     "positive": 92
+    },
+    "invigo": {
+     "contacted": 2563,
+     "replies": 108,
+     "positive": 12
+    }
    }
   },
   "2026-10-20": {
@@ -86,6 +103,23 @@
     "booked": 2,
     "held": 3,
     "won": 1
+   },
+   "sheet": {
+    "overall": {
+     "contacted": 28526,
+     "replies": 646,
+     "positive": 88
+    },
+    "persistiq": {
+     "contacted": 43837,
+     "replies": 415,
+     "positive": 57
+    },
+    "invigo": {
+     "contacted": 5472,
+     "replies": 93,
+     "positive": 9
+    }
    }
   },
   "2026-10-21": {
@@ -115,6 +149,23 @@
     "booked": 2,
     "held": 1,
     "won": 2
+   },
+   "sheet": {
+    "overall": {
+     "contacted": 49740,
+     "replies": 984,
+     "positive": 139
+    },
+    "persistiq": {
+     "contacted": 42795,
+     "replies": 422,
+     "positive": 60
+    },
+    "invigo": {
+     "contacted": 6451,
+     "replies": 116,
+     "positive": 17
+    }
    }
   },
   "2026-10-22": {
@@ -144,6 +195,23 @@
     "booked": 1,
     "held": 0,
     "won": 0
+   },
+   "sheet": {
+    "overall": {
+     "contacted": 16216,
+     "replies": 656,
+     "positive": 97
+    },
+    "persistiq": {
+     "contacted": 23213,
+     "replies": 338,
+     "positive": 44
+    },
+    "invigo": {
+     "contacted": 2957,
+     "replies": 70,
+     "positive": 5
+    }
    }
   },
   "2026-10-23": {
@@ -173,6 +241,23 @@
     "booked": 2,
     "held": 0,
     "won": 1
+   },
+   "sheet": {
+    "overall": {
+     "contacted": 31338,
+     "replies": 1286,
+     "positive": 163
+    },
+    "persistiq": {
+     "contacted": 35150,
+     "replies": 462,
+     "positive": 43
+    },
+    "invigo": {
+     "contacted": 4197,
+     "replies": 97,
+     "positive": 14
+    }
    }
   },
   "2026-10-24": {
@@ -260,6 +345,23 @@
     "booked": 0,
     "held": 1,
     "won": 0
+   },
+   "sheet": {
+    "overall": {
+     "contacted": 12243,
+     "replies": 876,
+     "positive": 92
+    },
+    "persistiq": {
+     "contacted": 15019,
+     "replies": 415,
+     "positive": 58
+    },
+    "invigo": {
+     "contacted": 353,
+     "replies": 48,
+     "positive": 5
+    }
    }
   },
   "2026-10-27": {
@@ -289,6 +391,23 @@
     "booked": 0,
     "held": 0,
     "won": 0
+   },
+   "sheet": {
+    "overall": {
+     "contacted": null,
+     "replies": null,
+     "positive": null
+    },
+    "persistiq": {
+     "contacted": null,
+     "replies": null,
+     "positive": null
+    },
+    "invigo": {
+     "contacted": null,
+     "replies": null,
+     "positive": null
+    }
    }
   },
   "2026-10-28": {
@@ -318,6 +437,23 @@
     "booked": 0,
     "held": 0,
     "won": 1
+   },
+   "sheet": {
+    "overall": {
+     "contacted": null,
+     "replies": null,
+     "positive": null
+    },
+    "persistiq": {
+     "contacted": null,
+     "replies": null,
+     "positive": null
+    },
+    "invigo": {
+     "contacted": null,
+     "replies": null,
+     "positive": null
+    }
    }
   },
   "2026-10-29": {
@@ -347,6 +483,23 @@
     "booked": 0,
     "held": 1,
     "won": 0
+   },
+   "sheet": {
+    "overall": {
+     "contacted": null,
+     "replies": null,
+     "positive": null
+    },
+    "persistiq": {
+     "contacted": null,
+     "replies": null,
+     "positive": null
+    },
+    "invigo": {
+     "contacted": null,
+     "replies": null,
+     "positive": null
+    }
    }
   },
   "2026-10-30": {
@@ -376,6 +529,23 @@
     "booked": 1,
     "held": 0,
     "won": 1
+   },
+   "sheet": {
+    "overall": {
+     "contacted": null,
+     "replies": null,
+     "positive": null
+    },
+    "persistiq": {
+     "contacted": null,
+     "replies": null,
+     "positive": null
+    },
+    "invigo": {
+     "contacted": null,
+     "replies": null,
+     "positive": null
+    }
    }
   },
   "2026-10-31": {
@@ -795,6 +965,23 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "sheet": {
+    "overall": {
+     "contacted": 22992,
+     "replies": 512,
+     "positive": 160
+    },
+    "persistiq": {
+     "contacted": 51923,
+     "replies": 351,
+     "positive": 146
+    },
+    "invigo": {
+     "contacted": 3386,
+     "replies": 74,
+     "positive": 7
+    }
    }
   },
   "2026-06-16": {
@@ -821,6 +1008,23 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "sheet": {
+    "overall": {
+     "contacted": 22981,
+     "replies": 444,
+     "positive": 123
+    },
+    "persistiq": {
+     "contacted": 62715,
+     "replies": 467,
+     "positive": 117
+    },
+    "invigo": {
+     "contacted": 7564,
+     "replies": 50,
+     "positive": 5
+    }
    }
   },
   "2026-06-17": {
@@ -847,6 +1051,23 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "sheet": {
+    "overall": {
+     "contacted": 22989,
+     "replies": 502,
+     "positive": 134
+    },
+    "persistiq": {
+     "contacted": 61556,
+     "replies": 403,
+     "positive": 124
+    },
+    "invigo": {
+     "contacted": 887,
+     "replies": 41,
+     "positive": 5
+    }
    }
   },
   "2026-06-18": {
@@ -873,6 +1094,23 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "sheet": {
+    "overall": {
+     "contacted": 23025,
+     "replies": 438,
+     "positive": 125
+    },
+    "persistiq": {
+     "contacted": 61493,
+     "replies": 388,
+     "positive": 115
+    },
+    "invigo": {
+     "contacted": 1227,
+     "replies": 47,
+     "positive": 3
+    }
    }
   },
   "2026-06-19": {
@@ -899,6 +1137,23 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "sheet": {
+    "overall": {
+     "contacted": 45757,
+     "replies": 777,
+     "positive": 204
+    },
+    "persistiq": {
+     "contacted": 111191,
+     "replies": 1143,
+     "positive": 182
+    },
+    "invigo": {
+     "contacted": 11896,
+     "replies": 78,
+     "positive": 8
+    }
    }
   },
   "2026-06-20": {
@@ -977,6 +1232,23 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "sheet": {
+    "overall": {
+     "contacted": 17217,
+     "replies": 557,
+     "positive": 132
+    },
+    "persistiq": {
+     "contacted": 8568,
+     "replies": 574,
+     "positive": 67
+    },
+    "invigo": {
+     "contacted": 13,
+     "replies": 36,
+     "positive": 4
+    }
    }
   },
   "2026-06-23": {
@@ -1003,6 +1275,23 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "sheet": {
+    "overall": {
+     "contacted": 19598,
+     "replies": 402,
+     "positive": 106
+    },
+    "persistiq": {
+     "contacted": 73067,
+     "replies": 568,
+     "positive": 50
+    },
+    "invigo": {
+     "contacted": 7022,
+     "replies": 69,
+     "positive": 7
+    }
    }
   },
   "2026-06-24": {
@@ -1029,6 +1318,23 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "sheet": {
+    "overall": {
+     "contacted": 20515,
+     "replies": 483,
+     "positive": 133
+    },
+    "persistiq": {
+     "contacted": 67008,
+     "replies": 505,
+     "positive": 71
+    },
+    "invigo": {
+     "contacted": 6895,
+     "replies": 66,
+     "positive": 6
+    }
    }
   },
   "2026-06-25": {
@@ -1055,6 +1361,23 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "sheet": {
+    "overall": {
+     "contacted": 20794,
+     "replies": 482,
+     "positive": 146
+    },
+    "persistiq": {
+     "contacted": 31790,
+     "replies": 348,
+     "positive": 45
+    },
+    "invigo": {
+     "contacted": 7035,
+     "replies": 89,
+     "positive": 7
+    }
    }
   },
   "2026-06-26": {
@@ -1081,6 +1404,23 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "sheet": {
+    "overall": {
+     "contacted": 40051,
+     "replies": 844,
+     "positive": 134
+    },
+    "persistiq": {
+     "contacted": 98203,
+     "replies": 1168,
+     "positive": 43
+    },
+    "invigo": {
+     "contacted": 12192,
+     "replies": 108,
+     "positive": 4
+    }
    }
   },
   "2026-06-27": {
@@ -1159,6 +1499,23 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "sheet": {
+    "overall": {
+     "contacted": 16560,
+     "replies": 291,
+     "positive": 82
+    },
+    "persistiq": {
+     "contacted": 84134,
+     "replies": 523,
+     "positive": 74
+    },
+    "invigo": {
+     "contacted": 6628,
+     "replies": 67,
+     "positive": 5
+    }
    }
   },
   "2026-06-30": {
@@ -1185,6 +1542,23 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "sheet": {
+    "overall": {
+     "contacted": 23070,
+     "replies": 306,
+     "positive": 55
+    },
+    "persistiq": {
+     "contacted": 85018,
+     "replies": 725,
+     "positive": 48
+    },
+    "invigo": {
+     "contacted": 7451,
+     "replies": 62,
+     "positive": 6
+    }
    }
   },
   "2026-07-01": {
@@ -1211,6 +1585,23 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "sheet": {
+    "overall": {
+     "contacted": 19100,
+     "replies": 332,
+     "positive": 70
+    },
+    "persistiq": {
+     "contacted": 35701,
+     "replies": 563,
+     "positive": 30
+    },
+    "invigo": {
+     "contacted": 6923,
+     "replies": 88,
+     "positive": 5
+    }
    }
   },
   "2026-07-02": {
@@ -1237,6 +1628,23 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "sheet": {
+    "overall": {
+     "contacted": 20915,
+     "replies": 354,
+     "positive": 60
+    },
+    "persistiq": {
+     "contacted": 42563,
+     "replies": 556,
+     "positive": 38
+    },
+    "invigo": {
+     "contacted": 6014,
+     "replies": 89,
+     "positive": 5
+    }
    }
   },
   "2026-07-03": {
@@ -1263,6 +1671,23 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "sheet": {
+    "overall": {
+     "contacted": 41540,
+     "replies": 691,
+     "positive": 163
+    },
+    "persistiq": {
+     "contacted": 80893,
+     "replies": 1256,
+     "positive": 68
+    },
+    "invigo": {
+     "contacted": 6867,
+     "replies": 159,
+     "positive": 10
+    }
    }
   },
   "2026-07-04": {
@@ -1341,6 +1766,23 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "sheet": {
+    "overall": {
+     "contacted": 13223,
+     "replies": 370,
+     "positive": 85
+    },
+    "persistiq": {
+     "contacted": 1070,
+     "replies": 531,
+     "positive": 54
+    },
+    "invigo": {
+     "contacted": 23,
+     "replies": 62,
+     "positive": 2
+    }
    }
   },
   "2026-07-07": {
@@ -1367,6 +1809,23 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "sheet": {
+    "overall": {
+     "contacted": 20674,
+     "replies": 414,
+     "positive": 109
+    },
+    "persistiq": {
+     "contacted": 61170,
+     "replies": 783,
+     "positive": 73
+    },
+    "invigo": {
+     "contacted": 4936,
+     "replies": 91,
+     "positive": 8
+    }
    }
   },
   "2026-07-08": {
@@ -1393,6 +1852,23 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "sheet": {
+    "overall": {
+     "contacted": 18501,
+     "replies": 347,
+     "positive": 70
+    },
+    "persistiq": {
+     "contacted": 59611,
+     "replies": 803,
+     "positive": 69
+    },
+    "invigo": {
+     "contacted": 7258,
+     "replies": 116,
+     "positive": 9
+    }
    }
   },
   "2026-07-09": {
@@ -1419,6 +1895,23 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "sheet": {
+    "overall": {
+     "contacted": 19658,
+     "replies": 384,
+     "positive": 57
+    },
+    "persistiq": {
+     "contacted": 55291,
+     "replies": 755,
+     "positive": 58
+    },
+    "invigo": {
+     "contacted": 6703,
+     "replies": 129,
+     "positive": 17
+    }
    }
   },
   "2026-07-10": {
@@ -1445,6 +1938,23 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "sheet": {
+    "overall": {
+     "contacted": 40665,
+     "replies": 686,
+     "positive": 144
+    },
+    "persistiq": {
+     "contacted": 90912,
+     "replies": 1464,
+     "positive": 159
+    },
+    "invigo": {
+     "contacted": 14618,
+     "replies": 214,
+     "positive": 20
+    }
    }
   },
   "2026-07-11": {
@@ -1523,6 +2033,23 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "sheet": {
+    "overall": {
+     "contacted": 20026,
+     "replies": 487,
+     "positive": 145
+    },
+    "persistiq": {
+     "contacted": 3371,
+     "replies": 633,
+     "positive": 88
+    },
+    "invigo": {
+     "contacted": 31,
+     "replies": 48,
+     "positive": 7
+    }
    }
   },
   "2026-07-14": {
@@ -1549,6 +2076,23 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "sheet": {
+    "overall": {
+     "contacted": 20089,
+     "replies": 367,
+     "positive": 107
+    },
+    "persistiq": {
+     "contacted": 4670,
+     "replies": 436,
+     "positive": 79
+    },
+    "invigo": {
+     "contacted": 4362,
+     "replies": 67,
+     "positive": 5
+    }
    }
   },
   "2026-07-15": {
@@ -1575,6 +2119,23 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "sheet": {
+    "overall": {
+     "contacted": 19876,
+     "replies": 357,
+     "positive": 99
+    },
+    "persistiq": {
+     "contacted": 15047,
+     "replies": 622,
+     "positive": 85
+    },
+    "invigo": {
+     "contacted": 5715,
+     "replies": 76,
+     "positive": 10
+    }
    }
   },
   "2026-07-16": {
@@ -1601,6 +2162,23 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "sheet": {
+    "overall": {
+     "contacted": 20526,
+     "replies": 359,
+     "positive": 95
+    },
+    "persistiq": {
+     "contacted": 11646,
+     "replies": 482,
+     "positive": 72
+    },
+    "invigo": {
+     "contacted": 4356,
+     "replies": 64,
+     "positive": 2
+    }
    }
   },
   "2026-07-17": {
@@ -1627,6 +2205,23 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "sheet": {
+    "overall": {
+     "contacted": 40004,
+     "replies": 646,
+     "positive": 150
+    },
+    "persistiq": {
+     "contacted": 71633,
+     "replies": 1092,
+     "positive": 158
+    },
+    "invigo": {
+     "contacted": 14692,
+     "replies": 168,
+     "positive": 11
+    }
    }
   },
   "2026-07-18": {
@@ -1705,6 +2300,23 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "sheet": {
+    "overall": {
+     "contacted": 20720,
+     "replies": 493,
+     "positive": 102
+    },
+    "persistiq": {
+     "contacted": 25135,
+     "replies": 628,
+     "positive": 78
+    },
+    "invigo": {
+     "contacted": 1914,
+     "replies": 69,
+     "positive": 10
+    }
    }
   },
   "2026-07-21": {
@@ -1731,6 +2343,23 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "sheet": {
+    "overall": {
+     "contacted": 19890,
+     "replies": 383,
+     "positive": 126
+    },
+    "persistiq": {
+     "contacted": 81364,
+     "replies": 1074,
+     "positive": 192
+    },
+    "invigo": {
+     "contacted": 6247,
+     "replies": 94,
+     "positive": 17
+    }
    }
   },
   "2026-07-22": {
@@ -1757,6 +2386,23 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "sheet": {
+    "overall": {
+     "contacted": 19307,
+     "replies": 405,
+     "positive": 101
+    },
+    "persistiq": {
+     "contacted": 59365,
+     "replies": 840,
+     "positive": 120
+    },
+    "invigo": {
+     "contacted": 6635,
+     "replies": 85,
+     "positive": 3
+    }
    }
   },
   "2026-07-23": {
@@ -1783,6 +2429,23 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "sheet": {
+    "overall": {
+     "contacted": 20670,
+     "replies": 390,
+     "positive": 89
+    },
+    "persistiq": {
+     "contacted": 11457,
+     "replies": 412,
+     "positive": 61
+    },
+    "invigo": {
+     "contacted": 6321,
+     "replies": 88,
+     "positive": 10
+    }
    }
   },
   "2026-07-24": {
@@ -1809,6 +2472,23 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "sheet": {
+    "overall": {
+     "contacted": 41156,
+     "replies": 613,
+     "positive": 163
+    },
+    "persistiq": {
+     "contacted": 105288,
+     "replies": 1830,
+     "positive": 215
+    },
+    "invigo": {
+     "contacted": 12939,
+     "replies": 220,
+     "positive": 20
+    }
    }
   },
   "2026-07-25": {
@@ -1887,6 +2567,23 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "sheet": {
+    "overall": {
+     "contacted": 47054,
+     "replies": 837,
+     "positive": 176
+    },
+    "persistiq": {
+     "contacted": 3265,
+     "replies": 546,
+     "positive": 102
+    },
+    "invigo": {
+     "contacted": 909,
+     "replies": 117,
+     "positive": 14
+    }
    }
   },
   "2026-07-28": {
@@ -1913,6 +2610,23 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "sheet": {
+    "overall": {
+     "contacted": 17337,
+     "replies": 588,
+     "positive": 195
+    },
+    "persistiq": {
+     "contacted": 52992,
+     "replies": 826,
+     "positive": 116
+    },
+    "invigo": {
+     "contacted": 5479,
+     "replies": 139,
+     "positive": 15
+    }
    }
   },
   "2026-07-29": {
@@ -1939,6 +2653,23 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "sheet": {
+    "overall": {
+     "contacted": 21684,
+     "replies": 507,
+     "positive": 167
+    },
+    "persistiq": {
+     "contacted": 69298,
+     "replies": 1217,
+     "positive": 112
+    },
+    "invigo": {
+     "contacted": 7401,
+     "replies": 172,
+     "positive": 17
+    }
    }
   },
   "2026-07-30": {
@@ -1965,6 +2696,23 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "sheet": {
+    "overall": {
+     "contacted": 23633,
+     "replies": 589,
+     "positive": 166
+    },
+    "persistiq": {
+     "contacted": 38574,
+     "replies": 586,
+     "positive": 68
+    },
+    "invigo": {
+     "contacted": 7580,
+     "replies": 188,
+     "positive": 13
+    }
    }
   },
   "2026-07-31": {
@@ -1991,6 +2739,23 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "sheet": {
+    "overall": {
+     "contacted": 56128,
+     "replies": 1131,
+     "positive": 326
+    },
+    "persistiq": {
+     "contacted": 76756,
+     "replies": 1249,
+     "positive": 105
+    },
+    "invigo": {
+     "contacted": 17674,
+     "replies": 482,
+     "positive": 43
+    }
    }
   },
   "2026-08-01": {
@@ -2069,6 +2834,23 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "sheet": {
+    "overall": {
+     "contacted": 25659,
+     "replies": 779,
+     "positive": 252
+    },
+    "persistiq": {
+     "contacted": 795,
+     "replies": 537,
+     "positive": 79
+    },
+    "invigo": {
+     "contacted": 2609,
+     "replies": 137,
+     "positive": 13
+    }
    }
   },
   "2026-08-04": {
@@ -2095,6 +2877,23 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "sheet": {
+    "overall": {
+     "contacted": 20481,
+     "replies": 642,
+     "positive": 209
+    },
+    "persistiq": {
+     "contacted": 42164,
+     "replies": 659,
+     "positive": 71
+    },
+    "invigo": {
+     "contacted": 6182,
+     "replies": 180,
+     "positive": 33
+    }
    }
   },
   "2026-08-05": {
@@ -2121,6 +2920,23 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "sheet": {
+    "overall": {
+     "contacted": 22558,
+     "replies": 675,
+     "positive": 208
+    },
+    "persistiq": {
+     "contacted": 78539,
+     "replies": 618,
+     "positive": 75
+    },
+    "invigo": {
+     "contacted": 5103,
+     "replies": 177,
+     "positive": 36
+    }
    }
   },
   "2026-08-06": {
@@ -2147,6 +2963,23 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "sheet": {
+    "overall": {
+     "contacted": 25799,
+     "replies": 775,
+     "positive": 259
+    },
+    "persistiq": {
+     "contacted": 60936,
+     "replies": 889,
+     "positive": 90
+    },
+    "invigo": {
+     "contacted": 6282,
+     "replies": 170,
+     "positive": 42
+    }
    }
   },
   "2026-08-07": {
@@ -2173,6 +3006,23 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "sheet": {
+    "overall": {
+     "contacted": 39470,
+     "replies": 1145,
+     "positive": 347
+    },
+    "persistiq": {
+     "contacted": 84118,
+     "replies": 1216,
+     "positive": 153
+    },
+    "invigo": {
+     "contacted": 18183,
+     "replies": 560,
+     "positive": 124
+    }
    }
   },
   "2026-08-08": {
@@ -2251,6 +3101,23 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "sheet": {
+    "overall": {
+     "contacted": 7647,
+     "replies": 600,
+     "positive": 216
+    },
+    "persistiq": {
+     "contacted": 25778,
+     "replies": 749,
+     "positive": 114
+    },
+    "invigo": {
+     "contacted": 1032,
+     "replies": 198,
+     "positive": 56
+    }
    }
   },
   "2026-08-11": {
@@ -2277,6 +3144,23 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "sheet": {
+    "overall": {
+     "contacted": 26219,
+     "replies": 596,
+     "positive": 177
+    },
+    "persistiq": {
+     "contacted": 75562,
+     "replies": 1022,
+     "positive": 92
+    },
+    "invigo": {
+     "contacted": 7358,
+     "replies": 212,
+     "positive": 40
+    }
    }
   },
   "2026-08-12": {
@@ -2303,6 +3187,23 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "sheet": {
+    "overall": {
+     "contacted": 26422,
+     "replies": 607,
+     "positive": 152
+    },
+    "persistiq": {
+     "contacted": 58112,
+     "replies": 600,
+     "positive": 83
+    },
+    "invigo": {
+     "contacted": 5957,
+     "replies": 168,
+     "positive": 59
+    }
    }
   },
   "2026-08-13": {
@@ -2329,6 +3230,23 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "sheet": {
+    "overall": {
+     "contacted": 29976,
+     "replies": 800,
+     "positive": 222
+    },
+    "persistiq": {
+     "contacted": 70592,
+     "replies": 773,
+     "positive": 97
+    },
+    "invigo": {
+     "contacted": 8158,
+     "replies": 270,
+     "positive": 92
+    }
    }
   },
   "2026-08-14": {
@@ -2355,6 +3273,23 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "sheet": {
+    "overall": {
+     "contacted": 51632,
+     "replies": 1412,
+     "positive": 406
+    },
+    "persistiq": {
+     "contacted": 79169,
+     "replies": 1101,
+     "positive": 152
+    },
+    "invigo": {
+     "contacted": 15550,
+     "replies": 449,
+     "positive": 128
+    }
    }
   },
   "2026-08-15": {
@@ -2433,6 +3368,23 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "sheet": {
+    "overall": {
+     "contacted": 14658,
+     "replies": 817,
+     "positive": 270
+    },
+    "persistiq": {
+     "contacted": 2098,
+     "replies": 638,
+     "positive": 109
+    },
+    "invigo": {
+     "contacted": 3006,
+     "replies": 216,
+     "positive": 53
+    }
    }
   },
   "2026-08-18": {
@@ -2459,6 +3411,23 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "sheet": {
+    "overall": {
+     "contacted": 23393,
+     "replies": 756,
+     "positive": 195
+    },
+    "persistiq": {
+     "contacted": 24789,
+     "replies": 574,
+     "positive": 77
+    },
+    "invigo": {
+     "contacted": 7711,
+     "replies": 193,
+     "positive": 48
+    }
    }
   },
   "2026-08-19": {
@@ -2485,6 +3454,23 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "sheet": {
+    "overall": {
+     "contacted": 18043,
+     "replies": 630,
+     "positive": 217
+    },
+    "persistiq": {
+     "contacted": 72117,
+     "replies": 750,
+     "positive": 76
+    },
+    "invigo": {
+     "contacted": 9151,
+     "replies": 220,
+     "positive": 54
+    }
    }
   },
   "2026-08-20": {
@@ -2511,6 +3497,23 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "sheet": {
+    "overall": {
+     "contacted": 14334,
+     "replies": 605,
+     "positive": 186
+    },
+    "persistiq": {
+     "contacted": 58569,
+     "replies": 691,
+     "positive": 84
+    },
+    "invigo": {
+     "contacted": 7892,
+     "replies": 259,
+     "positive": 74
+    }
    }
   },
   "2026-08-21": {
@@ -2537,6 +3540,23 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "sheet": {
+    "overall": {
+     "contacted": 40467,
+     "replies": 1317,
+     "positive": 196
+    },
+    "persistiq": {
+     "contacted": 61108,
+     "replies": 793,
+     "positive": 84
+    },
+    "invigo": {
+     "contacted": 17276,
+     "replies": 326,
+     "positive": 82
+    }
    }
   },
   "2026-08-22": {
@@ -2615,6 +3635,23 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "sheet": {
+    "overall": {
+     "contacted": 7886,
+     "replies": 740,
+     "positive": 227
+    },
+    "persistiq": {
+     "contacted": 7315,
+     "replies": 512,
+     "positive": 64
+    },
+    "invigo": {
+     "contacted": 2493,
+     "replies": 161,
+     "positive": 58
+    }
    }
   },
   "2026-08-25": {
@@ -2641,6 +3678,23 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "sheet": {
+    "overall": {
+     "contacted": 29423,
+     "replies": 755,
+     "positive": 200
+    },
+    "persistiq": {
+     "contacted": 58953,
+     "replies": 431,
+     "positive": 70
+    },
+    "invigo": {
+     "contacted": 7488,
+     "replies": 153,
+     "positive": 48
+    }
    }
   },
   "2026-08-26": {
@@ -2667,6 +3721,23 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "sheet": {
+    "overall": {
+     "contacted": 10751,
+     "replies": 607,
+     "positive": 173
+    },
+    "persistiq": {
+     "contacted": 36770,
+     "replies": 414,
+     "positive": 53
+    },
+    "invigo": {
+     "contacted": 7010,
+     "replies": 178,
+     "positive": 64
+    }
    }
   },
   "2026-08-27": {
@@ -2693,6 +3764,23 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "sheet": {
+    "overall": {
+     "contacted": 25661,
+     "replies": 763,
+     "positive": 175
+    },
+    "persistiq": {
+     "contacted": 33364,
+     "replies": 291,
+     "positive": 38
+    },
+    "invigo": {
+     "contacted": 6563,
+     "replies": 154,
+     "positive": 33
+    }
    }
   },
   "2026-08-28": {
@@ -2719,6 +3807,23 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "sheet": {
+    "overall": {
+     "contacted": 46601,
+     "replies": 1215,
+     "positive": 200
+    },
+    "persistiq": {
+     "contacted": 47026,
+     "replies": 524,
+     "positive": 45
+    },
+    "invigo": {
+     "contacted": 14443,
+     "replies": 287,
+     "positive": 56
+    }
    }
   },
   "2026-08-29": {
@@ -2797,6 +3902,23 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "sheet": {
+    "overall": {
+     "contacted": 5920,
+     "replies": 758,
+     "positive": 106
+    },
+    "persistiq": {
+     "contacted": 16953,
+     "replies": 344,
+     "positive": 69
+    },
+    "invigo": {
+     "contacted": 3235,
+     "replies": 109,
+     "positive": 22
+    }
    }
   },
   "2026-09-01": {
@@ -2823,6 +3945,23 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "sheet": {
+    "overall": {
+     "contacted": 16932,
+     "replies": 619,
+     "positive": 164
+    },
+    "persistiq": {
+     "contacted": 61029,
+     "replies": 395,
+     "positive": 54
+    },
+    "invigo": {
+     "contacted": 5779,
+     "replies": 144,
+     "positive": 22
+    }
    }
   },
   "2026-09-02": {
@@ -2849,6 +3988,23 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "sheet": {
+    "overall": {
+     "contacted": 22184,
+     "replies": 651,
+     "positive": 167
+    },
+    "persistiq": {
+     "contacted": 57936,
+     "replies": 458,
+     "positive": 68
+    },
+    "invigo": {
+     "contacted": 6741,
+     "replies": 136,
+     "positive": 26
+    }
    }
   },
   "2026-09-03": {
@@ -2875,6 +4031,23 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "sheet": {
+    "overall": {
+     "contacted": 33745,
+     "replies": 925,
+     "positive": 273
+    },
+    "persistiq": {
+     "contacted": 56670,
+     "replies": 431,
+     "positive": 65
+    },
+    "invigo": {
+     "contacted": 9164,
+     "replies": 141,
+     "positive": 15
+    }
    }
   },
   "2026-09-04": {
@@ -2901,6 +4074,23 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "sheet": {
+    "overall": {
+     "contacted": 31077,
+     "replies": 1154,
+     "positive": 239
+    },
+    "persistiq": {
+     "contacted": 49577,
+     "replies": 506,
+     "positive": 104
+    },
+    "invigo": {
+     "contacted": 16372,
+     "replies": 284,
+     "positive": 96
+    }
    }
   },
   "2026-09-05": {
@@ -2979,6 +4169,23 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "sheet": {
+    "overall": {
+     "contacted": 4530,
+     "replies": 637,
+     "positive": 191
+    },
+    "persistiq": {
+     "contacted": 9570,
+     "replies": 360,
+     "positive": 85
+    },
+    "invigo": {
+     "contacted": 807,
+     "replies": 97,
+     "positive": 26
+    }
    }
   },
   "2026-09-08": {
@@ -3005,6 +4212,23 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "sheet": {
+    "overall": {
+     "contacted": 5329,
+     "replies": 519,
+     "positive": 59
+    },
+    "persistiq": {
+     "contacted": 37876,
+     "replies": 370,
+     "positive": 60
+    },
+    "invigo": {
+     "contacted": 7209,
+     "replies": 154,
+     "positive": 46
+    }
    }
   },
   "2026-09-09": {
@@ -3031,6 +4255,23 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "sheet": {
+    "overall": {
+     "contacted": 26491,
+     "replies": 885,
+     "positive": 359
+    },
+    "persistiq": {
+     "contacted": 54834,
+     "replies": 296,
+     "positive": 69
+    },
+    "invigo": {
+     "contacted": 7608,
+     "replies": 113,
+     "positive": 33
+    }
    }
   },
   "2026-09-10": {
@@ -3057,6 +4298,23 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "sheet": {
+    "overall": {
+     "contacted": 36297,
+     "replies": 1331,
+     "positive": 253
+    },
+    "persistiq": {
+     "contacted": 84327,
+     "replies": 531,
+     "positive": 72
+    },
+    "invigo": {
+     "contacted": 14664,
+     "replies": 189,
+     "positive": 21
+    }
    }
   },
   "2026-09-11": {
@@ -3083,6 +4341,23 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "sheet": {
+    "overall": {
+     "contacted": 26648,
+     "replies": 1314,
+     "positive": 326
+    },
+    "persistiq": {
+     "contacted": 79919,
+     "replies": 589,
+     "positive": 77
+    },
+    "invigo": {
+     "contacted": 14515,
+     "replies": 210,
+     "positive": 34
+    }
    }
   },
   "2026-09-12": {
@@ -3161,6 +4436,23 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "sheet": {
+    "overall": {
+     "contacted": 0,
+     "replies": 0,
+     "positive": 0
+    },
+    "persistiq": {
+     "contacted": null,
+     "replies": null,
+     "positive": 98
+    },
+    "invigo": {
+     "contacted": null,
+     "replies": null,
+     "positive": null
+    }
    }
   },
   "2026-09-15": {
@@ -3187,6 +4479,23 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "sheet": {
+    "overall": {
+     "contacted": 16166,
+     "replies": 571,
+     "positive": 172
+    },
+    "persistiq": {
+     "contacted": 56931,
+     "replies": 258,
+     "positive": 83
+    },
+    "invigo": {
+     "contacted": 7818,
+     "replies": 85,
+     "positive": 26
+    }
    }
   },
   "2026-09-16": {
@@ -3213,6 +4522,23 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "sheet": {
+    "overall": {
+     "contacted": 8117,
+     "replies": 542,
+     "positive": 168
+    },
+    "persistiq": {
+     "contacted": 39295,
+     "replies": 222,
+     "positive": 66
+    },
+    "invigo": {
+     "contacted": 7226,
+     "replies": 119,
+     "positive": 39
+    }
    }
   },
   "2026-09-17": {
@@ -3239,6 +4565,23 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "sheet": {
+    "overall": {
+     "contacted": 8141,
+     "replies": 472,
+     "positive": 134
+    },
+    "persistiq": {
+     "contacted": 18398,
+     "replies": 258,
+     "positive": 77
+    },
+    "invigo": {
+     "contacted": 9046,
+     "replies": 112,
+     "positive": 31
+    }
    }
   },
   "2026-09-18": {
@@ -3265,6 +4608,23 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "sheet": {
+    "overall": {
+     "contacted": 32559,
+     "replies": 1132,
+     "positive": 256
+    },
+    "persistiq": {
+     "contacted": 60208,
+     "replies": 635,
+     "positive": 90
+    },
+    "invigo": {
+     "contacted": 16100,
+     "replies": 276,
+     "positive": 43
+    }
    }
   },
   "2026-09-19": {
@@ -3343,6 +4703,23 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "sheet": {
+    "overall": {
+     "contacted": 5366,
+     "replies": 710,
+     "positive": 182
+    },
+    "persistiq": {
+     "contacted": 37800,
+     "replies": 544,
+     "positive": 105
+    },
+    "invigo": {
+     "contacted": 1059,
+     "replies": 155,
+     "positive": 27
+    }
    }
   },
   "2026-09-22": {
@@ -3369,6 +4746,23 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "sheet": {
+    "overall": {
+     "contacted": 13439,
+     "replies": 457,
+     "positive": 90
+    },
+    "persistiq": {
+     "contacted": 19845,
+     "replies": 407,
+     "positive": 80
+    },
+    "invigo": {
+     "contacted": 8869,
+     "replies": 163,
+     "positive": 42
+    }
    }
   },
   "2026-09-23": {
@@ -3395,6 +4789,23 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "sheet": {
+    "overall": {
+     "contacted": 38064,
+     "replies": 886,
+     "positive": 223
+    },
+    "persistiq": {
+     "contacted": 35200,
+     "replies": 421,
+     "positive": 76
+    },
+    "invigo": {
+     "contacted": 7250,
+     "replies": 165,
+     "positive": 34
+    }
    }
   },
   "2026-09-24": {
@@ -3421,6 +4832,23 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "sheet": {
+    "overall": {
+     "contacted": 29067,
+     "replies": 840,
+     "positive": 175
+    },
+    "persistiq": {
+     "contacted": 24627,
+     "replies": 429,
+     "positive": 65
+    },
+    "invigo": {
+     "contacted": 8143,
+     "replies": 222,
+     "positive": 39
+    }
    }
   },
   "2026-09-25": {
@@ -3447,6 +4875,23 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "sheet": {
+    "overall": {
+     "contacted": 56406,
+     "replies": 1634,
+     "positive": 342
+    },
+    "persistiq": {
+     "contacted": 97692,
+     "replies": 870,
+     "positive": 91
+    },
+    "invigo": {
+     "contacted": 15573,
+     "replies": 261,
+     "positive": 34
+    }
    }
   },
   "2026-09-26": {
@@ -3525,6 +4970,23 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "sheet": {
+    "overall": {
+     "contacted": 8186,
+     "replies": 795,
+     "positive": 171
+    },
+    "persistiq": {
+     "contacted": 32239,
+     "replies": 629,
+     "positive": 147
+    },
+    "invigo": {
+     "contacted": 2373,
+     "replies": 157,
+     "positive": 30
+    }
    }
   },
   "2026-09-29": {
@@ -3551,6 +5013,23 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "sheet": {
+    "overall": {
+     "contacted": 31353,
+     "replies": 882,
+     "positive": 182
+    },
+    "persistiq": {
+     "contacted": 43625,
+     "replies": 558,
+     "positive": 89
+    },
+    "invigo": {
+     "contacted": 9473,
+     "replies": 169,
+     "positive": 28
+    }
    }
   },
   "2026-09-30": {
@@ -3577,6 +5056,23 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "sheet": {
+    "overall": {
+     "contacted": 27665,
+     "replies": 901,
+     "positive": 190
+    },
+    "persistiq": {
+     "contacted": 30223,
+     "replies": 540,
+     "positive": 134
+    },
+    "invigo": {
+     "contacted": 7772,
+     "replies": 155,
+     "positive": 23
+    }
    }
   },
   "2026-10-01": {
@@ -3603,6 +5099,23 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "sheet": {
+    "overall": {
+     "contacted": 29106,
+     "replies": 918,
+     "positive": 172
+    },
+    "persistiq": {
+     "contacted": 13700,
+     "replies": 420,
+     "positive": 74
+    },
+    "invigo": {
+     "contacted": 7536,
+     "replies": 125,
+     "positive": 19
+    }
    }
   },
   "2026-10-02": {
@@ -3629,6 +5142,23 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "sheet": {
+    "overall": {
+     "contacted": 36535,
+     "replies": 1431,
+     "positive": 206
+    },
+    "persistiq": {
+     "contacted": 38800,
+     "replies": 644,
+     "positive": 108
+    },
+    "invigo": {
+     "contacted": 14342,
+     "replies": 284,
+     "positive": 33
+    }
    }
   },
   "2026-10-03": {
@@ -3707,6 +5237,23 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "sheet": {
+    "overall": {
+     "contacted": 8716,
+     "replies": 882,
+     "positive": 164
+    },
+    "persistiq": {
+     "contacted": 30623,
+     "replies": 638,
+     "positive": 84
+    },
+    "invigo": {
+     "contacted": 1707,
+     "replies": 132,
+     "positive": 26
+    }
    }
   },
   "2026-10-06": {
@@ -3733,6 +5280,23 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "sheet": {
+    "overall": {
+     "contacted": 27035,
+     "replies": 862,
+     "positive": 139
+    },
+    "persistiq": {
+     "contacted": 10197,
+     "replies": 413,
+     "positive": 79
+    },
+    "invigo": {
+     "contacted": 7507,
+     "replies": 168,
+     "positive": 22
+    }
    }
   },
   "2026-10-07": {
@@ -3759,6 +5323,23 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "sheet": {
+    "overall": {
+     "contacted": 33090,
+     "replies": 806,
+     "positive": 139
+    },
+    "persistiq": {
+     "contacted": 47025,
+     "replies": 460,
+     "positive": 98
+    },
+    "invigo": {
+     "contacted": 8061,
+     "replies": 171,
+     "positive": 26
+    }
    }
   },
   "2026-10-08": {
@@ -3785,6 +5366,23 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "sheet": {
+    "overall": {
+     "contacted": 29681,
+     "replies": 701,
+     "positive": 124
+    },
+    "persistiq": {
+     "contacted": 13696,
+     "replies": 401,
+     "positive": 96
+    },
+    "invigo": {
+     "contacted": 7817,
+     "replies": 190,
+     "positive": 29
+    }
    }
   },
   "2026-10-09": {
@@ -3811,6 +5409,23 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "sheet": {
+    "overall": {
+     "contacted": 52900,
+     "replies": 1263,
+     "positive": 227
+    },
+    "persistiq": {
+     "contacted": 43891,
+     "replies": 813,
+     "positive": 184
+    },
+    "invigo": {
+     "contacted": 16399,
+     "replies": 317,
+     "positive": 32
+    }
    }
   },
   "2026-10-10": {
@@ -3889,6 +5504,23 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "sheet": {
+    "overall": {
+     "contacted": 19258,
+     "replies": 813,
+     "positive": 170
+    },
+    "persistiq": {
+     "contacted": 15510,
+     "replies": 642,
+     "positive": 149
+    },
+    "invigo": {
+     "contacted": 2565,
+     "replies": 138,
+     "positive": 30
+    }
    }
   },
   "2026-10-13": {
@@ -3915,6 +5547,23 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "sheet": {
+    "overall": {
+     "contacted": 25134,
+     "replies": 866,
+     "positive": 154
+    },
+    "persistiq": {
+     "contacted": 54188,
+     "replies": 590,
+     "positive": 87
+    },
+    "invigo": {
+     "contacted": 7490,
+     "replies": 172,
+     "positive": 25
+    }
    }
   },
   "2026-10-14": {
@@ -3941,6 +5590,23 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "sheet": {
+    "overall": {
+     "contacted": 28974,
+     "replies": 865,
+     "positive": 151
+    },
+    "persistiq": {
+     "contacted": 29602,
+     "replies": 507,
+     "positive": 100
+    },
+    "invigo": {
+     "contacted": 7794,
+     "replies": 152,
+     "positive": 32
+    }
    }
   },
   "2026-10-15": {
@@ -3967,6 +5633,23 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "sheet": {
+    "overall": {
+     "contacted": 33983,
+     "replies": 794,
+     "positive": 154
+    },
+    "persistiq": {
+     "contacted": 29540,
+     "replies": 465,
+     "positive": 107
+    },
+    "invigo": {
+     "contacted": 7623,
+     "replies": 183,
+     "positive": 30
+    }
    }
   },
   "2026-10-16": {
@@ -3993,6 +5676,23 @@
    "cyberpond_ndc": {
     "booked": 1,
     "held": 1
+   },
+   "sheet": {
+    "overall": {
+     "contacted": 20203,
+     "replies": 859,
+     "positive": 119
+    },
+    "persistiq": {
+     "contacted": 60910,
+     "replies": 696,
+     "positive": 152
+    },
+    "invigo": {
+     "contacted": 8579,
+     "replies": 141,
+     "positive": 24
+    }
    }
   },
   "2026-10-17": {

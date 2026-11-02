@@ -280,6 +280,14 @@ function getTotal(sectionId, days, key) {
     };
     return days.reduce((s, d) => s + pipedriveFolded(raw, d), 0);
   }
+  if (funnelDaily && ["wishpond","persistiq","invigo"].includes(sectionId) && ["leadsContacted","replyReceived","positive"].includes(key)) {
+    return days.reduce((s, d) => {
+      const k = (typeof d === "string") ? d : iso(d);
+      const rec = ((((funnelDaily || {}).days || {})[k] || {}).sheet || {})[sectionId === "wishpond" ? "overall" : sectionId] || {};
+      const sv = key === "leadsContacted" ? rec.contacted : key === "replyReceived" ? rec.replies : rec.positive;
+      return s + (Number(sv) || 0);
+    }, 0);
+  }
   if (funnelDaily && ["wishpond","persistiq","invigo"].includes(sectionId) && key === "wonDeals") {
     const raw = d => {
       const rec = ((funnelDaily || {}).days || {})[(typeof d === "string" ? d : iso(d))] || {};
@@ -461,6 +469,11 @@ function renderSection(sec, days) {
       } else if (funnelDaily && row.key === "demosHeld" && ["wishpond","persistiq","invigo"].includes(sec.id)) {
         const pd = sec.id === "wishpond" ? pipedriveFolded(pipedriveHeld, d) : pipedriveHeldFor(sec.id, d);
         if (Number.isFinite(pd)) v = pd;
+      } else if (funnelDaily && ["leadsContacted","replyReceived","positive"].includes(row.key) && ["wishpond","persistiq","invigo"].includes(sec.id)) {
+        const sh = (((funnelDaily || {}).days || {})[k] || {}).sheet || {};
+        const rec = sh[sec.id === "wishpond" ? "overall" : sec.id] || {};
+        const sv = row.key === "leadsContacted" ? rec.contacted : row.key === "replyReceived" ? rec.replies : rec.positive;
+        if (Number.isFinite(sv)) v = sv;
       } else if (funnelDaily && row.key === "wonDeals" && ["wishpond","persistiq","invigo"].includes(sec.id)) {
         const pd = pipedriveFolded(day => {
           const rec = ((funnelDaily || {}).days || {})[day] || {};
