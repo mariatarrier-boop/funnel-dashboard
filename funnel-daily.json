@@ -38,7 +38,7 @@
    "wishpond": {
     "booked": 6,
     "held": 9,
-    "won": 3
+    "won": 2
    },
    "cyberpond": {
     "booked": 0,
@@ -84,7 +84,7 @@
    "wishpond": {
     "booked": 11,
     "held": 3,
-    "won": 0
+    "won": 1
    },
    "cyberpond": {
     "booked": 0,
@@ -176,7 +176,7 @@
    "wishpond": {
     "booked": 12,
     "held": 8,
-    "won": 0
+    "won": 1
    },
    "cyberpond": {
     "booked": 0,
@@ -222,7 +222,7 @@
    "wishpond": {
     "booked": 5,
     "held": 7,
-    "won": 4
+    "won": 1
    },
    "cyberpond": {
     "booked": 6,
@@ -418,7 +418,7 @@
    "wishpond": {
     "booked": 2,
     "held": 6,
-    "won": 0
+    "won": 1
    },
    "cyberpond": {
     "booked": 7,
@@ -464,7 +464,7 @@
    "wishpond": {
     "booked": 7,
     "held": 6,
-    "won": 6
+    "won": 5
    },
    "cyberpond": {
     "booked": 6,
@@ -580,15 +580,18 @@
   "2026-06-01": {
    "wishpond": {
     "booked": 38,
-    "held": 17
+    "held": 17,
+    "won": 2
    },
    "persistiq": {
     "booked": 22,
-    "held": 10
+    "held": 10,
+    "won": 0
    },
    "invigo": {
     "booked": 2,
-    "held": 1
+    "held": 1,
+    "won": 0
    },
    "brax": {
     "booked": 7,
@@ -606,15 +609,18 @@
   "2026-06-02": {
    "wishpond": {
     "booked": 18,
-    "held": 11
+    "held": 11,
+    "won": 0
    },
    "persistiq": {
     "booked": 20,
-    "held": 12
+    "held": 12,
+    "won": 0
    },
    "invigo": {
     "booked": 1,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "brax": {
     "booked": 1,
@@ -632,15 +638,18 @@
   "2026-06-03": {
    "wishpond": {
     "booked": 21,
-    "held": 11
+    "held": 11,
+    "won": 3
    },
    "persistiq": {
     "booked": 29,
-    "held": 9
+    "held": 9,
+    "won": 0
    },
    "invigo": {
     "booked": 0,
-    "held": 0
+    "held": 0,
+    "won": 1
    },
    "brax": {
     "booked": 4,
@@ -658,15 +667,18 @@
   "2026-06-04": {
    "wishpond": {
     "booked": 14,
-    "held": 15
+    "held": 15,
+    "won": 0
    },
    "persistiq": {
     "booked": 39,
-    "held": 9
+    "held": 9,
+    "won": 4
    },
    "invigo": {
     "booked": 1,
-    "held": 1
+    "held": 1,
+    "won": 0
    },
    "brax": {
     "booked": 4,
@@ -684,15 +696,18 @@
   "2026-06-05": {
    "wishpond": {
     "booked": 16,
-    "held": 7
+    "held": 7,
+    "won": 3
    },
    "persistiq": {
     "booked": 23,
-    "held": 9
+    "held": 9,
+    "won": 0
    },
    "invigo": {
     "booked": 1,
-    "held": 0
+    "held": 0,
+    "won": 1
    },
    "brax": {
     "booked": 3,
@@ -710,15 +725,18 @@
   "2026-06-06": {
    "wishpond": {
     "booked": 5,
-    "held": 1
+    "held": 1,
+    "won": 0
    },
    "persistiq": {
     "booked": 18,
-    "held": 7
+    "held": 7,
+    "won": 0
    },
    "invigo": {
     "booked": 4,
-    "held": 1
+    "held": 1,
+    "won": 0
    },
    "brax": {
     "booked": 0,
@@ -736,15 +754,18 @@
   "2026-06-07": {
    "wishpond": {
     "booked": 0,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "persistiq": {
     "booked": 13,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "invigo": {
     "booked": 2,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "brax": {
     "booked": 0,
@@ -762,15 +783,18 @@
   "2026-06-08": {
    "wishpond": {
     "booked": 17,
-    "held": 9
+    "held": 9,
+    "won": 1
    },
    "persistiq": {
     "booked": 67,
-    "held": 18
+    "held": 18,
+    "won": 1
    },
    "invigo": {
     "booked": 6,
-    "held": 2
+    "held": 2,
+    "won": 0
    },
    "brax": {
     "booked": 0,
@@ -788,15 +812,18 @@
   "2026-06-09": {
    "wishpond": {
     "booked": 23,
-    "held": 15
+    "held": 15,
+    "won": 3
    },
    "persistiq": {
     "booked": 25,
-    "held": 15
+    "held": 15,
+    "won": 0
    },
    "invigo": {
     "booked": 0,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "brax": {
     "booked": 4,
@@ -814,15 +841,18 @@
   "2026-06-10": {
    "wishpond": {
     "booked": 13,
-    "held": 11
+    "held": 11,
+    "won": 0
    },
    "persistiq": {
     "booked": 12,
-    "held": 10
+    "held": 10,
+    "won": 1
    },
    "invigo": {
     "booked": 8,
-    "held": 4
+    "held": 4,
+    "won": 0
    },
    "brax": {
     "booked": 2,
@@ -840,15 +870,18 @@
   "2026-06-11": {
    "wishpond": {
     "booked": 11,
-    "held": 8
+    "held": 8,
+    "won": 0
    },
    "persistiq": {
     "booked": 20,
-    "held": 14
+    "held": 14,
+    "won": 2
    },
    "invigo": {
     "booked": 2,
-    "held": 2
+    "held": 2,
+    "won": 0
    },
    "brax": {
     "booked": 2,
@@ -866,15 +899,18 @@
   "2026-06-12": {
    "wishpond": {
     "booked": 16,
-    "held": 11
+    "held": 11,
+    "won": 3
    },
    "persistiq": {
     "booked": 25,
-    "held": 8
+    "held": 8,
+    "won": 0
    },
    "invigo": {
     "booked": 3,
-    "held": 1
+    "held": 1,
+    "won": 1
    },
    "brax": {
     "booked": 3,
@@ -892,15 +928,18 @@
   "2026-06-13": {
    "wishpond": {
     "booked": 0,
-    "held": 1
+    "held": 1,
+    "won": 1
    },
    "persistiq": {
     "booked": 10,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "invigo": {
     "booked": 0,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "brax": {
     "booked": 0,
@@ -918,15 +957,18 @@
   "2026-06-14": {
    "wishpond": {
     "booked": 0,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "persistiq": {
     "booked": 0,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "invigo": {
     "booked": 0,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "brax": {
     "booked": 0,
@@ -944,15 +986,18 @@
   "2026-06-15": {
    "wishpond": {
     "booked": 22,
-    "held": 10
+    "held": 10,
+    "won": 2
    },
    "persistiq": {
     "booked": 32,
-    "held": 26
+    "held": 26,
+    "won": 0
    },
    "invigo": {
     "booked": 3,
-    "held": 3
+    "held": 3,
+    "won": 0
    },
    "brax": {
     "booked": 3,
@@ -987,15 +1032,18 @@
   "2026-06-16": {
    "wishpond": {
     "booked": 16,
-    "held": 8
+    "held": 8,
+    "won": 2
    },
    "persistiq": {
     "booked": 25,
-    "held": 9
+    "held": 9,
+    "won": 0
    },
    "invigo": {
     "booked": 2,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "brax": {
     "booked": 2,
@@ -1030,15 +1078,18 @@
   "2026-06-17": {
    "wishpond": {
     "booked": 21,
-    "held": 12
+    "held": 12,
+    "won": 3
    },
    "persistiq": {
     "booked": 31,
-    "held": 7
+    "held": 7,
+    "won": 0
    },
    "invigo": {
     "booked": 1,
-    "held": 1
+    "held": 1,
+    "won": 0
    },
    "brax": {
     "booked": 6,
@@ -1073,15 +1124,18 @@
   "2026-06-18": {
    "wishpond": {
     "booked": 15,
-    "held": 13
+    "held": 13,
+    "won": 0
    },
    "persistiq": {
     "booked": 10,
-    "held": 13
+    "held": 13,
+    "won": 3
    },
    "invigo": {
     "booked": 3,
-    "held": 1
+    "held": 1,
+    "won": 0
    },
    "brax": {
     "booked": 3,
@@ -1116,15 +1170,18 @@
   "2026-06-19": {
    "wishpond": {
     "booked": 10,
-    "held": 10
+    "held": 10,
+    "won": 1
    },
    "persistiq": {
     "booked": 12,
-    "held": 10
+    "held": 10,
+    "won": 0
    },
    "invigo": {
     "booked": 1,
-    "held": 3
+    "held": 3,
+    "won": 0
    },
    "brax": {
     "booked": 1,
@@ -1159,15 +1216,18 @@
   "2026-06-20": {
    "wishpond": {
     "booked": 5,
-    "held": 1
+    "held": 1,
+    "won": 0
    },
    "persistiq": {
     "booked": 3,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "invigo": {
     "booked": 3,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "brax": {
     "booked": 0,
@@ -1185,15 +1245,18 @@
   "2026-06-21": {
    "wishpond": {
     "booked": 2,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "persistiq": {
     "booked": 1,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "invigo": {
     "booked": 0,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "brax": {
     "booked": 0,
@@ -1211,15 +1274,18 @@
   "2026-06-22": {
    "wishpond": {
     "booked": 27,
-    "held": 10
+    "held": 10,
+    "won": 1
    },
    "persistiq": {
     "booked": 18,
-    "held": 11
+    "held": 11,
+    "won": 1
    },
    "invigo": {
     "booked": 1,
-    "held": 1
+    "held": 1,
+    "won": 0
    },
    "brax": {
     "booked": 5,
@@ -1254,15 +1320,18 @@
   "2026-06-23": {
    "wishpond": {
     "booked": 13,
-    "held": 12
+    "held": 12,
+    "won": 0
    },
    "persistiq": {
     "booked": 12,
-    "held": 11
+    "held": 11,
+    "won": 1
    },
    "invigo": {
     "booked": 1,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "brax": {
     "booked": 4,
@@ -1297,15 +1366,18 @@
   "2026-06-24": {
    "wishpond": {
     "booked": 25,
-    "held": 8
+    "held": 8,
+    "won": 2
    },
    "persistiq": {
     "booked": 10,
-    "held": 10
+    "held": 10,
+    "won": 0
    },
    "invigo": {
     "booked": 1,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "brax": {
     "booked": 3,
@@ -1340,15 +1412,18 @@
   "2026-06-25": {
    "wishpond": {
     "booked": 25,
-    "held": 14
+    "held": 14,
+    "won": 1
    },
    "persistiq": {
     "booked": 18,
-    "held": 9
+    "held": 9,
+    "won": 2
    },
    "invigo": {
     "booked": 1,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "brax": {
     "booked": 5,
@@ -1383,15 +1458,18 @@
   "2026-06-26": {
    "wishpond": {
     "booked": 10,
-    "held": 11
+    "held": 11,
+    "won": 2
    },
    "persistiq": {
     "booked": 6,
-    "held": 7
+    "held": 7,
+    "won": 1
    },
    "invigo": {
     "booked": 3,
-    "held": 3
+    "held": 3,
+    "won": 0
    },
    "brax": {
     "booked": 2,
@@ -1426,15 +1504,18 @@
   "2026-06-27": {
    "wishpond": {
     "booked": 0,
-    "held": 2
+    "held": 2,
+    "won": 0
    },
    "persistiq": {
     "booked": 1,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "invigo": {
     "booked": 0,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "brax": {
     "booked": 0,
@@ -1452,15 +1533,18 @@
   "2026-06-28": {
    "wishpond": {
     "booked": 0,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "persistiq": {
     "booked": 0,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "invigo": {
     "booked": 0,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "brax": {
     "booked": 0,
@@ -1478,15 +1562,18 @@
   "2026-06-29": {
    "wishpond": {
     "booked": 21,
-    "held": 6
+    "held": 6,
+    "won": 0
    },
    "persistiq": {
     "booked": 6,
-    "held": 9
+    "held": 9,
+    "won": 2
    },
    "invigo": {
     "booked": 3,
-    "held": 3
+    "held": 3,
+    "won": 3
    },
    "brax": {
     "booked": 2,
@@ -1521,15 +1608,18 @@
   "2026-06-30": {
    "wishpond": {
     "booked": 20,
-    "held": 5
+    "held": 5,
+    "won": 3
    },
    "persistiq": {
     "booked": 7,
-    "held": 2
+    "held": 2,
+    "won": 1
    },
    "invigo": {
     "booked": 1,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "brax": {
     "booked": 2,
@@ -1564,15 +1654,18 @@
   "2026-07-01": {
    "wishpond": {
     "booked": 12,
-    "held": 1
+    "held": 1,
+    "won": 1
    },
    "persistiq": {
     "booked": 13,
-    "held": 9
+    "held": 9,
+    "won": 0
    },
    "invigo": {
     "booked": 3,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "brax": {
     "booked": 1,
@@ -1607,15 +1700,18 @@
   "2026-07-02": {
    "wishpond": {
     "booked": 14,
-    "held": 5
+    "held": 5,
+    "won": 0
    },
    "persistiq": {
     "booked": 10,
-    "held": 3
+    "held": 3,
+    "won": 0
    },
    "invigo": {
     "booked": 2,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "brax": {
     "booked": 1,
@@ -1650,15 +1746,18 @@
   "2026-07-03": {
    "wishpond": {
     "booked": 9,
-    "held": 7
+    "held": 7,
+    "won": 1
    },
    "persistiq": {
     "booked": 11,
-    "held": 4
+    "held": 4,
+    "won": 0
    },
    "invigo": {
     "booked": 1,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "brax": {
     "booked": 3,
@@ -1693,15 +1792,18 @@
   "2026-07-04": {
    "wishpond": {
     "booked": 0,
-    "held": 1
+    "held": 1,
+    "won": 1
    },
    "persistiq": {
     "booked": 1,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "invigo": {
     "booked": 0,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "brax": {
     "booked": 0,
@@ -1719,15 +1821,18 @@
   "2026-07-05": {
    "wishpond": {
     "booked": 0,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "persistiq": {
     "booked": 0,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "invigo": {
     "booked": 0,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "brax": {
     "booked": 0,
@@ -1745,15 +1850,18 @@
   "2026-07-06": {
    "wishpond": {
     "booked": 24,
-    "held": 12
+    "held": 12,
+    "won": 1
    },
    "persistiq": {
     "booked": 18,
-    "held": 9
+    "held": 9,
+    "won": 0
    },
    "invigo": {
     "booked": 2,
-    "held": 1
+    "held": 1,
+    "won": 0
    },
    "brax": {
     "booked": 4,
@@ -1788,15 +1896,18 @@
   "2026-07-07": {
    "wishpond": {
     "booked": 22,
-    "held": 13
+    "held": 13,
+    "won": 1
    },
    "persistiq": {
     "booked": 17,
-    "held": 4
+    "held": 4,
+    "won": 1
    },
    "invigo": {
     "booked": 1,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "brax": {
     "booked": 2,
@@ -1831,15 +1942,18 @@
   "2026-07-08": {
    "wishpond": {
     "booked": 18,
-    "held": 10
+    "held": 10,
+    "won": 0
    },
    "persistiq": {
     "booked": 13,
-    "held": 13
+    "held": 13,
+    "won": 0
    },
    "invigo": {
     "booked": 4,
-    "held": 3
+    "held": 3,
+    "won": 0
    },
    "brax": {
     "booked": 3,
@@ -1874,15 +1988,18 @@
   "2026-07-09": {
    "wishpond": {
     "booked": 24,
-    "held": 9
+    "held": 9,
+    "won": 1
    },
    "persistiq": {
     "booked": 8,
-    "held": 5
+    "held": 5,
+    "won": 0
    },
    "invigo": {
     "booked": 4,
-    "held": 3
+    "held": 3,
+    "won": 0
    },
    "brax": {
     "booked": 1,
@@ -1917,15 +2034,18 @@
   "2026-07-10": {
    "wishpond": {
     "booked": 12,
-    "held": 15
+    "held": 15,
+    "won": 2
    },
    "persistiq": {
     "booked": 12,
-    "held": 7
+    "held": 7,
+    "won": 0
    },
    "invigo": {
     "booked": 3,
-    "held": 3
+    "held": 3,
+    "won": 0
    },
    "brax": {
     "booked": 6,
@@ -1960,15 +2080,18 @@
   "2026-07-11": {
    "wishpond": {
     "booked": 5,
-    "held": 1
+    "held": 1,
+    "won": 0
    },
    "persistiq": {
     "booked": 0,
-    "held": 2
+    "held": 2,
+    "won": 0
    },
    "invigo": {
     "booked": 0,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "brax": {
     "booked": 0,
@@ -1986,15 +2109,18 @@
   "2026-07-12": {
    "wishpond": {
     "booked": 0,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "persistiq": {
     "booked": 0,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "invigo": {
     "booked": 0,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "brax": {
     "booked": 0,
@@ -2012,15 +2138,18 @@
   "2026-07-13": {
    "wishpond": {
     "booked": 21,
-    "held": 10
+    "held": 10,
+    "won": 0
    },
    "persistiq": {
     "booked": 16,
-    "held": 4
+    "held": 4,
+    "won": 1
    },
    "invigo": {
     "booked": 4,
-    "held": 1
+    "held": 1,
+    "won": 0
    },
    "brax": {
     "booked": 7,
@@ -2055,15 +2184,18 @@
   "2026-07-14": {
    "wishpond": {
     "booked": 35,
-    "held": 14
+    "held": 14,
+    "won": 0
    },
    "persistiq": {
     "booked": 18,
-    "held": 7
+    "held": 7,
+    "won": 0
    },
    "invigo": {
     "booked": 4,
-    "held": 4
+    "held": 4,
+    "won": 0
    },
    "brax": {
     "booked": 5,
@@ -2098,15 +2230,18 @@
   "2026-07-15": {
    "wishpond": {
     "booked": 19,
-    "held": 15
+    "held": 15,
+    "won": 2
    },
    "persistiq": {
     "booked": 15,
-    "held": 11
+    "held": 11,
+    "won": 0
    },
    "invigo": {
     "booked": 0,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "brax": {
     "booked": 6,
@@ -2141,15 +2276,18 @@
   "2026-07-16": {
    "wishpond": {
     "booked": 18,
-    "held": 6
+    "held": 6,
+    "won": 2
    },
    "persistiq": {
     "booked": 12,
-    "held": 12
+    "held": 12,
+    "won": 1
    },
    "invigo": {
     "booked": 1,
-    "held": 1
+    "held": 1,
+    "won": 1
    },
    "brax": {
     "booked": 4,
@@ -2184,15 +2322,18 @@
   "2026-07-17": {
    "wishpond": {
     "booked": 11,
-    "held": 9
+    "held": 9,
+    "won": 1
    },
    "persistiq": {
     "booked": 13,
-    "held": 14
+    "held": 14,
+    "won": 0
    },
    "invigo": {
     "booked": 4,
-    "held": 2
+    "held": 2,
+    "won": 0
    },
    "brax": {
     "booked": 5,
@@ -2227,15 +2368,18 @@
   "2026-07-18": {
    "wishpond": {
     "booked": 3,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "persistiq": {
     "booked": 0,
-    "held": 0
+    "held": 0,
+    "won": 1
    },
    "invigo": {
     "booked": 0,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "brax": {
     "booked": 0,
@@ -2253,15 +2397,18 @@
   "2026-07-19": {
    "wishpond": {
     "booked": 3,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "persistiq": {
     "booked": 0,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "invigo": {
     "booked": 0,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "brax": {
     "booked": 1,
@@ -2279,15 +2426,18 @@
   "2026-07-20": {
    "wishpond": {
     "booked": 29,
-    "held": 14
+    "held": 14,
+    "won": 1
    },
    "persistiq": {
     "booked": 21,
-    "held": 7
+    "held": 7,
+    "won": 1
    },
    "invigo": {
     "booked": 2,
-    "held": 4
+    "held": 4,
+    "won": 1
    },
    "brax": {
     "booked": 3,
@@ -2322,15 +2472,18 @@
   "2026-07-21": {
    "wishpond": {
     "booked": 22,
-    "held": 10
+    "held": 10,
+    "won": 2
    },
    "persistiq": {
     "booked": 16,
-    "held": 10
+    "held": 10,
+    "won": 1
    },
    "invigo": {
     "booked": 0,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "brax": {
     "booked": 1,
@@ -2365,15 +2518,18 @@
   "2026-07-22": {
    "wishpond": {
     "booked": 18,
-    "held": 13
+    "held": 13,
+    "won": 3
    },
    "persistiq": {
     "booked": 20,
-    "held": 9
+    "held": 9,
+    "won": 0
    },
    "invigo": {
     "booked": 0,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "brax": {
     "booked": 2,
@@ -2408,15 +2564,18 @@
   "2026-07-23": {
    "wishpond": {
     "booked": 8,
-    "held": 8
+    "held": 8,
+    "won": 1
    },
    "persistiq": {
     "booked": 16,
-    "held": 12
+    "held": 12,
+    "won": 1
    },
    "invigo": {
     "booked": 0,
-    "held": 0
+    "held": 0,
+    "won": 1
    },
    "brax": {
     "booked": 5,
@@ -2451,15 +2610,18 @@
   "2026-07-24": {
    "wishpond": {
     "booked": 11,
-    "held": 7
+    "held": 7,
+    "won": 1
    },
    "persistiq": {
     "booked": 15,
-    "held": 10
+    "held": 10,
+    "won": 1
    },
    "invigo": {
     "booked": 0,
-    "held": 1
+    "held": 1,
+    "won": 0
    },
    "brax": {
     "booked": 4,
@@ -2494,15 +2656,18 @@
   "2026-07-25": {
    "wishpond": {
     "booked": 0,
-    "held": 1
+    "held": 1,
+    "won": 0
    },
    "persistiq": {
     "booked": 0,
-    "held": 1
+    "held": 1,
+    "won": 0
    },
    "invigo": {
     "booked": 0,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "brax": {
     "booked": 1,
@@ -2520,15 +2685,18 @@
   "2026-07-26": {
    "wishpond": {
     "booked": 0,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "persistiq": {
     "booked": 0,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "invigo": {
     "booked": 0,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "brax": {
     "booked": 0,
@@ -2546,15 +2714,18 @@
   "2026-07-27": {
    "wishpond": {
     "booked": 27,
-    "held": 7
+    "held": 7,
+    "won": 1
    },
    "persistiq": {
     "booked": 21,
-    "held": 10
+    "held": 10,
+    "won": 0
    },
    "invigo": {
     "booked": 1,
-    "held": 1
+    "held": 1,
+    "won": 0
    },
    "brax": {
     "booked": 0,
@@ -2589,15 +2760,18 @@
   "2026-07-28": {
    "wishpond": {
     "booked": 30,
-    "held": 16
+    "held": 16,
+    "won": 2
    },
    "persistiq": {
     "booked": 21,
-    "held": 16
+    "held": 16,
+    "won": 0
    },
    "invigo": {
     "booked": 2,
-    "held": 2
+    "held": 2,
+    "won": 0
    },
    "brax": {
     "booked": 4,
@@ -2632,15 +2806,18 @@
   "2026-07-29": {
    "wishpond": {
     "booked": 20,
-    "held": 13
+    "held": 13,
+    "won": 2
    },
    "persistiq": {
     "booked": 19,
-    "held": 8
+    "held": 8,
+    "won": 1
    },
    "invigo": {
     "booked": 0,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "brax": {
     "booked": 4,
@@ -2675,15 +2852,18 @@
   "2026-07-30": {
    "wishpond": {
     "booked": 17,
-    "held": 14
+    "held": 14,
+    "won": 1
    },
    "persistiq": {
     "booked": 23,
-    "held": 14
+    "held": 14,
+    "won": 1
    },
    "invigo": {
     "booked": 3,
-    "held": 1
+    "held": 1,
+    "won": 0
    },
    "brax": {
     "booked": 2,
@@ -2718,15 +2898,18 @@
   "2026-07-31": {
    "wishpond": {
     "booked": 18,
-    "held": 6
+    "held": 6,
+    "won": 4
    },
    "persistiq": {
     "booked": 17,
-    "held": 17
+    "held": 17,
+    "won": 4
    },
    "invigo": {
     "booked": 4,
-    "held": 4
+    "held": 4,
+    "won": 1
    },
    "brax": {
     "booked": 1,
@@ -2761,15 +2944,18 @@
   "2026-08-01": {
    "wishpond": {
     "booked": 5,
-    "held": 2
+    "held": 2,
+    "won": 1
    },
    "persistiq": {
     "booked": 0,
-    "held": 2
+    "held": 2,
+    "won": 1
    },
    "invigo": {
     "booked": 0,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "brax": {
     "booked": 0,
@@ -2787,15 +2973,18 @@
   "2026-08-02": {
    "wishpond": {
     "booked": 6,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "persistiq": {
     "booked": 0,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "invigo": {
     "booked": 0,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "brax": {
     "booked": 0,
@@ -2813,15 +3002,18 @@
   "2026-08-03": {
    "wishpond": {
     "booked": 28,
-    "held": 2
+    "held": 2,
+    "won": 1
    },
    "persistiq": {
     "booked": 20,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "invigo": {
     "booked": 3,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "brax": {
     "booked": 5,
@@ -2856,15 +3048,18 @@
   "2026-08-04": {
    "wishpond": {
     "booked": 23,
-    "held": 8
+    "held": 8,
+    "won": 0
    },
    "persistiq": {
     "booked": 20,
-    "held": 12
+    "held": 12,
+    "won": 2
    },
    "invigo": {
     "booked": 1,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "brax": {
     "booked": 2,
@@ -2899,15 +3094,18 @@
   "2026-08-05": {
    "wishpond": {
     "booked": 23,
-    "held": 9
+    "held": 9,
+    "won": 1
    },
    "persistiq": {
     "booked": 19,
-    "held": 18
+    "held": 18,
+    "won": 0
    },
    "invigo": {
     "booked": 2,
-    "held": 1
+    "held": 1,
+    "won": 0
    },
    "brax": {
     "booked": 1,
@@ -2942,15 +3140,18 @@
   "2026-08-06": {
    "wishpond": {
     "booked": 16,
-    "held": 9
+    "held": 9,
+    "won": 3
    },
    "persistiq": {
     "booked": 15,
-    "held": 8
+    "held": 8,
+    "won": 0
    },
    "invigo": {
     "booked": 3,
-    "held": 2
+    "held": 2,
+    "won": 0
    },
    "brax": {
     "booked": 1,
@@ -2985,15 +3186,18 @@
   "2026-08-07": {
    "wishpond": {
     "booked": 13,
-    "held": 11
+    "held": 11,
+    "won": 0
    },
    "persistiq": {
     "booked": 10,
-    "held": 5
+    "held": 5,
+    "won": 1
    },
    "invigo": {
     "booked": 4,
-    "held": 3
+    "held": 3,
+    "won": 0
    },
    "brax": {
     "booked": 1,
@@ -3028,15 +3232,18 @@
   "2026-08-08": {
    "wishpond": {
     "booked": 1,
-    "held": 2
+    "held": 2,
+    "won": 0
    },
    "persistiq": {
     "booked": 2,
-    "held": 1
+    "held": 1,
+    "won": 0
    },
    "invigo": {
     "booked": 0,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "brax": {
     "booked": 0,
@@ -3054,15 +3261,18 @@
   "2026-08-09": {
    "wishpond": {
     "booked": 0,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "persistiq": {
     "booked": 0,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "invigo": {
     "booked": 0,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "brax": {
     "booked": 0,
@@ -3080,15 +3290,18 @@
   "2026-08-10": {
    "wishpond": {
     "booked": 49,
-    "held": 15
+    "held": 15,
+    "won": 0
    },
    "persistiq": {
     "booked": 15,
-    "held": 4
+    "held": 4,
+    "won": 3
    },
    "invigo": {
     "booked": 11,
-    "held": 2
+    "held": 2,
+    "won": 1
    },
    "brax": {
     "booked": 7,
@@ -3123,15 +3336,18 @@
   "2026-08-11": {
    "wishpond": {
     "booked": 31,
-    "held": 16
+    "held": 16,
+    "won": 1
    },
    "persistiq": {
     "booked": 17,
-    "held": 4
+    "held": 4,
+    "won": 0
    },
    "invigo": {
     "booked": 4,
-    "held": 1
+    "held": 1,
+    "won": 0
    },
    "brax": {
     "booked": 4,
@@ -3166,15 +3382,18 @@
   "2026-08-12": {
    "wishpond": {
     "booked": 28,
-    "held": 7
+    "held": 7,
+    "won": 0
    },
    "persistiq": {
     "booked": 15,
-    "held": 7
+    "held": 7,
+    "won": 0
    },
    "invigo": {
     "booked": 1,
-    "held": 4
+    "held": 4,
+    "won": 0
    },
    "brax": {
     "booked": 3,
@@ -3209,15 +3428,18 @@
   "2026-08-13": {
    "wishpond": {
     "booked": 21,
-    "held": 13
+    "held": 13,
+    "won": 1
    },
    "persistiq": {
     "booked": 11,
-    "held": 1
+    "held": 1,
+    "won": 2
    },
    "invigo": {
     "booked": 0,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "brax": {
     "booked": 1,
@@ -3252,15 +3474,18 @@
   "2026-08-14": {
    "wishpond": {
     "booked": 19,
-    "held": 6
+    "held": 6,
+    "won": 2
    },
    "persistiq": {
     "booked": 10,
-    "held": 11
+    "held": 11,
+    "won": 0
    },
    "invigo": {
     "booked": 4,
-    "held": 1
+    "held": 1,
+    "won": 1
    },
    "brax": {
     "booked": 2,
@@ -3295,15 +3520,18 @@
   "2026-08-15": {
    "wishpond": {
     "booked": 1,
-    "held": 5
+    "held": 5,
+    "won": 0
    },
    "persistiq": {
     "booked": 1,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "invigo": {
     "booked": 0,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "brax": {
     "booked": 1,
@@ -3321,15 +3549,18 @@
   "2026-08-16": {
    "wishpond": {
     "booked": 1,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "persistiq": {
     "booked": 0,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "invigo": {
     "booked": 0,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "brax": {
     "booked": 0,
@@ -3347,15 +3578,18 @@
   "2026-08-17": {
    "wishpond": {
     "booked": 53,
-    "held": 8
+    "held": 8,
+    "won": 1
    },
    "persistiq": {
     "booked": 30,
-    "held": 8
+    "held": 8,
+    "won": 1
    },
    "invigo": {
     "booked": 7,
-    "held": 1
+    "held": 1,
+    "won": 0
    },
    "brax": {
     "booked": 8,
@@ -3390,15 +3624,18 @@
   "2026-08-18": {
    "wishpond": {
     "booked": 44,
-    "held": 14
+    "held": 14,
+    "won": 2
    },
    "persistiq": {
     "booked": 18,
-    "held": 10
+    "held": 10,
+    "won": 0
    },
    "invigo": {
     "booked": 3,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "brax": {
     "booked": 1,
@@ -3433,15 +3670,18 @@
   "2026-08-19": {
    "wishpond": {
     "booked": 36,
-    "held": 12
+    "held": 12,
+    "won": 0
    },
    "persistiq": {
     "booked": 16,
-    "held": 12
+    "held": 12,
+    "won": 1
    },
    "invigo": {
     "booked": 5,
-    "held": 1
+    "held": 1,
+    "won": 0
    },
    "brax": {
     "booked": 2,
@@ -3476,15 +3716,18 @@
   "2026-08-20": {
    "wishpond": {
     "booked": 30,
-    "held": 10
+    "held": 10,
+    "won": 0
    },
    "persistiq": {
     "booked": 12,
-    "held": 7
+    "held": 7,
+    "won": 0
    },
    "invigo": {
     "booked": 3,
-    "held": 1
+    "held": 1,
+    "won": 0
    },
    "brax": {
     "booked": 1,
@@ -3519,15 +3762,18 @@
   "2026-08-21": {
    "wishpond": {
     "booked": 32,
-    "held": 16
+    "held": 16,
+    "won": 1
    },
    "persistiq": {
     "booked": 5,
-    "held": 8
+    "held": 8,
+    "won": 0
    },
    "invigo": {
     "booked": 1,
-    "held": 12
+    "held": 12,
+    "won": 0
    },
    "brax": {
     "booked": 1,
@@ -3562,15 +3808,18 @@
   "2026-08-22": {
    "wishpond": {
     "booked": 17,
-    "held": 7
+    "held": 7,
+    "won": 0
    },
    "persistiq": {
     "booked": 0,
-    "held": 1
+    "held": 1,
+    "won": 0
    },
    "invigo": {
     "booked": 0,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "brax": {
     "booked": 2,
@@ -3588,15 +3837,18 @@
   "2026-08-23": {
    "wishpond": {
     "booked": 12,
-    "held": 0
+    "held": 0,
+    "won": 1
    },
    "persistiq": {
     "booked": 0,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "invigo": {
     "booked": 0,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "brax": {
     "booked": 0,
@@ -3614,15 +3866,18 @@
   "2026-08-24": {
    "wishpond": {
     "booked": 54,
-    "held": 16
+    "held": 16,
+    "won": 0
    },
    "persistiq": {
     "booked": 7,
-    "held": 7
+    "held": 7,
+    "won": 7
    },
    "invigo": {
     "booked": 1,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "brax": {
     "booked": 5,
@@ -3657,15 +3912,18 @@
   "2026-08-25": {
    "wishpond": {
     "booked": 26,
-    "held": 17
+    "held": 17,
+    "won": 0
    },
    "persistiq": {
     "booked": 8,
-    "held": 11
+    "held": 11,
+    "won": 0
    },
    "invigo": {
     "booked": 0,
-    "held": 1
+    "held": 1,
+    "won": 1
    },
    "brax": {
     "booked": 1,
@@ -3700,15 +3958,18 @@
   "2026-08-26": {
    "wishpond": {
     "booked": 27,
-    "held": 11
+    "held": 11,
+    "won": 1
    },
    "persistiq": {
     "booked": 3,
-    "held": 2
+    "held": 2,
+    "won": 0
    },
    "invigo": {
     "booked": 2,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "brax": {
     "booked": 4,
@@ -3743,15 +4004,18 @@
   "2026-08-27": {
    "wishpond": {
     "booked": 39,
-    "held": 8
+    "held": 8,
+    "won": 1
    },
    "persistiq": {
     "booked": 2,
-    "held": 3
+    "held": 3,
+    "won": 1
    },
    "invigo": {
     "booked": 0,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "brax": {
     "booked": 2,
@@ -3786,15 +4050,18 @@
   "2026-08-28": {
    "wishpond": {
     "booked": 46,
-    "held": 25
+    "held": 25,
+    "won": 1
    },
    "persistiq": {
     "booked": 8,
-    "held": 3
+    "held": 3,
+    "won": 0
    },
    "invigo": {
     "booked": 0,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "brax": {
     "booked": 0,
@@ -3829,15 +4096,18 @@
   "2026-08-29": {
    "wishpond": {
     "booked": 19,
-    "held": 1
+    "held": 1,
+    "won": 0
    },
    "persistiq": {
     "booked": 1,
-    "held": 2
+    "held": 2,
+    "won": 0
    },
    "invigo": {
     "booked": 0,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "brax": {
     "booked": 0,
@@ -3855,15 +4125,18 @@
   "2026-08-30": {
    "wishpond": {
     "booked": 18,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "persistiq": {
     "booked": 0,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "invigo": {
     "booked": 0,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "brax": {
     "booked": 0,
@@ -3881,15 +4154,18 @@
   "2026-08-31": {
    "wishpond": {
     "booked": 39,
-    "held": 11
+    "held": 11,
+    "won": 3
    },
    "persistiq": {
     "booked": 10,
-    "held": 3
+    "held": 3,
+    "won": 2
    },
    "invigo": {
     "booked": 1,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "brax": {
     "booked": 3,
@@ -3924,15 +4200,18 @@
   "2026-09-01": {
    "wishpond": {
     "booked": 31,
-    "held": 20
+    "held": 20,
+    "won": 1
    },
    "persistiq": {
     "booked": 5,
-    "held": 2
+    "held": 2,
+    "won": 0
    },
    "invigo": {
     "booked": 0,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "brax": {
     "booked": 0,
@@ -3967,15 +4246,18 @@
   "2026-09-02": {
    "wishpond": {
     "booked": 39,
-    "held": 16
+    "held": 16,
+    "won": 0
    },
    "persistiq": {
     "booked": 4,
-    "held": 2
+    "held": 2,
+    "won": 1
    },
    "invigo": {
     "booked": 1,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "brax": {
     "booked": 2,
@@ -4010,15 +4292,18 @@
   "2026-09-03": {
    "wishpond": {
     "booked": 72,
-    "held": 13
+    "held": 13,
+    "won": 3
    },
    "persistiq": {
     "booked": 8,
-    "held": 1
+    "held": 1,
+    "won": 0
    },
    "invigo": {
     "booked": 0,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "brax": {
     "booked": 2,
@@ -4053,15 +4338,18 @@
   "2026-09-04": {
    "wishpond": {
     "booked": 67,
-    "held": 13
+    "held": 13,
+    "won": 1
    },
    "persistiq": {
     "booked": 3,
-    "held": 1
+    "held": 1,
+    "won": 0
    },
    "invigo": {
     "booked": 2,
-    "held": 0
+    "held": 0,
+    "won": 1
    },
    "brax": {
     "booked": 1,
@@ -4096,15 +4384,18 @@
   "2026-09-05": {
    "wishpond": {
     "booked": 10,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "persistiq": {
     "booked": 2,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "invigo": {
     "booked": 1,
-    "held": 1
+    "held": 1,
+    "won": 0
    },
    "brax": {
     "booked": 1,
@@ -4122,15 +4413,18 @@
   "2026-09-06": {
    "wishpond": {
     "booked": 7,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "persistiq": {
     "booked": 0,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "invigo": {
     "booked": 0,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "brax": {
     "booked": 1,
@@ -4148,15 +4442,18 @@
   "2026-09-07": {
    "wishpond": {
     "booked": 11,
-    "held": 6
+    "held": 6,
+    "won": 0
    },
    "persistiq": {
     "booked": 6,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "invigo": {
     "booked": 4,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "brax": {
     "booked": 3,
@@ -4191,15 +4488,18 @@
   "2026-09-08": {
    "wishpond": {
     "booked": 27,
-    "held": 8
+    "held": 8,
+    "won": 0
    },
    "persistiq": {
     "booked": 23,
-    "held": 8
+    "held": 8,
+    "won": 0
    },
    "invigo": {
     "booked": 1,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "brax": {
     "booked": 10,
@@ -4234,15 +4534,18 @@
   "2026-09-09": {
    "wishpond": {
     "booked": 35,
-    "held": 12
+    "held": 12,
+    "won": 0
    },
    "persistiq": {
     "booked": 2,
-    "held": 1
+    "held": 1,
+    "won": 2
    },
    "invigo": {
     "booked": 3,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "brax": {
     "booked": 2,
@@ -4277,15 +4580,18 @@
   "2026-09-10": {
    "wishpond": {
     "booked": 20,
-    "held": 8
+    "held": 8,
+    "won": 0
    },
    "persistiq": {
     "booked": 1,
-    "held": 4
+    "held": 4,
+    "won": 0
    },
    "invigo": {
     "booked": 0,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "brax": {
     "booked": 3,
@@ -4320,15 +4626,18 @@
   "2026-09-11": {
    "wishpond": {
     "booked": 43,
-    "held": 9
+    "held": 9,
+    "won": 1
    },
    "persistiq": {
     "booked": 6,
-    "held": 7
+    "held": 7,
+    "won": 0
    },
    "invigo": {
     "booked": 0,
-    "held": 1
+    "held": 1,
+    "won": 0
    },
    "brax": {
     "booked": 2,
@@ -4363,15 +4672,18 @@
   "2026-09-12": {
    "wishpond": {
     "booked": 17,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "persistiq": {
     "booked": 0,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "invigo": {
     "booked": 0,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "brax": {
     "booked": 1,
@@ -4389,15 +4701,18 @@
   "2026-09-13": {
    "wishpond": {
     "booked": 14,
-    "held": 3
+    "held": 3,
+    "won": 0
    },
    "persistiq": {
     "booked": 0,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "invigo": {
     "booked": 0,
-    "held": 1
+    "held": 1,
+    "won": 0
    },
    "brax": {
     "booked": 1,
@@ -4415,15 +4730,18 @@
   "2026-09-14": {
    "wishpond": {
     "booked": 38,
-    "held": 8
+    "held": 8,
+    "won": 0
    },
    "persistiq": {
     "booked": 8,
-    "held": 1
+    "held": 1,
+    "won": 0
    },
    "invigo": {
     "booked": 2,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "brax": {
     "booked": 7,
@@ -4458,15 +4776,18 @@
   "2026-09-15": {
    "wishpond": {
     "booked": 33,
-    "held": 16
+    "held": 16,
+    "won": 2
    },
    "persistiq": {
     "booked": 6,
-    "held": 7
+    "held": 7,
+    "won": 0
    },
    "invigo": {
     "booked": 1,
-    "held": 1
+    "held": 1,
+    "won": 0
    },
    "brax": {
     "booked": 7,
@@ -4501,15 +4822,18 @@
   "2026-09-16": {
    "wishpond": {
     "booked": 26,
-    "held": 17
+    "held": 17,
+    "won": 2
    },
    "persistiq": {
     "booked": 2,
-    "held": 3
+    "held": 3,
+    "won": 1
    },
    "invigo": {
     "booked": 2,
-    "held": 1
+    "held": 1,
+    "won": 0
    },
    "brax": {
     "booked": 2,
@@ -4544,15 +4868,18 @@
   "2026-09-17": {
    "wishpond": {
     "booked": 29,
-    "held": 23
+    "held": 23,
+    "won": 3
    },
    "persistiq": {
     "booked": 3,
-    "held": 2
+    "held": 2,
+    "won": 0
    },
    "invigo": {
     "booked": 1,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "brax": {
     "booked": 4,
@@ -4587,15 +4914,18 @@
   "2026-09-18": {
    "wishpond": {
     "booked": 22,
-    "held": 12
+    "held": 12,
+    "won": 3
    },
    "persistiq": {
     "booked": 2,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "invigo": {
     "booked": 0,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "brax": {
     "booked": 2,
@@ -4630,15 +4960,18 @@
   "2026-09-19": {
    "wishpond": {
     "booked": 8,
-    "held": 1
+    "held": 1,
+    "won": 0
    },
    "persistiq": {
     "booked": 0,
-    "held": 2
+    "held": 2,
+    "won": 1
    },
    "invigo": {
     "booked": 0,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "brax": {
     "booked": 0,
@@ -4656,15 +4989,18 @@
   "2026-09-20": {
    "wishpond": {
     "booked": 7,
-    "held": 2
+    "held": 2,
+    "won": 2
    },
    "persistiq": {
     "booked": 1,
-    "held": 1
+    "held": 1,
+    "won": 0
    },
    "invigo": {
     "booked": 0,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "brax": {
     "booked": 0,
@@ -4682,15 +5018,18 @@
   "2026-09-21": {
    "wishpond": {
     "booked": 39,
-    "held": 10
+    "held": 10,
+    "won": 1
    },
    "persistiq": {
     "booked": 4,
-    "held": 5
+    "held": 5,
+    "won": 0
    },
    "invigo": {
     "booked": 0,
-    "held": 2
+    "held": 2,
+    "won": 0
    },
    "brax": {
     "booked": 10,
@@ -4725,15 +5064,18 @@
   "2026-09-22": {
    "wishpond": {
     "booked": 29,
-    "held": 12
+    "held": 12,
+    "won": 1
    },
    "persistiq": {
     "booked": 7,
-    "held": 2
+    "held": 2,
+    "won": 0
    },
    "invigo": {
     "booked": 0,
-    "held": 1
+    "held": 1,
+    "won": 0
    },
    "brax": {
     "booked": 1,
@@ -4768,15 +5110,18 @@
   "2026-09-23": {
    "wishpond": {
     "booked": 17,
-    "held": 14
+    "held": 14,
+    "won": 1
    },
    "persistiq": {
     "booked": 1,
-    "held": 2
+    "held": 2,
+    "won": 0
    },
    "invigo": {
     "booked": 0,
-    "held": 0
+    "held": 0,
+    "won": 1
    },
    "brax": {
     "booked": 1,
@@ -4811,15 +5156,18 @@
   "2026-09-24": {
    "wishpond": {
     "booked": 26,
-    "held": 16
+    "held": 16,
+    "won": 1
    },
    "persistiq": {
     "booked": 7,
-    "held": 6
+    "held": 6,
+    "won": 0
    },
    "invigo": {
     "booked": 3,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "brax": {
     "booked": 3,
@@ -4854,15 +5202,18 @@
   "2026-09-25": {
    "wishpond": {
     "booked": 18,
-    "held": 15
+    "held": 15,
+    "won": 1
    },
    "persistiq": {
     "booked": 1,
-    "held": 3
+    "held": 3,
+    "won": 1
    },
    "invigo": {
     "booked": 1,
-    "held": 1
+    "held": 1,
+    "won": 0
    },
    "brax": {
     "booked": 8,
@@ -4897,15 +5248,18 @@
   "2026-09-26": {
    "wishpond": {
     "booked": 18,
-    "held": 5
+    "held": 5,
+    "won": 0
    },
    "persistiq": {
     "booked": 0,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "invigo": {
     "booked": 0,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "brax": {
     "booked": 1,
@@ -4923,15 +5277,18 @@
   "2026-09-27": {
    "wishpond": {
     "booked": 6,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "persistiq": {
     "booked": 1,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "invigo": {
     "booked": 0,
-    "held": 0
+    "held": 0,
+    "won": 1
    },
    "brax": {
     "booked": 0,
@@ -4949,15 +5306,18 @@
   "2026-09-28": {
    "wishpond": {
     "booked": 24,
-    "held": 19
+    "held": 19,
+    "won": 2
    },
    "persistiq": {
     "booked": 5,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "invigo": {
     "booked": 5,
-    "held": 3
+    "held": 3,
+    "won": 1
    },
    "brax": {
     "booked": 3,
@@ -4992,15 +5352,18 @@
   "2026-09-29": {
    "wishpond": {
     "booked": 25,
-    "held": 15
+    "held": 15,
+    "won": 2
    },
    "persistiq": {
     "booked": 1,
-    "held": 2
+    "held": 2,
+    "won": 0
    },
    "invigo": {
     "booked": 2,
-    "held": 2
+    "held": 2,
+    "won": 2
    },
    "brax": {
     "booked": 4,
@@ -5035,15 +5398,18 @@
   "2026-09-30": {
    "wishpond": {
     "booked": 24,
-    "held": 16
+    "held": 16,
+    "won": 3
    },
    "persistiq": {
     "booked": 11,
-    "held": 2
+    "held": 2,
+    "won": 2
    },
    "invigo": {
     "booked": 3,
-    "held": 1
+    "held": 1,
+    "won": 1
    },
    "brax": {
     "booked": 3,
@@ -5078,15 +5444,18 @@
   "2026-10-01": {
    "wishpond": {
     "booked": 30,
-    "held": 12
+    "held": 12,
+    "won": 2
    },
    "persistiq": {
     "booked": 5,
-    "held": 1
+    "held": 1,
+    "won": 1
    },
    "invigo": {
     "booked": 5,
-    "held": 2
+    "held": 2,
+    "won": 1
    },
    "brax": {
     "booked": 0,
@@ -5121,15 +5490,18 @@
   "2026-10-02": {
    "wishpond": {
     "booked": 14,
-    "held": 8
+    "held": 8,
+    "won": 2
    },
    "persistiq": {
     "booked": 4,
-    "held": 2
+    "held": 2,
+    "won": 0
    },
    "invigo": {
     "booked": 3,
-    "held": 1
+    "held": 1,
+    "won": 0
    },
    "brax": {
     "booked": 0,
@@ -5164,15 +5536,18 @@
   "2026-10-03": {
    "wishpond": {
     "booked": 8,
-    "held": 2
+    "held": 2,
+    "won": 1
    },
    "persistiq": {
     "booked": 0,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "invigo": {
     "booked": 0,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "brax": {
     "booked": 4,
@@ -5190,15 +5565,18 @@
   "2026-10-04": {
    "wishpond": {
     "booked": 11,
-    "held": 1
+    "held": 1,
+    "won": 0
    },
    "persistiq": {
     "booked": 0,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "invigo": {
     "booked": 1,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "brax": {
     "booked": 3,
@@ -5216,15 +5594,18 @@
   "2026-10-05": {
    "wishpond": {
     "booked": 21,
-    "held": 7
+    "held": 7,
+    "won": 0
    },
    "persistiq": {
     "booked": 3,
-    "held": 5
+    "held": 5,
+    "won": 0
    },
    "invigo": {
     "booked": 2,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "brax": {
     "booked": 5,
@@ -5259,15 +5640,18 @@
   "2026-10-06": {
    "wishpond": {
     "booked": 48,
-    "held": 13
+    "held": 13,
+    "won": 2
    },
    "persistiq": {
     "booked": 16,
-    "held": 4
+    "held": 4,
+    "won": 0
    },
    "invigo": {
     "booked": 5,
-    "held": 4
+    "held": 4,
+    "won": 0
    },
    "brax": {
     "booked": 18,
@@ -5302,15 +5686,18 @@
   "2026-10-07": {
    "wishpond": {
     "booked": 18,
-    "held": 17
+    "held": 17,
+    "won": 1
    },
    "persistiq": {
     "booked": 6,
-    "held": 3
+    "held": 3,
+    "won": 0
    },
    "invigo": {
     "booked": 3,
-    "held": 1
+    "held": 1,
+    "won": 0
    },
    "brax": {
     "booked": 5,
@@ -5345,15 +5732,18 @@
   "2026-10-08": {
    "wishpond": {
     "booked": 24,
-    "held": 10
+    "held": 10,
+    "won": 0
    },
    "persistiq": {
     "booked": 10,
-    "held": 4
+    "held": 4,
+    "won": 1
    },
    "invigo": {
     "booked": 3,
-    "held": 1
+    "held": 1,
+    "won": 0
    },
    "brax": {
     "booked": 8,
@@ -5388,15 +5778,18 @@
   "2026-10-09": {
    "wishpond": {
     "booked": 13,
-    "held": 8
+    "held": 8,
+    "won": 7
    },
    "persistiq": {
     "booked": 4,
-    "held": 2
+    "held": 2,
+    "won": 0
    },
    "invigo": {
     "booked": 1,
-    "held": 2
+    "held": 2,
+    "won": 0
    },
    "brax": {
     "booked": 4,
@@ -5431,15 +5824,18 @@
   "2026-10-10": {
    "wishpond": {
     "booked": 1,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "persistiq": {
     "booked": 1,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "invigo": {
     "booked": 0,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "brax": {
     "booked": 1,
@@ -5457,15 +5853,18 @@
   "2026-10-11": {
    "wishpond": {
     "booked": 10,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "persistiq": {
     "booked": 0,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "invigo": {
     "booked": 0,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "brax": {
     "booked": 2,
@@ -5483,15 +5882,18 @@
   "2026-10-12": {
    "wishpond": {
     "booked": 13,
-    "held": 4
+    "held": 4,
+    "won": 0
    },
    "persistiq": {
     "booked": 3,
-    "held": 1
+    "held": 1,
+    "won": 0
    },
    "invigo": {
     "booked": 2,
-    "held": 1
+    "held": 1,
+    "won": 0
    },
    "brax": {
     "booked": 5,
@@ -5526,15 +5928,18 @@
   "2026-10-13": {
    "wishpond": {
     "booked": 19,
-    "held": 11
+    "held": 11,
+    "won": 2
    },
    "persistiq": {
     "booked": 2,
-    "held": 5
+    "held": 5,
+    "won": 1
    },
    "invigo": {
     "booked": 0,
-    "held": 1
+    "held": 1,
+    "won": 0
    },
    "brax": {
     "booked": 2,
@@ -5569,15 +5974,18 @@
   "2026-10-14": {
    "wishpond": {
     "booked": 27,
-    "held": 16
+    "held": 16,
+    "won": 0
    },
    "persistiq": {
     "booked": 5,
-    "held": 5
+    "held": 5,
+    "won": 0
    },
    "invigo": {
     "booked": 2,
-    "held": 1
+    "held": 1,
+    "won": 0
    },
    "brax": {
     "booked": 3,
@@ -5612,15 +6020,18 @@
   "2026-10-15": {
    "wishpond": {
     "booked": 10,
-    "held": 5
+    "held": 5,
+    "won": 2
    },
    "persistiq": {
     "booked": 5,
-    "held": 3
+    "held": 3,
+    "won": 0
    },
    "invigo": {
     "booked": 3,
-    "held": 1
+    "held": 1,
+    "won": 0
    },
    "brax": {
     "booked": 2,
@@ -5655,15 +6066,18 @@
   "2026-10-16": {
    "wishpond": {
     "booked": 11,
-    "held": 8
+    "held": 8,
+    "won": 2
    },
    "persistiq": {
     "booked": 3,
-    "held": 3
+    "held": 3,
+    "won": 1
    },
    "invigo": {
     "booked": 1,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "brax": {
     "booked": 1,
@@ -5698,15 +6112,18 @@
   "2026-10-17": {
    "wishpond": {
     "booked": 2,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "persistiq": {
     "booked": 0,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "invigo": {
     "booked": 1,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "brax": {
     "booked": 2,
@@ -5724,15 +6141,18 @@
   "2026-11-01": {
    "wishpond": {
     "booked": 0,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "persistiq": {
     "booked": 0,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "invigo": {
     "booked": 0,
-    "held": 0
+    "held": 0,
+    "won": 0
    },
    "brax": {
     "booked": 0,
