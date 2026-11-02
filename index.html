@@ -254,6 +254,23 @@ function getCount(sectionId, isoDate, key) {
   if (manual !== undefined && manual !== null && manual !== "") return Number(manual);
   const fromSheet = ((sheetData[sectionId] || {})[isoDate] || {})[key];
   if (fromSheet !== undefined && fromSheet !== null && Number.isFinite(Number(fromSheet))) return Number(fromSheet);
+  /* Google-sheet KPIs (contacted/replies/positive) live in funnelDaily.sheet */
+  if (funnelDaily && ["leadsContacted","replyReceived","positive"].includes(key)) {
+    const rec = ((((funnelDaily || {}).days || {})[isoDate] || {}).sheet || {})[sectionId === "wishpond" ? "overall" : sectionId] || {};
+    const sv = key === "leadsContacted" ? rec.contacted : key === "replyReceived" ? rec.replies : rec.positive;
+    if (Number.isFinite(sv)) return sv;
+  }
+  /* Pipedrive KPIs (booked/held/won) live in funnelDaily per-source buckets */
+  if (funnelDaily && ["demosBooked","demosHeld","wonDeals"].includes(key)) {
+    const rec = ((funnelDaily || {}).days || {})[isoDate] || {};
+    if (sectionId === "wishpond") {
+      const keys = ["brax","wishpond","cyberpond","cyberpond_ndc"];
+      const fld = key === "demosBooked" ? "booked" : key === "demosHeld" ? "held" : "won";
+      return keys.reduce((s, k) => s + (Number((rec[k] || {})[fld]) || 0), 0);
+    }
+    const fld = key === "demosBooked" ? "booked" : key === "demosHeld" ? "held" : "won";
+    return Number((rec[sectionId] || {})[fld]) || 0;
+  }
   return 0;
 }
 function getManual(sectionId, isoDate, key) {
