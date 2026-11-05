@@ -43,11 +43,12 @@
   }
   .summary-box { background: #4285f4; border-color: #4285f4; }
   /* Power Hour summary: dialled centered on top, then 3 columns of Booked/Held stacks */
+  #summary-powerhour { display: block; }
   .ph-summary { display: flex; flex-direction: column; gap: 10px; padding: 0 20px 16px; }
   .ph-summary .dialled-row { display: flex; justify-content: center; }
   .ph-summary .dialled-row .summary-box { min-width: 220px; }
-  .ph-summary .pairs { display: grid; grid-template-columns: repeat(3, minmax(160px, 220px)); gap: 10px; justify-content: center; }
-  .ph-summary .pair { display: flex; flex-direction: column; gap: 10px; }
+  .ph-summary .pairs { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+  .ph-summary .pairs .summary-box { min-width: 200px; }
   .summary-box .label { font-size: 12px; font-weight: 600; color: #ffffff; text-transform: uppercase; letter-spacing: .5px; }
   .summary-box .value { font-size: 28px; font-weight: 700; color: #ffffff; margin-top: 6px; }
   .summary-box .value.blue { color: #ffffff; }
@@ -620,9 +621,12 @@ function renderSummary() {
     phEl.innerHTML = `<div class="ph-summary">
       <div class="dialled-row">${box("Total Number of Dials", phTot.dialled)}</div>
       <div class="pairs">
-        <div class="pair">${box("Total Demo Booked-WP", phTot.wp_booked)}${box("Total Demo Held-WP", phTot.wp_held)}</div>
-        <div class="pair">${box("Total Demo Booked-PIQ", phTot.piq_booked)}${box("Total Demo Held-PIQ", phTot.piq_held)}</div>
-        <div class="pair">${box("Total Demo Booked-INV", phTot.inv_booked)}${box("Total Demo Held-INV", phTot.inv_held)}</div>
+        ${box("Total Demo Booked-WP", phTot.wp_booked)}
+        ${box("Total Demo Held-WP", phTot.wp_held)}
+        ${box("Total Demo Booked-PIQ", phTot.piq_booked)}
+        ${box("Total Demo Held-PIQ", phTot.piq_held)}
+        ${box("Total Demo Booked-INV", phTot.inv_booked)}
+        ${box("Total Demo Held-INV", phTot.inv_held)}
       </div>
     </div>`;
   }
