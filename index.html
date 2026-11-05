@@ -198,6 +198,15 @@ const COUNT_ROWS = [
   { key: "demosHeld",      label: "Demos Held" },
   { key: "wonDeals",       label: "Won Deals" },
 ];
+const PH_ROWS = [
+  { key: "dialled",    label: "Dialled" },
+  { key: "wp_booked",  label: "WP Booked" },
+  { key: "wp_held",    label: "WP Held" },
+  { key: "piq_booked", label: "PIQ Booked" },
+  { key: "piq_held",   label: "PIQ Held" },
+  { key: "inv_booked", label: "INV Booked" },
+  { key: "inv_held",   label: "INV Held" },
+];
 const RATE_ROWS = [
   { label: "Reply Rate",    num: "replyReceived", den: "leadsContacted" },
   { label: "Positive Rate", num: "positive",      den: "leadsContacted" },
@@ -220,6 +229,7 @@ const SECTIONS = [
   { id: "wishpond",  title: "Full Funnel Performance - Wishpond",  csvRow: 3,  sheetLabel: "OVERALL OUTBOUND" },
   { id: "persistiq", title: "Full Funnel Performance - PersistIQ", csvRow: 14, sheetLabel: "PERSISTIQ" },
   { id: "invigo",    title: "Full Funnel Performance - Invigo",    csvRow: 26, sheetLabel: "INVIGO" },
+  { id: "powerhour", title: "Power Hour",                          csvRow: 38, sheetLabel: null },
 ];
 
 const STORAGE_KEY = "funnelDashboard.counts.v2";   // overrides: { sectionId: { date: { key: n } } }
@@ -449,6 +459,12 @@ function effectiveValue(sectionId, d, rowKey) {
     const pd = sectionId === "wishpond" ? pipedriveFolded(pipedriveHeld, d) : pipedriveHeldFor(sectionId, d);
     if (Number.isFinite(pd)) return pd;
   }
+  /* Power Hour table: per-day PH counts from funnelDaily.powerhour */
+  if (funnelDaily && sectionId === "powerhour") {
+    const rec = (((funnelDaily || {}).days || {})[k] || {}).powerhour || {};
+    const sv = rec[rowKey];
+    if (Number.isFinite(sv)) return sv;
+  }
   /* Pipedrive Won Deals (folded) */
   if (funnelDaily && rowKey === "wonDeals" && ["wishpond","persistiq","invigo"].includes(sectionId)) {
     const pd = pipedriveFolded(day => {
@@ -472,7 +488,8 @@ function renderSection(sec, days) {
 
   const body = document.getElementById("body-" + sec.id);
   let html = "";
-  for (const row of COUNT_ROWS) {
+  const rows_ = sec.id === "powerhour" ? PH_ROWS : COUNT_ROWS;
+  for (const row of rows_) {
     html += `<tr><td class="kpi-col">${row.label}</td>`;
     for (const d of days) {
       const k = iso(d);
@@ -486,7 +503,7 @@ function renderSection(sec, days) {
     }
     html += `<td class="total-col">${getTotal(sec.id, days, row.key)}</td></tr>`;
   }
-  for (const row of RATE_ROWS) {
+  for (const row of (sec.id === "powerhour" ? [] : RATE_ROWS)) {
     html += `<tr><td class="kpi-col">${row.label}</td>`;
     for (const d of days) {
       const k = iso(d);
@@ -587,7 +604,7 @@ function renderSummary() {
   }).join("");
   SECTIONS.forEach(sec => {
     const el = document.getElementById("summary-" + sec.id);
-    if (!el) return;
+    if (!el || sec.id === "powerhour") return;
     el.innerHTML = SUMMARY_BOXES.map(b => {
       const n = getTotal(sec.id, days, b.num), d = getTotal(sec.id, days, b.den);
       return `<div class="summary-box">

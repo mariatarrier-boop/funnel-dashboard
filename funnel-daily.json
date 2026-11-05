@@ -28,6 +28,15 @@
     "booked": 0,
     "held": 0,
     "won": 0
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-10-19": {
@@ -74,6 +83,15 @@
      "replies": 108,
      "positive": 12
     }
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 12,
+    "wp_held": 2,
+    "piq_booked": 3,
+    "piq_held": 1,
+    "inv_booked": 2,
+    "inv_held": 0
    }
   },
   "2026-10-20": {
@@ -120,6 +138,15 @@
      "replies": 93,
      "positive": 9
     }
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 14,
+    "wp_held": 5,
+    "piq_booked": 3,
+    "piq_held": 1,
+    "inv_booked": 2,
+    "inv_held": 1
    }
   },
   "2026-10-21": {
@@ -166,6 +193,15 @@
      "replies": 116,
      "positive": 17
     }
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 11,
+    "wp_held": 4,
+    "piq_booked": 2,
+    "piq_held": 1,
+    "inv_booked": 3,
+    "inv_held": 3
    }
   },
   "2026-10-22": {
@@ -212,6 +248,15 @@
      "replies": 70,
      "positive": 5
     }
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 12,
+    "wp_held": 5,
+    "piq_booked": 4,
+    "piq_held": 2,
+    "inv_booked": 0,
+    "inv_held": 1
    }
   },
   "2026-10-23": {
@@ -258,6 +303,15 @@
      "replies": 97,
      "positive": 14
     }
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 13,
+    "wp_held": 11,
+    "piq_booked": 5,
+    "piq_held": 5,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-10-24": {
@@ -287,6 +341,15 @@
     "booked": 0,
     "held": 0,
     "won": 0
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-10-25": {
@@ -316,6 +379,15 @@
     "booked": 0,
     "held": 0,
     "won": 0
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-10-26": {
@@ -362,6 +434,15 @@
      "replies": 48,
      "positive": 5
     }
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 22,
+    "wp_held": 8,
+    "piq_booked": 5,
+    "piq_held": 1,
+    "inv_booked": 2,
+    "inv_held": 0
    }
   },
   "2026-10-27": {
@@ -408,6 +489,15 @@
      "replies": null,
      "positive": null
     }
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 17,
+    "wp_held": 10,
+    "piq_booked": 0,
+    "piq_held": 4,
+    "inv_booked": 1,
+    "inv_held": 2
    }
   },
   "2026-10-28": {
@@ -454,6 +544,15 @@
      "replies": null,
      "positive": null
     }
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 18,
+    "wp_held": 7,
+    "piq_booked": 4,
+    "piq_held": 1,
+    "inv_booked": 2,
+    "inv_held": 2
    }
   },
   "2026-10-29": {
@@ -500,6 +599,15 @@
      "replies": null,
      "positive": null
     }
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 14,
+    "wp_held": 10,
+    "piq_booked": 0,
+    "piq_held": 1,
+    "inv_booked": 1,
+    "inv_held": 1
    }
   },
   "2026-10-30": {
@@ -546,6 +654,15 @@
      "replies": null,
      "positive": null
     }
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 18,
+    "wp_held": 7,
+    "piq_booked": 2,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 1
    }
   },
   "2026-10-31": {
@@ -575,6 +692,15 @@
     "booked": 0,
     "held": 0,
     "won": 0
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-06-01": {
@@ -604,6 +730,15 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-06-02": {
@@ -633,6 +768,15 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-06-03": {
@@ -662,6 +806,15 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-06-04": {
@@ -691,6 +844,15 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-06-05": {
@@ -720,6 +882,15 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-06-06": {
@@ -749,6 +920,15 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-06-07": {
@@ -778,6 +958,15 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-06-08": {
@@ -807,6 +996,15 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-06-09": {
@@ -836,6 +1034,15 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-06-10": {
@@ -865,6 +1072,15 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-06-11": {
@@ -894,6 +1110,15 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-06-12": {
@@ -923,6 +1148,15 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-06-13": {
@@ -952,6 +1186,15 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-06-14": {
@@ -981,6 +1224,15 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-06-15": {
@@ -1027,6 +1279,15 @@
      "replies": 74,
      "positive": 7
     }
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-06-16": {
@@ -1073,6 +1334,15 @@
      "replies": 50,
      "positive": 5
     }
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-06-17": {
@@ -1119,6 +1389,15 @@
      "replies": 41,
      "positive": 5
     }
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-06-18": {
@@ -1165,6 +1444,15 @@
      "replies": 47,
      "positive": 3
     }
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-06-19": {
@@ -1211,6 +1499,15 @@
      "replies": 78,
      "positive": 8
     }
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-06-20": {
@@ -1240,6 +1537,15 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-06-21": {
@@ -1269,6 +1575,15 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-06-22": {
@@ -1315,6 +1630,15 @@
      "replies": 36,
      "positive": 4
     }
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-06-23": {
@@ -1361,6 +1685,15 @@
      "replies": 69,
      "positive": 7
     }
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-06-24": {
@@ -1407,6 +1740,15 @@
      "replies": 66,
      "positive": 6
     }
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-06-25": {
@@ -1453,6 +1795,15 @@
      "replies": 89,
      "positive": 7
     }
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-06-26": {
@@ -1499,6 +1850,15 @@
      "replies": 108,
      "positive": 4
     }
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-06-27": {
@@ -1528,6 +1888,15 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-06-28": {
@@ -1557,6 +1926,15 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-06-29": {
@@ -1603,6 +1981,15 @@
      "replies": 67,
      "positive": 5
     }
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-06-30": {
@@ -1649,6 +2036,15 @@
      "replies": 62,
      "positive": 6
     }
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-07-01": {
@@ -1695,6 +2091,15 @@
      "replies": 88,
      "positive": 5
     }
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-07-02": {
@@ -1741,6 +2146,15 @@
      "replies": 89,
      "positive": 5
     }
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-07-03": {
@@ -1787,6 +2201,15 @@
      "replies": 159,
      "positive": 10
     }
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-07-04": {
@@ -1816,6 +2239,15 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-07-05": {
@@ -1845,6 +2277,15 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-07-06": {
@@ -1891,6 +2332,15 @@
      "replies": 62,
      "positive": 2
     }
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-07-07": {
@@ -1937,6 +2387,15 @@
      "replies": 91,
      "positive": 8
     }
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-07-08": {
@@ -1983,6 +2442,15 @@
      "replies": 116,
      "positive": 9
     }
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-07-09": {
@@ -2029,6 +2497,15 @@
      "replies": 129,
      "positive": 17
     }
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-07-10": {
@@ -2075,6 +2552,15 @@
      "replies": 214,
      "positive": 20
     }
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-07-11": {
@@ -2104,6 +2590,15 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-07-12": {
@@ -2133,6 +2628,15 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-07-13": {
@@ -2179,6 +2683,15 @@
      "replies": 48,
      "positive": 7
     }
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-07-14": {
@@ -2225,6 +2738,15 @@
      "replies": 67,
      "positive": 5
     }
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-07-15": {
@@ -2271,6 +2793,15 @@
      "replies": 76,
      "positive": 10
     }
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-07-16": {
@@ -2317,6 +2848,15 @@
      "replies": 64,
      "positive": 2
     }
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-07-17": {
@@ -2363,6 +2903,15 @@
      "replies": 168,
      "positive": 11
     }
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-07-18": {
@@ -2392,6 +2941,15 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-07-19": {
@@ -2421,6 +2979,15 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-07-20": {
@@ -2467,6 +3034,15 @@
      "replies": 69,
      "positive": 10
     }
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-07-21": {
@@ -2513,6 +3089,15 @@
      "replies": 94,
      "positive": 17
     }
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-07-22": {
@@ -2559,6 +3144,15 @@
      "replies": 85,
      "positive": 3
     }
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-07-23": {
@@ -2605,6 +3199,15 @@
      "replies": 88,
      "positive": 10
     }
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-07-24": {
@@ -2651,6 +3254,15 @@
      "replies": 220,
      "positive": 20
     }
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-07-25": {
@@ -2680,6 +3292,15 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-07-26": {
@@ -2709,6 +3330,15 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-07-27": {
@@ -2755,6 +3385,15 @@
      "replies": 117,
      "positive": 14
     }
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-07-28": {
@@ -2801,6 +3440,15 @@
      "replies": 139,
      "positive": 15
     }
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-07-29": {
@@ -2847,6 +3495,15 @@
      "replies": 172,
      "positive": 17
     }
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-07-30": {
@@ -2893,6 +3550,15 @@
      "replies": 188,
      "positive": 13
     }
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-07-31": {
@@ -2939,6 +3605,15 @@
      "replies": 482,
      "positive": 43
     }
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-08-01": {
@@ -2968,6 +3643,15 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-08-02": {
@@ -2997,6 +3681,15 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-08-03": {
@@ -3043,6 +3736,15 @@
      "replies": 137,
      "positive": 13
     }
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-08-04": {
@@ -3089,6 +3791,15 @@
      "replies": 180,
      "positive": 33
     }
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-08-05": {
@@ -3135,6 +3846,15 @@
      "replies": 177,
      "positive": 36
     }
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-08-06": {
@@ -3181,6 +3901,15 @@
      "replies": 170,
      "positive": 42
     }
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-08-07": {
@@ -3227,6 +3956,15 @@
      "replies": 560,
      "positive": 124
     }
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-08-08": {
@@ -3256,6 +3994,15 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-08-09": {
@@ -3285,6 +4032,15 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-08-10": {
@@ -3331,6 +4087,15 @@
      "replies": 198,
      "positive": 56
     }
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-08-11": {
@@ -3377,6 +4142,15 @@
      "replies": 212,
      "positive": 40
     }
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-08-12": {
@@ -3423,6 +4197,15 @@
      "replies": 168,
      "positive": 59
     }
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-08-13": {
@@ -3469,6 +4252,15 @@
      "replies": 270,
      "positive": 92
     }
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-08-14": {
@@ -3515,6 +4307,15 @@
      "replies": 449,
      "positive": 128
     }
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-08-15": {
@@ -3544,6 +4345,15 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-08-16": {
@@ -3573,6 +4383,15 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-08-17": {
@@ -3619,6 +4438,15 @@
      "replies": 216,
      "positive": 53
     }
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-08-18": {
@@ -3665,6 +4493,15 @@
      "replies": 193,
      "positive": 48
     }
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-08-19": {
@@ -3711,6 +4548,15 @@
      "replies": 220,
      "positive": 54
     }
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 1,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-08-20": {
@@ -3757,6 +4603,15 @@
      "replies": 259,
      "positive": 74
     }
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 1,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-08-21": {
@@ -3803,6 +4658,15 @@
      "replies": 326,
      "positive": 82
     }
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 2,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-08-22": {
@@ -3832,6 +4696,15 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-08-23": {
@@ -3861,6 +4734,15 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-08-24": {
@@ -3907,6 +4789,15 @@
      "replies": 161,
      "positive": 58
     }
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-08-25": {
@@ -3953,6 +4844,15 @@
      "replies": 153,
      "positive": 48
     }
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-08-26": {
@@ -3999,6 +4899,15 @@
      "replies": 178,
      "positive": 64
     }
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 1,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-08-27": {
@@ -4045,6 +4954,15 @@
      "replies": 154,
      "positive": 33
     }
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 1,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-08-28": {
@@ -4091,6 +5009,15 @@
      "replies": 287,
      "positive": 56
     }
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 3,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-08-29": {
@@ -4120,6 +5047,15 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-08-30": {
@@ -4149,6 +5085,15 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-08-31": {
@@ -4195,6 +5140,15 @@
      "replies": 109,
      "positive": 22
     }
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 2,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-09-01": {
@@ -4241,6 +5195,15 @@
      "replies": 144,
      "positive": 22
     }
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 2,
+    "wp_held": 2,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-09-02": {
@@ -4287,6 +5250,15 @@
      "replies": 136,
      "positive": 26
     }
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 4,
+    "wp_held": 0,
+    "piq_booked": 1,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-09-03": {
@@ -4333,6 +5305,15 @@
      "replies": 141,
      "positive": 15
     }
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 2,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-09-04": {
@@ -4379,6 +5360,15 @@
      "replies": 284,
      "positive": 96
     }
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 1,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-09-05": {
@@ -4408,6 +5398,15 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-09-06": {
@@ -4437,6 +5436,15 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-09-07": {
@@ -4483,6 +5491,15 @@
      "replies": 97,
      "positive": 26
     }
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-09-08": {
@@ -4529,6 +5546,15 @@
      "replies": 154,
      "positive": 46
     }
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 3,
+    "wp_held": 2,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-09-09": {
@@ -4575,6 +5601,15 @@
      "replies": 113,
      "positive": 33
     }
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 4,
+    "wp_held": 3,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-09-10": {
@@ -4621,6 +5656,15 @@
      "replies": 189,
      "positive": 21
     }
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 5,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-09-11": {
@@ -4667,6 +5711,15 @@
      "replies": 210,
      "positive": 34
     }
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 2,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-09-12": {
@@ -4696,6 +5749,15 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-09-13": {
@@ -4725,6 +5787,15 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-09-14": {
@@ -4771,6 +5842,15 @@
      "replies": null,
      "positive": null
     }
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 9,
+    "wp_held": 1,
+    "piq_booked": 1,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-09-15": {
@@ -4817,6 +5897,15 @@
      "replies": 85,
      "positive": 26
     }
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 5,
+    "wp_held": 1,
+    "piq_booked": 2,
+    "piq_held": 1,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-09-16": {
@@ -4863,6 +5952,15 @@
      "replies": 119,
      "positive": 39
     }
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 11,
+    "wp_held": 1,
+    "piq_booked": 1,
+    "piq_held": 0,
+    "inv_booked": 2,
+    "inv_held": 0
    }
   },
   "2026-09-17": {
@@ -4909,6 +6007,15 @@
      "replies": 112,
      "positive": 31
     }
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 10,
+    "wp_held": 3,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 4,
+    "inv_held": 0
    }
   },
   "2026-09-18": {
@@ -4955,6 +6062,15 @@
      "replies": 276,
      "positive": 43
     }
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 3,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 1,
+    "inv_held": 0
    }
   },
   "2026-09-19": {
@@ -4984,6 +6100,15 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 1,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-09-20": {
@@ -5013,6 +6138,15 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-09-21": {
@@ -5059,6 +6193,15 @@
      "replies": 155,
      "positive": 27
     }
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 8,
+    "wp_held": 0,
+    "piq_booked": 1,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-09-22": {
@@ -5105,6 +6248,15 @@
      "replies": 163,
      "positive": 42
     }
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 2,
+    "wp_held": 2,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-09-23": {
@@ -5151,6 +6303,15 @@
      "replies": 165,
      "positive": 34
     }
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 5,
+    "wp_held": 2,
+    "piq_booked": 1,
+    "piq_held": 1,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-09-24": {
@@ -5197,6 +6358,15 @@
      "replies": 222,
      "positive": 39
     }
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 5,
+    "wp_held": 4,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 1,
+    "inv_held": 0
    }
   },
   "2026-09-25": {
@@ -5243,6 +6413,15 @@
      "replies": 261,
      "positive": 34
     }
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 2,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 2,
+    "inv_held": 0
    }
   },
   "2026-09-26": {
@@ -5272,6 +6451,15 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-09-27": {
@@ -5301,6 +6489,15 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-09-28": {
@@ -5347,6 +6544,15 @@
      "replies": 157,
      "positive": 30
     }
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 3,
+    "wp_held": 2,
+    "piq_booked": 1,
+    "piq_held": 1,
+    "inv_booked": 6,
+    "inv_held": 0
    }
   },
   "2026-09-29": {
@@ -5393,6 +6599,15 @@
      "replies": 169,
      "positive": 28
     }
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 7,
+    "wp_held": 2,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 1,
+    "inv_held": 0
    }
   },
   "2026-09-30": {
@@ -5439,6 +6654,15 @@
      "replies": 155,
      "positive": 23
     }
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 6,
+    "wp_held": 0,
+    "piq_booked": 4,
+    "piq_held": 0,
+    "inv_booked": 1,
+    "inv_held": 0
    }
   },
   "2026-10-01": {
@@ -5485,6 +6709,15 @@
      "replies": 125,
      "positive": 19
     }
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 4,
+    "wp_held": 0,
+    "piq_booked": 2,
+    "piq_held": 0,
+    "inv_booked": 2,
+    "inv_held": 1
    }
   },
   "2026-10-02": {
@@ -5531,6 +6764,15 @@
      "replies": 284,
      "positive": 33
     }
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 3,
+    "wp_held": 3,
+    "piq_booked": 1,
+    "piq_held": 2,
+    "inv_booked": 1,
+    "inv_held": 2
    }
   },
   "2026-10-03": {
@@ -5560,6 +6802,15 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-10-04": {
@@ -5589,6 +6840,15 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-10-05": {
@@ -5635,6 +6895,15 @@
      "replies": 132,
      "positive": 26
     }
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 5,
+    "wp_held": 5,
+    "piq_booked": 0,
+    "piq_held": 2,
+    "inv_booked": 2,
+    "inv_held": 1
    }
   },
   "2026-10-06": {
@@ -5681,6 +6950,15 @@
      "replies": 168,
      "positive": 22
     }
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 10,
+    "wp_held": 5,
+    "piq_booked": 3,
+    "piq_held": 1,
+    "inv_booked": 1,
+    "inv_held": 1
    }
   },
   "2026-10-07": {
@@ -5727,6 +7005,15 @@
      "replies": 171,
      "positive": 26
     }
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 3,
+    "wp_held": 1,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 1
    }
   },
   "2026-10-08": {
@@ -5773,6 +7060,15 @@
      "replies": 190,
      "positive": 29
     }
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 2,
+    "wp_held": 3,
+    "piq_booked": 0,
+    "piq_held": 1,
+    "inv_booked": 0,
+    "inv_held": 2
    }
   },
   "2026-10-09": {
@@ -5819,6 +7115,15 @@
      "replies": 317,
      "positive": 32
     }
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 1,
+    "wp_held": 1,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-10-10": {
@@ -5848,6 +7153,15 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-10-11": {
@@ -5877,6 +7191,15 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-10-12": {
@@ -5923,6 +7246,15 @@
      "replies": 138,
      "positive": 30
     }
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 1,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-10-13": {
@@ -5969,6 +7301,15 @@
      "replies": 172,
      "positive": 25
     }
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 6,
+    "wp_held": 0,
+    "piq_booked": 2,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-10-14": {
@@ -6015,6 +7356,15 @@
      "replies": 152,
      "positive": 32
     }
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 5,
+    "wp_held": 0,
+    "piq_booked": 1,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-10-15": {
@@ -6061,6 +7411,15 @@
      "replies": 183,
      "positive": 30
     }
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 3,
+    "wp_held": 3,
+    "piq_booked": 1,
+    "piq_held": 1,
+    "inv_booked": 4,
+    "inv_held": 1
    }
   },
   "2026-10-16": {
@@ -6107,6 +7466,15 @@
      "replies": 141,
      "positive": 24
     }
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 3,
+    "wp_held": 1,
+    "piq_booked": 2,
+    "piq_held": 0,
+    "inv_booked": 2,
+    "inv_held": 0
    }
   },
   "2026-10-17": {
@@ -6136,6 +7504,15 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   },
   "2026-11-01": {
@@ -6165,6 +7542,59 @@
    "cyberpond_ndc": {
     "booked": 0,
     "held": 0
+   },
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 0,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
+   }
+  },
+  "2026-11-02": {
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 12,
+    "wp_held": 3,
+    "piq_booked": 4,
+    "piq_held": 0,
+    "inv_booked": 1,
+    "inv_held": 0
+   }
+  },
+  "2026-11-03": {
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 10,
+    "wp_held": 7,
+    "piq_booked": 1,
+    "piq_held": 2,
+    "inv_booked": 1,
+    "inv_held": 2
+   }
+  },
+  "2026-11-04": {
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 7,
+    "wp_held": 3,
+    "piq_booked": 1,
+    "piq_held": 1,
+    "inv_booked": 2,
+    "inv_held": 0
+   }
+  },
+  "2026-11-05": {
+   "powerhour": {
+    "dialled": 0,
+    "wp_booked": 4,
+    "wp_held": 0,
+    "piq_booked": 0,
+    "piq_held": 0,
+    "inv_booked": 0,
+    "inv_held": 0
    }
   }
  },
