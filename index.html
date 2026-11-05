@@ -42,6 +42,12 @@
     border: 1px solid #e2e8f0;
   }
   .summary-box { background: #4285f4; border-color: #4285f4; }
+  /* Power Hour summary: dialled centered on top, then 3 columns of Booked/Held stacks */
+  .ph-summary { display: flex; flex-direction: column; gap: 10px; padding: 0 20px 16px; }
+  .ph-summary .dialled-row { display: flex; justify-content: center; }
+  .ph-summary .dialled-row .summary-box { min-width: 220px; }
+  .ph-summary .pairs { display: grid; grid-template-columns: repeat(3, minmax(160px, 220px)); gap: 10px; justify-content: center; }
+  .ph-summary .pair { display: flex; flex-direction: column; gap: 10px; }
   .summary-box .label { font-size: 12px; font-weight: 600; color: #ffffff; text-transform: uppercase; letter-spacing: .5px; }
   .summary-box .value { font-size: 28px; font-weight: 700; color: #ffffff; margin-top: 6px; }
   .summary-box .value.blue { color: #ffffff; }
@@ -602,6 +608,24 @@ function renderSummary() {
       <div class="sub">Wishpond week total &middot; ${n} / ${d}</div>
     </div>`;
   }).join("");
+  /* Power Hour summary: dialled centered, then WP/PIQ/INV booked-over-held pairs */
+  const phEl = document.getElementById("summary-powerhour");
+  if (phEl && SECTIONS.some(s => s.id === "powerhour")) {
+    const phTot = {};
+    PH_ROWS.forEach(r => phTot[r.key] = getTotal("powerhour", days, r.key));
+    const box = (label, val) => `<div class="summary-box">
+      <div class="label">${label}</div>
+      <div class="value">${val}</div>
+    </div>`;
+    phEl.innerHTML = `<div class="ph-summary">
+      <div class="dialled-row">${box("Total Number of Dials", phTot.dialled)}</div>
+      <div class="pairs">
+        <div class="pair">${box("Total Demo Booked-WP", phTot.wp_booked)}${box("Total Demo Held-WP", phTot.wp_held)}</div>
+        <div class="pair">${box("Total Demo Booked-PIQ", phTot.piq_booked)}${box("Total Demo Held-PIQ", phTot.piq_held)}</div>
+        <div class="pair">${box("Total Demo Booked-INV", phTot.inv_booked)}${box("Total Demo Held-INV", phTot.inv_held)}</div>
+      </div>
+    </div>`;
+  }
   SECTIONS.forEach(sec => {
     const el = document.getElementById("summary-" + sec.id);
     if (!el || sec.id === "powerhour") return;
