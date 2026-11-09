@@ -206,13 +206,19 @@ const COUNT_ROWS = [
   { key: "wonDeals",       label: "Won Deals" },
 ];
 const PH_ROWS = [
-  { key: "dialled",    label: "Dialled" },
-  { key: "wp_booked",  label: "WP Booked" },
-  { key: "wp_held",    label: "WP Held" },
-  { key: "piq_booked", label: "PIQ Booked" },
-  { key: "piq_held",   label: "PIQ Held" },
-  { key: "inv_booked", label: "INV Booked" },
-  { key: "inv_held",   label: "INV Held" },
+  { key: "dialled",       label: "Total Dialed" },
+  { key: "wp_dialled",    label: "WP Dialed" },
+  { key: "wp_booked",     label: "WP Booked" },
+  { key: "wp_held",       label: "WP Held" },
+  { key: "wp_ratio",      label: "Dials needed for 1 booking WP", ratio: { num: "wp_dialled", den: "wp_booked" } },
+  { key: "piq_dialled",   label: "PIQ Dialed" },
+  { key: "piq_booked",    label: "PIQ Booked" },
+  { key: "piq_held",      label: "PIQ Held" },
+  { key: "piq_ratio",     label: "Dials needed for 1 booking PIQ", ratio: { num: "piq_dialled", den: "piq_booked" } },
+  { key: "inv_dialled",   label: "INV Dialed" },
+  { key: "inv_booked",    label: "INV Booked" },
+  { key: "inv_held",      label: "INV Held" },
+  { key: "inv_ratio",     label: "Dials needed for 1 booking INV", ratio: { num: "inv_dialled", den: "inv_booked" } },
 ];
 const RATE_ROWS = [
   { label: "Reply Rate",    num: "replyReceived", den: "leadsContacted" },
@@ -298,6 +304,13 @@ function getManual(sectionId, isoDate, key) {
   return Number.isFinite(n) ? n : 0;
 }
 function getTotal(sectionId, days, key) {
+  /* Ratio rows: week total = total dialled / total booked */
+  if (sectionId === "powerhour" && (key === "wp_ratio" || key === "piq_ratio" || key === "inv_ratio")) {
+    const pre = key.split("_")[0];
+    const num = days.reduce((s, d) => s + (Number(effectiveValue(sectionId, d, pre + "_dialled")) || 0), 0);
+    const den = days.reduce((s, d) => s + (Number(effectiveValue(sectionId, d, pre + "_booked")) || 0), 0);
+    return den ? Math.round(num / den) : 0;
+  }
   /* Total = sum of the values actually shown in columns 2-6 */
   return days.reduce((s, d) => s + (Number(effectiveValue(sectionId, d, key)) || 0), 0);
 }
@@ -469,6 +482,14 @@ function effectiveValue(sectionId, d, rowKey) {
   /* Power Hour table: per-day PH counts from funnelDaily.powerhour */
   if (funnelDaily && sectionId === "powerhour") {
     const rec = (((funnelDaily || {}).days || {})[k] || {}).powerhour || {};
+    if (rowKey === "dialled") return ["wp","piq","inv"].reduce((s, c) => s + (Number(rec[c + "_dialled"]) || 0), 0);
+    if (rowKey === "wp_ratio" || rowKey === "piq_ratio" || rowKey === "inv_ratio") {
+      const pre = rowKey.split("_")[0];
+      const num = effectiveValue(sectionId, d, pre + "_dialled");
+      const den = effectiveValue(sectionId, d, pre + "_booked");
+      if (!den) return 0;
+      return Math.round(num / den);
+    }
     const sv = rec[rowKey];
     if (Number.isFinite(sv)) return sv;
   }
@@ -560,13 +581,15 @@ function wireInputs() {
 
 function renderTotals(sectionId) {
   const days = mondaysOfSelectedWeek(selectedDate);
+  const sec = SECTIONS.find(s => s.id === sectionId);
+  const rowList = sec && sec.id === "powerhour" ? PH_ROWS : COUNT_ROWS;
   const rows = document.getElementById("body-" + sectionId).querySelectorAll("tr");
   let r = 0;
-  for (const row of COUNT_ROWS) {
+  for (const row of rowList) {
     rows[r].querySelector("td.total-col").textContent = getTotal(sectionId, days, row.key);
     r++;
   }
-  for (const row of RATE_ROWS) {
+  for (const row of (sec && sec.id === "powerhour" ? [] : RATE_ROWS)) {
     const tds = rows[r].querySelectorAll("td");
     for (let i = 0; i < days.length; i++) {
       const k = iso(days[i]);
@@ -580,19 +603,21 @@ function renderTotals(sectionId) {
 
 function refreshInputs(sectionId) {
   const days = mondaysOfSelectedWeek(selectedDate);
+  const sec = SECTIONS.find(s => s.id === sectionId);
+  const rowList = sec && sec.id === "powerhour" ? PH_ROWS : COUNT_ROWS;
   const rows = document.getElementById("body-" + sectionId).querySelectorAll("tr");
   let r = 0;
-  for (const row of COUNT_ROWS) {
+  for (const row of rowList) {
     const tds = rows[r].querySelectorAll("td.count-cell input");
     for (let i = 0; i < days.length; i++) {
       const k = iso(days[i]);
       const inp = tds[i];
+      if (!inp) continue;
       if (document.activeElement === inp) continue;
+      inp.value = effectiveValue(sectionId, days[i], row.key);
       const fromSheet = ((sheetData[sectionId] || {})[k] || {})[row.key];
       const hasSheet = fromSheet !== undefined && fromSheet !== null;
-      const manual = getManual(sectionId, k, row.key);
-      inp.value = hasSheet && manual === 0 ? fromSheet : manual;
-      inp.classList.toggle("sheet-filled", hasSheet && manual === 0);
+      inp.classList.toggle("sheet-filled", hasSheet && getManual(sectionId, k, row.key) === 0);
     }
     r++;
   }
@@ -619,7 +644,7 @@ function renderSummary() {
       <div class="value">${val}</div>
     </div>`;
     phEl.innerHTML = `<div class="ph-summary">
-      <div class="dialled-row">${box("Total Number of Dials", phTot.dialled)}</div>
+      <div class="dialled-row">${box("Total Dialed", phTot.dialled)}</div>
       <div class="pairs">
         ${box("Total Demo Booked-WP", phTot.wp_booked)}
         ${box("Total Demo Held-WP", phTot.wp_held)}
