@@ -52,6 +52,17 @@
   .kpi-item .target { font-size: 12px; color: #334155; margin-top: 6px; }
   .kpi-item .target b { color: #4285f4; }
   .hidden { display: none; }
+  .clarify-box { background: #fff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 16px; margin-bottom: 20px; }
+  .clarify-box .star-tag { display: inline-block; font-size: 10px; font-weight: 800; letter-spacing: 1px; color: #fff; background: #34a853; border-radius: 4px; padding: 2px 8px; margin-bottom: 8px; }
+  .clarify-box .clarified { font-size: 16px; font-weight: 700; line-height: 1.5; }
+  .clarify-box .breakdown { margin-top: 12px; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 8px; }
+  .clarify-box .star-item { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 10px 12px; font-size: 12px; }
+  .clarify-box .star-item b { display: block; color: #34a853; font-size: 10px; letter-spacing: .8px; margin-bottom: 4px; }
+  #clarifyBtn {
+    padding: 12px 26px; font-size: 15px; font-weight: 700; font-family: inherit;
+    background: #34a853; color: #fff; border: none; border-radius: 8px; cursor: pointer;
+  }
+  #clarifyBtn:hover { background: #2d9249; }
 </style>
 </head>
 <body>
@@ -66,10 +77,13 @@
     <h2>Your Objective</h2>
     <div class="objective-row">
       <input type="text" id="objectiveInput" placeholder="e.g. Grow outbound revenue by 40% this quarter" autocomplete="off">
+      <button id="clarifyBtn">Clarify (S-T-A-R)</button>
       <button id="recommendBtn">Recommend</button>
     </div>
     <div class="hint">Tip: include a theme (growth, revenue, retention, demos, leads, product, support, hiring…) and a number or timeframe for sharper recommendations.</div>
   </div>
+
+  <div id="clarifyOut" class="clarify-box hidden" style="margin-top:20px"></div>
 
   <div id="results" class="hidden">
     <div class="objective-display">
@@ -234,7 +248,128 @@ function recommend(text) {
   };
 }
 
+/* ================= S-T-A-R clarification engine ================= */
+/* Rewrites a rough objective into Situation -> Task -> Action -> Result form, with no ambiguity:
+   - infers metric/theme, baseline, target, timeframe
+   - forces a single measurable outcome
+   - names the owner and the actions that get there            */
+const STAR_RULES = [
+  { match: ["revenue","sales","arr","mrr","bookings","deal"],
+    metric: "revenue",
+    action: "ramp outbound and pipeline coverage, and tighten qualification",
+    unit: "" },
+  { match: ["lead","outbound","prospect","pipeline generation","sdr","cold"],
+    metric: "qualified leads",
+    action: "expand the prospecting list, refresh sequences, and raise daily outreach volume",
+    unit: "" },
+  { match: ["demo","meeting","booked","held"],
+    metric: "demos booked",
+    action: "increase top-of-funnel volume and sharpen the booking call-to-action",
+    unit: "" },
+  { match: ["churn"],
+    metric: "monthly churn rate",
+    action: "stand up a proactive save play and fix the top drivers of churn",
+    unit: "%" },
+  { match: ["retention","renewal","retain"],
+    metric: "net revenue retention",
+    action: "stand up a proactive save play and fix the top drivers of churn",
+    unit: "%" },
+  { match: ["nps","csat","support","satisfaction","ticket"],
+    metric: "customer satisfaction",
+    action: "cut response times and close the recurring pain points behind tickets",
+    unit: "" },
+  { match: ["product","feature","launch","adoption","usage","activation"],
+    metric: "adoption",
+    action: "ship the highest-impact improvements and drive onboarding to first value",
+    unit: "%" },
+  { match: ["hiring","recruit","team","headcount","talent"],
+    metric: "hires",
+    action: "run a focused sourcing sprint and tighten the interview loop",
+    unit: "" },
+  { match: ["marketing","traffic","conversion","website","seo","campaign"],
+    metric: "conversions",
+    action: "rework the highest-traffic pages and rebalance spend to the best channels",
+    unit: "%" }
+];
+const TIME_WORDS = ["this week","this month","this quarter","this year","q1","q2","q3","q4",
+                    "by december","by november","by october","by september","by august","by july","by june","by may","by april","by march","by february","by january"];
+
+function starClarify(text) {
+  const t = text.toLowerCase();
+  const scoredR = STAR_RULES.map(r => ({ r, score: r.match.reduce((s, k) => s + (t.includes(k) ? k.length : 0), 0) }))
+                             .sort((a, b) => b.score - a.score);
+  let rule = scoredR[0].score > 0 ? scoredR[0].r : null;
+  /* intent override: explicit "demo(s)" beats channel words (outbound/leads) */
+  if (rule && rule.match.includes("lead") && /demo|meeting/.test(t)) {
+    const demoR = scoredR.find(x => x.r.match.includes("demo"));
+    if (demoR) rule = demoR.r;
+  }
+  const metric = rule ? rule.metric : "the primary outcome metric";
+  const action = rule ? rule.action : "focus the team's effort on the single highest-impact lever";
+
+  /* timeframe */
+  let timeframe = TIME_WORDS.find(w => t.includes(w));
+  if (!timeframe) timeframe = "this quarter";
+
+  /* numbers: % targets, absolute values, baselines ("from X to Y") */
+  const pctMatch = t.match(/(\d+(?:\.\d+)?)\s*%/);
+  const fromTo = t.match(/from\s+\$?([\d.,]+)\s*(?:%|k|m)?\s*to\s+\$?([\d.,]+)/i);
+  const growTo = t.match(/(?:grow|increase|reach|hit|achieve)\s+(?:to\s+)?\$?([\d.,]+)/i);
+  const byMatch = t.match(/by\s+([a-z]+(?:\s+\d{1,2}(?:,\s*\d{4})?)?)/i);
+  const byOk = byMatch && !/^\d+$/.test(byMatch[1]) ? byMatch : null;
+
+  let target, baseline;
+  if (fromTo) { baseline = fromTo[1]; target = fromTo[2] + (pctMatch ? "%" : ""); }
+  else if (pctMatch) { target = pctMatch[1] + "%"; }
+  else if (growTo) { target = growTo[1]; }
+
+  const dir = /reduce|cut|lower|decrease|churn|shrink|drop/.test(t) ? "Reduce" : "Grow";
+  const cleanTarget = target ? target : (pctMatch ? "the stated %" : "a specific numeric target");
+  const cleanBaseline = baseline ? baseline : "today's baseline";
+
+  const situation = `${metric.charAt(0).toUpperCase() + metric.slice(1)} is at ${cleanBaseline}` +
+                    (baseline ? "" : " (quantify the current level)");
+  const when = byOk ? byOk[1].replace(/^\w/, c => c.toUpperCase())
+                    : timeframe.replace(/^this /, "end of ").replace(/^\w/, c => c.toUpperCase());
+  const task = `${dir} ${metric} to ${cleanTarget} by ${when}`;
+  const result = `By ${when}, ${metric} reaches ${cleanTarget}` +
+                 (pctMatch && !fromTo ? `, a ${pctMatch[1]}% improvement` : "") +
+                 ", measured weekly on the KPI dashboard";
+
+  const clarified = `${task} — ${action}. Success: ${result}.`;
+  return {
+    clarified,
+    breakdown: [
+      { k: "S — Situation", v: situation },
+      { k: "T — Task", v: `${dir} ${metric} to ${cleanTarget}` },
+      { k: "A — Action", v: action.charAt(0).toUpperCase() + action.slice(1) },
+      { k: "R — Result", v: result }
+    ],
+    gaps: [
+      !baseline ? "Baseline not stated — add the current number (e.g., 'from 15%')" : null,
+      !target ? "No target number — add the goal (e.g., 'to 25%')" : null,
+      !byMatch && !TIME_WORDS.some(w => t.includes(w)) ? "Timeframe added by default (this quarter) — change if needed" : null,
+      !rule ? "Theme not recognized — KPIs below use the generic set" : null
+    ].filter(Boolean)
+  };
+}
+
 /* ================= Wiring ================= */
+document.getElementById("clarifyBtn").addEventListener("click", () => {
+  const text = document.getElementById("objectiveInput").value.trim();
+  if (!text) { alert("Enter an Objective first."); return; }
+  const c = starClarify(text);
+  const el = document.getElementById("clarifyOut");
+  el.innerHTML = `
+    <span class="star-tag">S · T · A · R — clarified objective</span>
+    <div class="clarified">${c.clarified}</div>
+    <div class="breakdown">${c.breakdown.map(b => `<div class="star-item"><b>${b.k}</b>${b.v}</div>`).join("")}</div>
+    ${c.gaps.length ? `<div style="margin-top:10px;font-size:12px;color:#b45309;">⚠ To make it airtight: ${c.gaps.join(" · ")}</div>` : `<div style="margin-top:10px;font-size:12px;color:#15803d;">✓ Specific, measurable, time-bound — no ambiguity.</div>`}
+  `;
+  el.classList.remove("hidden");
+  el.scrollIntoView({ behavior: "smooth" });
+});
+
 document.getElementById("recommendBtn").addEventListener("click", () => {
   const text = document.getElementById("objectiveInput").value.trim();
   if (!text) { alert("Enter an Objective first."); return; }
