@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dimiya Tech — OKR KPI Dashboard</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif; background: #f1f5f9; color: #0f172a; min-height: 100vh; }
+
+  header { background: #4285f4; color: #fff; padding: 28px 32px; }
+  header h1 { font-size: 24px; font-weight: 800; letter-spacing: .5px; }
+  header p { font-size: 13px; opacity: .9; margin-top: 4px; }
+
+  .main { max-width: 1100px; margin: 0 auto; padding: 28px 24px 60px; }
+
+  .card { background: #fff; border-radius: 12px; padding: 24px; box-shadow: 0 1px 3px rgba(15,23,42,.08); border: 1px solid #e2e8f0; margin-bottom: 24px; }
+  .card h2 { font-size: 16px; font-weight: 700; margin-bottom: 12px; }
+
+  .objective-row { display: flex; gap: 12px; flex-wrap: wrap; }
+  #objectiveInput {
+    flex: 1; min-width: 260px; padding: 12px 14px; font-size: 15px; font-family: inherit;
+    border: 1px solid #cbd5e1; border-radius: 8px;
+  }
+  #objectiveInput:focus { outline: 2px solid #4285f4; outline-offset: 1px; border-color: #4285f4; }
+  #recommendBtn {
+    padding: 12px 26px; font-size: 15px; font-weight: 700; font-family: inherit;
+    background: #4285f4; color: #fff; border: none; border-radius: 8px; cursor: pointer;
+  }
+  #recommendBtn:hover { background: #3367d6; }
+  .hint { font-size: 12px; color: #64748b; margin-top: 10px; }
+
+  .objective-display {
+    background: #eef4ff; border-left: 4px solid #4285f4; padding: 14px 16px; border-radius: 8px;
+    margin-bottom: 20px; font-size: 15px;
+  }
+  .objective-display .tag { font-size: 11px; font-weight: 700; color: #4285f4; text-transform: uppercase; letter-spacing: .6px; display: block; margin-bottom: 4px; }
+
+  .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  @media (max-width: 800px) { .cols { grid-template-columns: 1fr; } }
+
+  .kr-item, .kpi-item {
+    background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; padding: 14px 16px; margin-bottom: 12px;
+  }
+  .kr-item .num, .kpi-item .num {
+    display: inline-block; background: #4285f4; color: #fff; font-size: 12px; font-weight: 700;
+    width: 22px; height: 22px; line-height: 22px; text-align: center; border-radius: 50%; margin-right: 8px;
+  }
+  .kr-item .text { display: inline; font-size: 14px; font-weight: 600; }
+  .kpi-item .name { font-size: 14px; font-weight: 700; margin-bottom: 4px; }
+  .kpi-item .why { font-size: 12px; color: #64748b; margin-top: 6px; }
+  .kpi-item .target { font-size: 12px; color: #334155; margin-top: 6px; }
+  .kpi-item .target b { color: #4285f4; }
+  .hidden { display: none; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Dimiya Tech — OKR KPI Dashboard</h1>
+  <p>Enter an Objective and get recommended Key Results &amp; KPIs</p>
+</header>
+
+<div class="main">
+  <div class="card">
+    <h2>Your Objective</h2>
+    <div class="objective-row">
+      <input type="text" id="objectiveInput" placeholder="e.g. Grow outbound revenue by 40% this quarter" autocomplete="off">
+      <button id="recommendBtn">Recommend</button>
+    </div>
+    <div class="hint">Tip: include a theme (growth, revenue, retention, demos, leads, product, support, hiring…) and a number or timeframe for sharper recommendations.</div>
+  </div>
+
+  <div id="results" class="hidden">
+    <div class="objective-display">
+      <span class="tag">Objective</span>
+      <span id="objectiveText"></span>
+    </div>
+
+    <div class="cols">
+      <div class="card">
+        <h2>Recommended Key Results</h2>
+        <div id="krList"></div>
+      </div>
+      <div class="card">
+        <h2>Recommended KPIs</h2>
+        <div id="kpiList"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ================= Recommendation engine ================= */
+/* Keyword themes -> tailored Key Results + KPIs. Falls back to a generic revenue-funnel set. */
+const THEMES = [
+  {
+    match: ["revenue", "sales", "arr", "mrr", "bookings", "deal"],
+    krs: [
+      "Grow new bookings from $X to $Y by end of quarter",
+      "Increase average deal size from $X to $Y",
+      "Close Z enterprise deals (> $25K ACV) this quarter"
+    ],
+    kpis: [
+      { name: "Monthly Recurring Revenue (MRR)", target: "+10% month over month", why: "Direct measure of sales objective progress" },
+      { name: "Sales Pipeline Value", target: "3× quarterly bookings target", why: "Healthy pipeline coverage predicts close rates" },
+      { name: "Win Rate", target: "> 25% of qualified opportunities", why: "Shows whether the team is closing the right deals" }
+    ]
+  },
+  {
+    match: ["lead", "outbound", "prospect", "pipeline generation", "sdR", "cold"],
+    krs: [
+      "Generate X qualified leads per week (up from Y)",
+      "Book Z demos per week from outbound sequences",
+      "Lift reply rate from X% to Y% across campaigns"
+    ],
+    kpis: [
+      { name: "Qualified Leads per Week", target: "Track weekly vs. quota", why: "Top-of-funnel volume drives everything downstream" },
+      { name: "Positive Reply Rate", target: "> 2% of leads contacted", why: "Quality signal for targeting and messaging" },
+      { name: "Demo Book Rate", target: "> 15% of positive replies", why: "Converts interest into sales conversations" }
+    ]
+  },
+  {
+    match: ["demo", "meeting", "booked", "held", "show"],
+    krs: [
+      "Increase demos booked per week from X to Y",
+      "Improve demo hold rate from X% to Y%",
+      "Convert Z% of held demos into opportunities"
+    ],
+    kpis: [
+      { name: "Demos Booked per Week", target: "Growth vs. previous 4-week average", why: "Leading indicator of revenue" },
+      { name: "Demo Hold Rate", target: "> 70% booked → held", why: "No-shows waste pipeline; holding predicts close" },
+      { name: "Demos per Booking", target: "< 1.5 dials or touches per booking", why: "Efficiency of the booking motion" }
+    ]
+  },
+  {
+    match: ["retention", "churn", "renewal", "retain", "loyal"],
+    krs: [
+      "Reduce monthly logo churn from X% to Y%",
+      "Lift net revenue retention from X% to Y%",
+      "Save Z at-risk accounts through a proactive play"
+    ],
+    kpis: [
+      { name: "Logo Churn Rate", target: "< 2% monthly", why: "Core health metric for a subscription business" },
+      { name: "Net Revenue Retention (NRR)", target: "> 110%", why: "Expansion offsets churn; compounding growth" },
+      { name: "At-Risk Accounts", target: "Reviewed weekly, < 5% of base", why: "Early warning enables saves before renewal" }
+    ]
+  },
+  {
+    match: ["customer satisfaction", "nps", "csat", "support", "ticket", "service"],
+    krs: [
+      "Raise NPS from X to Y by quarter end",
+      "Cut first-response time from X hours to Y minutes",
+      "Resolve Z% of tickets within 24 hours"
+    ],
+    kpis: [
+      { name: "NPS", target: "+5 points vs. last quarter", why: "Direct measure of customer sentiment" },
+      { name: "First Response Time", target: "< 2 hours", why: "Fast responses drive satisfaction" },
+      { name: "Ticket Resolution Rate", target: "> 90% within SLA", why: "Reliability builds trust" }
+    ]
+  },
+  {
+    match: ["product", "feature", "launch", "adoption", "usage", "activation"],
+    krs: [
+      "Launch X features with Y% adoption within 30 days",
+      "Increase weekly active users from X to Y",
+      "Improve activation rate from X% to Y%"
+    ],
+    kpis: [
+      { name: "Feature Adoption Rate", target: "> 40% of active accounts in 30 days", why: "Validates product bets" },
+      { name: "Weekly Active Users", target: "+10% month over month", why: "Engagement compounds into retention" },
+      { name: "Activation Rate", target: "> 60% of new signups", why: "First-value moment predicts LTV" }
+    ]
+  },
+  {
+    match: ["hiring", "recruit", "team", "headcount", "talent"],
+    krs: [
+      "Hire X A-players for Y roles by Z date",
+      "Cut time-to-hire from X days to Y days",
+      "Achieve Z% offer-acceptance rate"
+    ],
+    kpis: [
+      { name: "Time to Hire", target: "< 30 days per role", why: "Slow hiring delays revenue plans" },
+      { name: "Offer Acceptance Rate", target: "> 85%", why: "Signal of compelling offers & culture" },
+      { name: "90-Day Ramp Retention", target: "> 95%", why: "Hiring quality, not just quantity" }
+    ]
+  },
+  {
+    match: ["marketing", "traffic", "conversion", "website", "seo", "campaign"],
+    krs: [
+      "Grow organic traffic from X to Y visits/month",
+      "Improve landing conversion rate from X% to Y%",
+      "Cut cost per lead from $X to $Y"
+    ],
+    kpis: [
+      { name: "Cost per Lead (CPL)", target: "-20% vs. last quarter", why: "Efficiency of demand generation" },
+      { name: "Landing Page Conversion Rate", target: "> 5%", why: "Every point compounds pipeline" },
+      { name: "Marketing Qualified Leads", target: "Weekly vs. plan", why: "Feeds the sales engine" }
+    ]
+  }
+];
+
+const GENERIC = {
+  krs: [
+    "Achieve the primary measurable outcome defined for this objective by quarter end",
+    "Improve the single bottleneck metric limiting this objective by X%",
+    "Complete the 2–3 key initiatives that unlock this objective"
+  ],
+  kpis: [
+    { name: "Primary Outcome Metric", target: "Set a concrete weekly target", why: "The number this objective exists to move" },
+    { name: "Leading Indicator", target: "Tracked weekly", why: "Predicts the outcome early enough to act" },
+    { name: "Execution Pace", target: "Weekly milestones hit", why: "Objectives fail on drift, not intent" }
+  ]
+};
+
+function recommend(text) {
+  const t = text.toLowerCase();
+  const scored = THEMES.map(th => ({
+    th,
+    score: th.match.reduce((s, kw) => s + (t.includes(kw.toLowerCase()) ? 1 : 0), 0)
+  })).sort((a, b) => b.score - a.score);
+  const best = scored[0];
+  const theme = best.score > 0 ? best.th : GENERIC;
+  const krs = theme.krs;
+  const kpis = theme.kpis;
+  /* fill placeholder X/Y/Z with numbers extracted from the objective, or sensible defaults */
+  const nums = (text.match(/\d+/g) || []).map(Number);
+  const fill = s => s.replace(/\$?X\b/g, nums[0] !== undefined ? String(nums[0]) : "X")
+                     .replace(/\$?Y\b/g, nums[1] !== undefined ? String(nums[1]) : "Y")
+                     .replace(/\bZ\b/g, nums[2] !== undefined ? String(nums[2]) : "Z");
+  return {
+    krs: krs.map(fill),
+    kpis: kpis.map(k => ({ ...k, name: fill(k.name), target: fill(k.target), why: fill(k.why) }))
+  };
+}
+
+/* ================= Wiring ================= */
+document.getElementById("recommendBtn").addEventListener("click", () => {
+  const text = document.getElementById("objectiveInput").value.trim();
+  if (!text) { alert("Enter an Objective first."); return; }
+  const rec = recommend(text);
+  document.getElementById("objectiveText").textContent = text;
+  document.getElementById("krList").innerHTML = rec.krs.map((kr, i) =>
+    `<div class="kr-item"><span class="num">${i + 1}</span><span class="text">${kr}</span></div>`).join("");
+  document.getElementById("kpiList").innerHTML = rec.kpis.map((k, i) =>
+    `<div class="kpi-item">
+       <div class="name"><span class="num">${i + 1}</span>${k.name}</div>
+       <div class="target">Suggested target: <b>${k.target}</b></div>
+       <div class="why">Why it matters: ${k.why}</div>
+     </div>`).join("");
+  document.getElementById("results").classList.remove("hidden");
+  document.getElementById("results").scrollIntoView({ behavior: "smooth" });
+});
+document.getElementById("objectiveInput").addEventListener("keydown", e => {
+  if (e.key === "Enter") document.getElementById("recommendBtn").click();
+});
+</script>
+</body>
+</html>
